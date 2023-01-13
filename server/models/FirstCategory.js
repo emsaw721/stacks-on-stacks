@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const secondCategorySchema = require("./SecondCategory")
+const secondCategorySchema = require("./SecondCategory")
 
 const firstCategorySchema = new Schema(
   {
@@ -7,7 +8,7 @@ const firstCategorySchema = new Schema(
         required: true,
         type:String,
     },
-    secondCategory:[secondCategorySchema.schema]
+    secondCategory:[secondCategorySchema]
   },
   // set this to use virtual below
   {
@@ -18,10 +19,6 @@ const firstCategorySchema = new Schema(
 );
 
 
-<<<<<<< HEAD
-const FirstCategory = model('FirstCategory', firstCategorySchema);
-=======
 const FirstCategory = model('Transactions', firstCategorySchema);
->>>>>>> e0331726 (index)
 
 module.exports = FirstCategory;
