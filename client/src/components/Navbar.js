@@ -4,6 +4,7 @@ import Auth from '../utils/auth';
 import './components.css'; 
 import Navpig from 'oinktranspig.png'; 
 
+<<<<<<< HEAD
 const Nav = () => {
     return(
         <nav className='navbar' >
@@ -37,5 +38,12 @@ const Nav = () => {
         </nav>
     )
 };
+=======
+function Nav({currectPage, handlePageChange}) {
+    return(
+        
+    )
+}
+>>>>>>> 38be5c00 (i'm exaustion typing and its not helping)
 
 export default Nav; 

@@ -5,7 +5,11 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js",
+<<<<<<< HEAD
     "seed": "node seeders/seeds.js"
+=======
+    "seed": "node seeders/seed.js"
+>>>>>>> 38be5c00 (i'm exaustion typing and its not helping)
   },
   "keywords": [],
   "author": "",
