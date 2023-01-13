@@ -14,5 +14,14 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsaw721/stacks-on-stacks.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/emsaw721/stacks-on-stacks/issues"
+  },
+  "homepage": "https://github.com/emsaw721/stacks-on-stacks#readme"
 }
