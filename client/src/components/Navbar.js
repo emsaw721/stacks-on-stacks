@@ -4,6 +4,7 @@ import './components.css';
 import Navpig from './oinktranspig.png'; 
 import Auth from '../utils/auth';
 
+<<<<<<< HEAD
 // import Expense from './pages/Expense';
 // import Income from './pages/Income';
 // import Planner from './pages/Planner';
@@ -12,7 +13,17 @@ import Auth from '../utils/auth';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+function Nav({currectPage, handlePageChange}) {
+    return(
+        
+    )
+}
+>>>>>>> cefb9227 (i'm exaustion typing and its not helping)
+>>>>>>> 75cfa646 (i'm exaustion typing and its not helping)
 
 >>>>>>> fa9f569a (added calendar)
 const Nav = () => {

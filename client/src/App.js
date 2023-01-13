@@ -1,13 +1,6 @@
 import React from 'react';
 // import {Link} from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -18,17 +11,21 @@ import Planner from './pages/Planner';
 // import Dashboard from './pages/Dashboard'; 
 // import Signout from './pages/Signout'; 
 
+<<<<<<< HEAD
 // import Header from './components/Header';
 // import Footer from './components/Footer';
 // import Navbar from './components/Navbar'; 
 import Planner from './pages/Planner';
 
 
+=======
+>>>>>>> 75cfa646 (i'm exaustion typing and its not helping)
 
 function App() {
 
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Header />
     <div>
@@ -37,6 +34,8 @@ function App() {
     </div>
     <Nav />
 =======
+=======
+>>>>>>> 75cfa646 (i'm exaustion typing and its not helping)
     <ApolloProvider client={client}>
       <Header />
       <Router>
@@ -54,7 +53,18 @@ function App() {
         <Footer />
       </Router>
     </ApolloProvider>
+<<<<<<< HEAD
 >>>>>>> fa9f569a (added calendar)
+=======
+=======
+    <Header />
+    <div>
+      <main>
+      </main>
+    </div>
+    <Nav />
+>>>>>>> cefb9227 (i'm exaustion typing and its not helping)
+>>>>>>> 75cfa646 (i'm exaustion typing and its not helping)
   );
 }
 
