@@ -1,13 +1,13 @@
 const { Schema, model } = require('mongoose');
-const secondcategorySchema = require("./Secondcategory")
+const secondCategorySchema = require("./SecondCategory")
 
-const firstcategorySchema = new Schema(
+const firstCategorySchema = new Schema(
   {
     category: {
         required: true,
         type:String,
     },
-    secondcategory:[secondcategorySchema]
+    secondCategory:[secondCategorySchema]
   },
   // set this to use virtual below
   {
@@ -18,6 +18,6 @@ const firstcategorySchema = new Schema(
 );
 
 
-const Firstcategory = model('Transactions', firstcategorySchema);
+const FirstCategory = model('Transactions', firstCategorySchema);
 
-module.exports = Firstcategory;
+module.exports = FirstCategory;
