@@ -1,8 +1,8 @@
 const { Schema, model } = require('mongoose');
 
-const secondcategorySchema = new Schema(
+const secondCategorySchema = new Schema(
   {
-    secondcategory: {
+    secondCategory: {
         required: true,
         type:String,
     }
@@ -16,6 +16,6 @@ const secondcategorySchema = new Schema(
 );
 
 
-const Secondcategory = model('Transactions', secondcategorySchema);
+const SecondCategory = model('Transactions', secondCategorySchema);
 
-module.exports = Secondcategory;
+module.exports = SecondCategory;
