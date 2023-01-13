@@ -18,6 +18,10 @@ const firstCategorySchema = new Schema(
 );
 
 
+<<<<<<< HEAD
 const FirstCategory = model('FirstCategory', firstCategorySchema);
+=======
+const FirstCategory = model('Transactions', firstCategorySchema);
+>>>>>>> e0331726 (index)
 
 module.exports = FirstCategory;

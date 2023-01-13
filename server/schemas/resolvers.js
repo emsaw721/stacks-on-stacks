@@ -63,6 +63,9 @@ const resolvers ={
                 return transaction;
             }
             throw new AuthenticationError('You need to be logged in!');
+        },
+        monthlytransaction: async (parent, args, context)=>{
+            
         }
     },
 
