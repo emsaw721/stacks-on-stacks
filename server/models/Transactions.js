@@ -1,14 +1,20 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 const transactionSchema = new Schema(
   {
-    user: {
+    username: {
         required: true,
         type:String,
     },
     amount: {
       type: Number,
       required: true,
+    },
+    date: {
+      type: Date,
+      default: Date.now,
+      get: timestamp => dateFormat(timestamp)
     },
     maincategory:{
         required: true,
