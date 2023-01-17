@@ -1,9 +1,10 @@
 import React  from 'react'; 
 import {Link} from 'react-router-dom';
-import './pages.css'; 
+import Auth from '../utils/auth';
+import './components.css'; 
 import Navpig from 'oinktranspig.png'; 
 
-function Nav() {
+const Nav = () => {
     return(
         <nav className='navbar' >
             <ul className='nav-list'>
@@ -22,7 +23,19 @@ function Nav() {
                         <img src={Navpig} />
                     </Link>
                 </li>
+                <li className='nav-item'>
+                    <Link to '/Planner' className='nav-link'>
+                        <span className='link-text'>Budget Planner</span>
+                    </Link>
+                </li>
+                <li className='nav-item'>
+                    <Link to '/Signout' className='nav-link'>
+                        <span className='link-text'>Signout</span>
+                    </Link>
+                </li>
+            </ul>
+        </nav>
     )
-}
+};
 
 export default Nav; 
