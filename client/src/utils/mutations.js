@@ -1,5 +1,10 @@
 import { gql } from '@apollo/client';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> bbd9572f (started logic for mutations.js and queries.js)
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
@@ -12,6 +17,10 @@ export const LOGIN_USER = gql`
   }
 `;
 
+<<<<<<< HEAD
+=======
+>>>>>>> f1a52169 (started logic for mutations.js and queries.js)
+>>>>>>> bbd9572f (started logic for mutations.js and queries.js)
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
@@ -22,6 +31,12 @@ export const ADD_USER = gql`
       }
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+`;
+=======
+>>>>>>> bbd9572f (started logic for mutations.js and queries.js)
 `;
 
 export const ADD_TRANSACTION = gql`
@@ -52,4 +67,9 @@ export const REMOVE_TRANSACTION = gql`
             _id
         }
     }
+<<<<<<< HEAD
 `; 
+=======
+`; 
+>>>>>>> f1a52169 (started logic for mutations.js and queries.js)
+>>>>>>> bbd9572f (started logic for mutations.js and queries.js)
