@@ -7,3 +7,16 @@
     --sextary-color: #EC4F46;
     --septary-color: #475FD7;
 }
+
+.navbar {
+    background-color: var(--tertiary-color);
+    display: flex; 
+}
+
+.nav-list {
+    justify-content: space-between;
+}
+
+.link-text {
+    color: var(--quaternary-color); 
+}
