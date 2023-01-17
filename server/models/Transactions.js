@@ -4,8 +4,8 @@ const dateFormat = require('../utils/dateFormat');
 const transactionSchema = new Schema(
   {
     username: {
-        required: true,
-        type:String,
+      type: String,
+      required:true
     },
     amount: {
       type: Number,
@@ -16,12 +16,11 @@ const transactionSchema = new Schema(
       default: Date.now,
       get: timestamp => dateFormat(timestamp)
     },
-    maincategory:{
+    firstcategory:{
         required: true,
         type:String,
     },
     secondcategory:{
-        required: true,
         type:String,
     },
     categoryNote:{
