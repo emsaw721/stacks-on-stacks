@@ -4,6 +4,7 @@ const secondCategorySchema = new Schema(
   {
     secondCategory: {
         required: true,
+
         type:String,
     }
   },
@@ -16,6 +17,8 @@ const secondCategorySchema = new Schema(
 );
 
 
-const SecondCategory = model('Transactions', secondCategorySchema);
+
+const SecondCategory = model('secondCategory', secondCategorySchema);
+
 
 module.exports = SecondCategory;

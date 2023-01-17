@@ -3,11 +3,12 @@ const secondCategorySchema = require("./SecondCategory")
 
 const firstCategorySchema = new Schema(
   {
-    category: {
+    firstCategory: {
         required: true,
         type:String,
     },
-    secondCategory:[secondCategorySchema]
+    secondCategory:[secondCategorySchema.schema]
+
   },
   // set this to use virtual below
   {
@@ -18,6 +19,8 @@ const firstCategorySchema = new Schema(
 );
 
 
-const FirstCategory = model('Transactions', firstCategorySchema);
+
+const FirstCategory = model('FirstCategory', firstCategorySchema);
+
 
 module.exports = FirstCategory;
