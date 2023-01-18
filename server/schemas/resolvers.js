@@ -44,7 +44,7 @@ const resolvers ={
                 // Find the transactions by the username of the logged-in user
                 const transactions = await Transactions.find({ username: context.user.username });
                 const budgetdata=[];
-                // add method to extract the budget data
+                // add method to extract the budget data from transactions
                 return budgetdata;
             }
             throw new AuthenticationError('You need to be logged in!');

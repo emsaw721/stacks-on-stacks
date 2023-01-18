@@ -1,58 +1,46 @@
-import React from "react";
-import AuthService from "../../utils/auth";
-import { Link } from "react-router-dom";
+import React  from 'react'; 
+import {Link} from 'react-router-dom';
+import './components.css'; 
+import Navpig from './oinktranspig.png'; 
 
-function Nav() {
+// import Expense from './pages/Expense';
+// import Income from './pages/Income';
+// import Planner from './pages/Planner';
+// import Dashboard from './pages/Dashboard'; 
+// import Signout from './pages/Signout'; 
 
-  function showNavigation() {
-    if (AuthService.loggedIn()) {
-      return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/Planner">
-              Planner
-            </Link>
-          </li>
-          <li className="mx-1">
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => AuthService.logout()}>
-              Logout
-            </a>
-          </li>
-        </ul>
-      );
-    } else {
-      return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
-          </li>
-        </ul>
-      );
-    }
-  }
+const Nav = () => {
+    return(
+        <nav className='navbar' >
+            <ul className='nav-list'>
+                <li className='nav-item'>
+                    {/* <Link to '/expense' className='nav-link'> */}
+                        <span className='link-text'>Expense</span>
+                    {/* </Link> */}
+                </li>
+                <li className='nav-item'>
+                    {/* <Link to '/income' className='nav-link'> */}
+                        <span className='link-text'>Income</span>
+                    {/* </Link> */}
+                </li>
+                <li className='dash-icon'>
+                    {/* <Link to '/dashboard' className='nav-link'> */}
+                        <img src={Navpig} />
+                    {/* </Link> */}
+                </li>
+                <li className='nav-item'>
+                    {/* <Link to '/planner' className='nav-link'> */}
+                        <span className='link-text'>Budget Planner</span>
+                    {/* </Link> */}
+                </li>
+                <li className='nav-item'>
+                    {/* <Link to '/signout' className='nav-link'> */}
+                        <span className='link-text'>Signout</span>
+                    {/* </Link> */}
+                </li>
+            </ul>
+        </nav>
+    )
+};
 
-  return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="piggy"></span>
-          Planner
-        </Link>
-      </h1>
-
-      <nav>
-        {showNavigation()}
-      </nav>
-    </header>
-  );
-}
-
-export default Nav;
+export default Nav; 

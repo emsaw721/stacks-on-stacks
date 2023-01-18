@@ -15,13 +15,17 @@ db.once('open', async () => {
             username:"user1",
             amount:"1000.00",
             firstcategory:"Cash",
-            secondcategory:"Saving account"
+            secondcategory:"Saving account",
+            date:"2023-01-12",
+            yearmonth:"2023-01"
         },
         {
             username:"user1",
             amount:"3000.00",
             firstcategory:"Income",
-            secondcategroy:"Full time job income"
+            secondcategroy:"Full time job income",
+            date:"2023-01-12",
+            yearmonth:"2023-01"
         },
         {
             username:"user1",
@@ -30,7 +34,9 @@ db.once('open', async () => {
             secondcategroy:"Food",
             categoryNote:"Grocery",
             location:"HEB",
-            note:"Food for long weekend"
+            note:"Food for long weekend",
+            date:"2023-01-14",
+            yearmonth:"2023-01"
         },
         {
             username:"user1",
@@ -39,8 +45,21 @@ db.once('open', async () => {
             secondcategroy:"Recreation & Entertainment",
             categoryNote:"Movie",
             location:"AMC, Houton",
-            note:"Avatar II, The Way of Water"
-        }
+            note:"Avatar II, The Way of Water",
+            date:"2023-01-16",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user2",
+            amount:"7.88",
+            firstcategory:"Expense",
+            secondcategroy:"Education",
+            categoryNote:"Book",
+            location:"Barnes and noble",
+            note:"Harry Potter and the Sorcerer's Stone",
+            date:"2023-01-12",
+            yearmonth:"2023-01"
+        },
     );
 
     await User.create (
