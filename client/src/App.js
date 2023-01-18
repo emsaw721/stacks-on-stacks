@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-=======
 import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
->>>>>>> ec3b9543e7e79085c812862dd044f9efcf32ff9a
 import {
   ApolloClient,
   InMemoryCache,
