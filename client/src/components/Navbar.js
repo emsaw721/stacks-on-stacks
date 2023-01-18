@@ -5,6 +5,10 @@ import './components.css';
 import Navpig from 'oinktranspig.png'; 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa9f569a (added calendar)
 const Nav = () => {
     return(
         <nav className='navbar' >
