@@ -16,6 +16,10 @@ const transactionSchema = new Schema(
       default: Date.now,
       get: timestamp => dateFormat(timestamp)
     },
+    yearmonth:{
+      type: String,
+      required:true,
+    },
     firstcategory:{
         required: true,
         type:String,

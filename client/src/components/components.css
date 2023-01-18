@@ -8,15 +8,46 @@
     --septary-color: #475FD7;
 }
 
+
+/* -------- Navbar Styling ---------- */
 .navbar {
     background-color: var(--tertiary-color);
     display: flex; 
 }
 
 .nav-list {
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    list-style: none; 
 }
 
 .link-text {
     color: var(--quaternary-color); 
+}
+
+.navbar img {
+    width: 15%; 
+    height: auto; 
+    list-style: none; 
+}
+
+/* -------- Header Styling ------- */
+.header {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color); 
+    display: flex; 
+    justify-content: space-between;
+}
+
+.header img {
+    width: 5%;
+    height: auto; 
+}
+
+/* ------- Footer Styling ------- */ 
+.footer {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color);
 }

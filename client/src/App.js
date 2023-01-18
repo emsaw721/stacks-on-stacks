@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,13 +8,14 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-
-
-// import Header from './components/Header';
-// import Footer from './components/Footer';
-// import Navbar from './components/Navbar'; 
-import Planner from './pages/Planner';
-
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar'; 
+// import Expense from './pages/Expense';
+// import Income from './pages/Income';
+// import Planner from './pages/Planner';
+// import Dashboard from './pages/Dashboard'; 
+// import Signout from './pages/Signout'; 
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -38,12 +39,19 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        {/* <Header></Header>
-        <Navbar></Navbar> */}
-        <Planner></Planner>
-        {/* <Footer></Footer> */}
-      </Router>
+      {/* <Router> */}
+      <Header />    
+        {/* 
+        <Switch>
+        <Route exact path = '/' component={Dashboard} /> 
+        <Route exact path = '/expense' component={Expense} />
+        <Route exact path = '/income' component={Income} />
+        <Route exact path = '/planner' component={Planner} />
+       <Route exact path = '/signout' component={Signout} /> 
+       </Switch> */}
+      <Navbar />
+      <Footer />
+      {/* </Router> */}
     </ApolloProvider>
   );
 }

@@ -1,8 +1,13 @@
 import React  from 'react'; 
 import {Link} from 'react-router-dom';
-import Auth from '../utils/auth';
 import './components.css'; 
-import Navpig from 'oinktranspig.png'; 
+import Navpig from './oinktranspig.png'; 
+
+// import Expense from './pages/Expense';
+// import Income from './pages/Income';
+// import Planner from './pages/Planner';
+// import Dashboard from './pages/Dashboard'; 
+// import Signout from './pages/Signout'; 
 
 
 const Nav = () => {
@@ -10,29 +15,29 @@ const Nav = () => {
         <nav className='navbar' >
             <ul className='nav-list'>
                 <li className='nav-item'>
-                    <Link to '/Expense' className='nav-link'>
+                    {/* <Link to '/expense' className='nav-link'> */}
                         <span className='link-text'>Expense</span>
-                    </Link>
+                    {/* </Link> */}
                 </li>
                 <li className='nav-item'>
-                    <Link to '/Income' className='nav-link'>
+                    {/* <Link to '/income' className='nav-link'> */}
                         <span className='link-text'>Income</span>
-                    </Link>
+                    {/* </Link> */}
                 </li>
                 <li className='dash-icon'>
-                    <Link to '/Dashboard' className='nav-link'>
+                    {/* <Link to '/dashboard' className='nav-link'> */}
                         <img src={Navpig} />
-                    </Link>
+                    {/* </Link> */}
                 </li>
                 <li className='nav-item'>
-                    <Link to '/Planner' className='nav-link'>
+                    {/* <Link to '/planner' className='nav-link'> */}
                         <span className='link-text'>Budget Planner</span>
-                    </Link>
+                    {/* </Link> */}
                 </li>
                 <li className='nav-item'>
-                    <Link to '/Signout' className='nav-link'>
+                    {/* <Link to '/signout' className='nav-link'> */}
                         <span className='link-text'>Signout</span>
-                    </Link>
+                    {/* </Link> */}
                 </li>
             </ul>
         </nav>

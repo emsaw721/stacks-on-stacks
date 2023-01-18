@@ -14,6 +14,7 @@ const typeDefs = gql`
         username:String
         amount:	Float
         date: String
+        yearmonth: String
         firstcategory: String
         secondcategory: String
         categoryNote: String
@@ -25,7 +26,7 @@ const typeDefs = gql`
     }
     type Firstcategory {
         _id:ID
-        category: String
+        firstCategory: String
         secondCategory: [Secondcategory]
     }
 
@@ -37,18 +38,17 @@ const typeDefs = gql`
     type Query {
         me: User
         users: [User]
-        user(username: String!): User
-        transactions(username: String!): [Transaction]
+        transactions: [Transaction]
         budget(username: String!): [Transaction]
         transaction(_id: ID!): Transaction
         category: [Firstcategory]
-        monthtraction(username:String!, mon:String!, year: String!):[Transaction]
+        monthlytransction(yearmonth: String!):[Transaction]
     }
 
     type Mutation {
         login (email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
-        addTransaction(username: String!, amount:String!, firstcategory:String!, secondcategory:String, categoryNote: String, location: String, note:String): Transaction
+        addTransaction(username: String!, amount:String!, date: String, yearmonth:String!,firstcategory:String!, secondcategory:String, categoryNote: String, location: String, note:String): Transaction
         removeTransaction(_id: ID!): Transaction
         updateTransaction(_id: ID!,username: String! amount:String, firstcategory:String, secondcategory:String, categoryNote: String, location: String, note:String):Transaction
     }
