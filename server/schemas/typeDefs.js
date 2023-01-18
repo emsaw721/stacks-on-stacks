@@ -38,12 +38,11 @@ const typeDefs = gql`
     type Query {
         me: User
         users: [User]
-        user(username: String!): User
-        transactions(username: String!): [Transaction]
+        transactions: [Transaction]
         budget(username: String!): [Transaction]
         transaction(_id: ID!): Transaction
         category: [Firstcategory]
-        monthlytransction(username:String!, yearmonth: String!):[Transaction]
+        monthlytransction(yearmonth: String!):[Transaction]
     }
 
     type Mutation {
