@@ -13,6 +13,9 @@ const Nav = () => {
     return(
         <nav className='navbar' >
             <ul className='nav-list'>
+                <li>
+                    <img src={Navpig} />
+                </li>
                 {/* <li className='nav-item'>
                     <Link to {...Expense} className='nav-link'>
                         <span className='link-text'>Expense</span>

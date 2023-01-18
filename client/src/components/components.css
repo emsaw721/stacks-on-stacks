@@ -20,3 +20,8 @@
 .link-text {
     color: var(--quaternary-color); 
 }
+
+.header {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color); 
+}
