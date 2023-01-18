@@ -8,6 +8,8 @@
     --septary-color: #475FD7;
 }
 
+
+/* -------- Navbar Styling ---------- */
 .navbar {
     background-color: var(--tertiary-color);
     display: flex; 
@@ -15,8 +17,34 @@
 
 .nav-list {
     justify-content: space-between;
+    display: inline; 
+}
+
+.nav-item {
+    text-decoration: none;
+    list-style: none; 
+    display: inline; 
 }
 
 .link-text {
     color: var(--quaternary-color); 
+}
+
+.navbar img {
+    width: 15%; 
+    height: auto; 
+    list-style: none; 
+}
+
+/* -------- Header Styling ------- */
+.header {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color); 
+}
+
+
+/* ------- Footer Styling ------- */ 
+.footer {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color);
 }
