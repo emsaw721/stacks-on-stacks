@@ -39,7 +39,7 @@ function App() {
     <ApolloProvider client={client}>
       {/* <Router> */}
       <Header />
-      <Navbar />
+
     
         {/* 
         <Switch>
@@ -49,7 +49,7 @@ function App() {
         <Route exact path = '/planner' component={Planner} />
        <Route exact path = '/signout' component={Signout} /> 
        </Switch> */}
-    
+      <Navbar />
       <Footer />
       {/* </Router> */}
     </ApolloProvider>

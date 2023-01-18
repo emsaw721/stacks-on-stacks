@@ -5,7 +5,7 @@ const Footer = () => {
 
     return (
         <div className='footer'>
-            <h3>Some Footer Text and Color</h3>
+            <h3>Created by Group 1 🐷</h3>
         </div>
     )
 }
