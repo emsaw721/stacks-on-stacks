@@ -8,3 +8,8 @@
     --septary-color: #475FD7;
 }
 
+.calendar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
