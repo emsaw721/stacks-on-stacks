@@ -45,11 +45,11 @@ function App() {
       <Hero />
       <Router>
         <div className='content'>
-          <Routes>
+            <Routes>
             {/* <Route path = '/' element={<Dashboard />} />  */}
             <Route path = '/expense' element={<Expense />} />
             <Route path='/planner' element={<Planner />} />
-          </Routes>
+            </Routes>
         </div>
         <Navbar />
         <Footer />

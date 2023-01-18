@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
-import { LOGIN } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
 import AuthService from '../utils/auth';
+import { ADD_USER } from '../utils/mutations';
 
-function Login(props) {
+function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, { error }] = useMutation(LOGIN);
+  const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    try {
-      const mutationResponse = await login({
-        variables: { email: formState.email, password: formState.password },
-      });
-      const token = mutationResponse.data.login.token;
-      AuthService.login(token);
-    } catch (e) {
-      console.log(e);
-    }
+    const mutationResponse = await addUser({
+      variables: {
+        userName: formState.firstName,
+        email: formState.email,
+        password: formState.password,
+      },
+    });
+    const token = mutationResponse.data.addUser.token;
+    AuthService.login(token);
   };
 
   const handleChange = (event) => {
@@ -31,12 +31,22 @@ function Login(props) {
 
   return (
     <div className="container my-1">
-      <Link to="/signup">← Go to Signup</Link>
+      <Link to="/login">← Go to Login</Link>
 
-      <h2>Login</h2>
+      <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
+          <label htmlFor="userName">Username:</label>
+          <input
+            placeholder="User"
+            name="userName"
+            type="userName"
+            id="userName"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email:</label>
           <input
             placeholder="youremail@test.com"
             name="email"
@@ -55,11 +65,6 @@ function Login(props) {
             onChange={handleChange}
           />
         </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
-          </div>
-        ) : null}
         <div className="flex-row flex-end">
           <button type="submit">Submit</button>
         </div>
@@ -68,4 +73,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export default Signup;

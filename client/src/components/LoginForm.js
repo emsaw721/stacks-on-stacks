@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+import AuthService from '../utils/auth';
 
 const LoginForm = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -32,10 +32,9 @@ const LoginForm = () => {
         variables: { ...formState },
       });
 
-      Auth.login(data.loginUser.token);
-    } catch (error) {
-      console.error(error);
-      setShowAlert(true);
+      AuthService.login(data.login.token);
+    } catch (e) {
+      console.error(e);
     }
   };
 
