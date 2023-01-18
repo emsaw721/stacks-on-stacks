@@ -4,6 +4,8 @@ import './pages.css';
 
 const Planner = () => {
     return (
+        <section className='planner'>
+            <h1> You Budget Planner </h1>
         <Doughnut data={{
             datasets: [
                 {
@@ -24,5 +26,6 @@ const Planner = () => {
             ],
         }}
         />
+        </section>
     )
 }
