@@ -4,6 +4,7 @@ import Auth from '../utils/auth';
 import './components.css'; 
 import Navpig from 'oinktranspig.png'; 
 
+
 const Nav = () => {
     return(
         <nav className='navbar' >
