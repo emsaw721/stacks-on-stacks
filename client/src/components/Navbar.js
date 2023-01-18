@@ -13,33 +13,31 @@ const Nav = () => {
     return(
         <nav className='navbar' >
             <ul className='nav-list'>
-                    <img src={Navpig} />
-             
-                {/* <li className='nav-item'>
-                    <Link to {...Expense} className='nav-link'>
+                <li className='nav-item'>
+                    {/* <Link to {...Expense} className='nav-link'> */}
                         <span className='link-text'>Expense</span>
-                    </Link>
+                    {/* </Link> */}
                 </li>
                 <li className='nav-item'>
-                    <Link to {...Income} className='nav-link'>
+                    {/* <Link to {...Income} className='nav-link'> */}
                         <span className='link-text'>Income</span>
-                    </Link>
+                    {/* </Link> */}
                 </li>
                 <li className='dash-icon'>
-                    <Link to {...Dashboard} className='nav-link'>
+                    {/* <Link to {...Dashboard} className='nav-link'> */}
                         <img src={Navpig} />
-                    </Link>
-                </li> */}
-                {/* <li className='nav-item'>
-                    <Link to {...Planner} className='nav-link'>
-                        <span className='link-text'>Budget Planner</span>
-                    </Link>
+                    {/* </Link> */}
                 </li>
                 <li className='nav-item'>
-                    <Link to {...Signout} className='nav-link'>
+                    {/* <Link to {...Planner} className='nav-link'> */}
+                        <span className='link-text'>Budget Planner</span>
+                    {/* </Link> */}
+                </li>
+                <li className='nav-item'>
+                    {/* <Link to {...Signout} className='nav-link'> */}
                         <span className='link-text'>Signout</span>
-                    </Link>
-                </li> */}
+                    {/* </Link> */}
+                </li>
             </ul>
         </nav>
     )

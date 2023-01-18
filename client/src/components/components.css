@@ -17,6 +17,13 @@
 
 .nav-list {
     justify-content: space-between;
+    display: inline; 
+}
+
+.nav-item {
+    text-decoration: none;
+    list-style: none; 
+    display: inline; 
 }
 
 .link-text {
@@ -26,6 +33,7 @@
 .navbar img {
     width: 15%; 
     height: auto; 
+    list-style: none; 
 }
 
 /* -------- Header Styling ------- */
