@@ -37,8 +37,14 @@
 .header {
     background-color: var(--quinary-color);
     color: var(--tertiary-color); 
+    display: flex; 
+    justify-content: space-between;
 }
 
+.header img {
+    width: 5%;
+    height: auto; 
+}
 
 /* ------- Footer Styling ------- */ 
 .footer {
