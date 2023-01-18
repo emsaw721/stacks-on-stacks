@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/emsaw721/stacks-on-stacks/issues"
   },
-  "homepage": "https://github.com/emsaw721/stacks-on-stacks#readme"
+  "homepage": "https://github.com/emsaw721/stacks-on-stacks#readme",
+  "dependencies": {
+    "apollo": "^2.34.0",
+    "react": "^18.2.0"
+  }
 }
