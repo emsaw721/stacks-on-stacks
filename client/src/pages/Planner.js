@@ -1,30 +1,22 @@
-import React, { useState } from 'react'
-import './pages.css';
-import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css'
+import React from 'react';
+import './components.css'; 
+import Auth from '../utils/auth';
 
-const Planner = () => {
-    // set states of calendar date
-    const [calDate, setCalDate] = useState(new Date())
-
-    function onChange(calDate) {
-        setCalDate(calDate)
-
-    }
-
-// function to open calendar on a given day and view expenses and or income
-    
-
+const Header = () => {
 
     return (
-        <div className="calendar">
-            <Calendar onChange={onChange} value={calDate} />
-        </div>
+    <section className='header'>
+        <h1>This is the header!</h1>
+            {/* {Auth.loggedin() ? (
+                <div className='header'>
+                <h1> Hello, Username! </h1>
+                </div>
+            ):(  <div className='header'>
+            <h1>This is the header, maybe?</h1>
+            </div>)} */}
+    </section>
     )
 
 }
 
-
-export default Planner;
-
-
+export default Header; 
