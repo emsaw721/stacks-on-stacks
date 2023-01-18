@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import './components.css'; 
 import Auth from '../utils/auth';
@@ -19,3 +20,4 @@ const Header = () => {
 }
 
 export default Header; 
+

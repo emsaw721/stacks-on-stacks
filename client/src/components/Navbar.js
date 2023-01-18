@@ -30,6 +30,12 @@ const Nav = () => {
                 </li>
                 <li className='nav-item'>
                     {/* <Link to {...Planner} className='nav-link'> */}
+                    <Link to {...Dashboard} className='nav-link'>
+                        <img src={Navpig} />
+                    </Link>
+                </li> */}
+                {/* <li className='nav-item'>
+                    <Link to {...Planner} className='nav-link'>
                         <span className='link-text'>Budget Planner</span>
                     {/* </Link> */}
                 </li>
