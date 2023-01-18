@@ -16,14 +16,11 @@
 }
 
 .nav-list {
-    justify-content: space-between;
-    display: inline; 
+    justify-content: space-evenly;
 }
 
 .nav-item {
-    text-decoration: none;
     list-style: none; 
-    display: inline; 
 }
 
 .link-text {

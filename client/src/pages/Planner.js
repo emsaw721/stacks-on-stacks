@@ -31,3 +31,5 @@ const Planner = () => {
     </section>
     )
 }
+
+export default Planner; 
