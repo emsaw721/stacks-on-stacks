@@ -8,6 +8,8 @@
     --septary-color: #475FD7;
 }
 
+
+/* -------- Navbar Styling ---------- */
 .navbar {
     background-color: var(--tertiary-color);
     display: flex; 
@@ -21,7 +23,20 @@
     color: var(--quaternary-color); 
 }
 
+.navbar img {
+    width: 15%; 
+    height: auto; 
+}
+
+/* -------- Header Styling ------- */
 .header {
-    background-color: var(--secondary-color);
+    background-color: var(--quinary-color);
     color: var(--tertiary-color); 
+}
+
+
+/* ------- Footer Styling ------- */ 
+.footer {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color);
 }
