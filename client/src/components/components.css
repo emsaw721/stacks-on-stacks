@@ -47,10 +47,24 @@
     background-color: var(--quinary-color);
     color: var(--tertiary-color); 
     display: flex; 
-    justify-content: space-between;
 }
 
-.header img {
+.header .loggedin {
+    justify-content: center;
+    text-align: center;
+    margin-left: 25%;
+}
+
+.header .loggedout {
+    flex-direction: column;
+}
+
+.header .loggedout img {
+    width: 100%;
+    height: auto; 
+}
+
+.header .loggedin img {
     display: none; 
 }
 
