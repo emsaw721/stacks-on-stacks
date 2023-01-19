@@ -11,9 +11,9 @@ import { setContext } from '@apollo/client/link/context';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar'; 
+import Planner from './pages/Planner';
 // import Expense from './pages/Expense';
 // import Income from './pages/Income';
-// import Planner from './pages/Planner';
 // import Dashboard from './pages/Dashboard'; 
 // import Signout from './pages/Signout'; 
 
@@ -50,6 +50,7 @@ function App() {
        <Route exact path = '/signout' component={Signout} /> 
        </Switch> */}
       <Navbar />
+      <Planner></Planner>
       <Footer />
       {/* </Router> */}
     </ApolloProvider>
