@@ -35,9 +35,9 @@ const Nav = () => {
                     {/* </Link> */}
                 </li>
                 <li className='nav-item'>
-                    {/* <Link to '/planner' className='nav-link'> */}
+                    <Link to={'/planner'} className='nav-link'>
                         <span className='link-text'>Planner</span>
-                    {/* </Link> */}
+                    </Link>
                 </li>
                 <li className='nav-item'>
                     {/* <Link to '/signout' className='nav-link'> */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -14,6 +14,7 @@ import Navbar from './components/Navbar';
 import Planner from './pages/Planner';
 // import Expense from './pages/Expense';
 // import Income from './pages/Income';
+import Planner from './pages/Planner';
 // import Dashboard from './pages/Dashboard'; 
 // import Signout from './pages/Signout'; 
 
@@ -37,22 +38,19 @@ function App() {
     <Nav />
 =======
     <ApolloProvider client={client}>
-      {/* <Router> */}
+      <Router>
       <Header />
-
-    
-        {/* 
-        <Switch>
-        <Route exact path = '/' component={Dashboard} /> 
+        <Routes>
+        {/* <Route exact path = '/' component={Dashboard} /> 
         <Route exact path = '/expense' component={Expense} />
-        <Route exact path = '/income' component={Income} />
-        <Route exact path = '/planner' component={Planner} />
-       <Route exact path = '/signout' component={Signout} /> 
-       </Switch> */}
+        <Route exact path = '/income' component={Income} /> */}
+        <Route path = '/planner' element={<Planner />} />
+       {/* <Route exact path = '/signout' component={Signout} />  */}
+       </Routes> 
       <Navbar />
       <Planner></Planner>
       <Footer />
-      {/* </Router> */}
+      </Router>
     </ApolloProvider>
 >>>>>>> fa9f569a (added calendar)
   );
