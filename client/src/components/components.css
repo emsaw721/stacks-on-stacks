@@ -17,8 +17,6 @@
 .navbar {
     background-color: var(--tertiary-color);
     flex-basis: 100%; 
-    margin: 0; 
-    padding: 0; 
     flex-direction: row; 
 }
 
@@ -27,13 +25,11 @@
     position: -webkit-sticky;
     position: sticky;
     bottom: 0; 
-    flex-direction: row; 
 }
 
 .nav-item {
     list-style: none; 
     flex-shrink: 1; 
-    font-size: 5px; 
 }
 
 .link-text {
@@ -41,7 +37,7 @@
 }
 
 .navbar img {
-    width: 15%; 
+    width: 20%; 
     height: auto; 
     list-style: none; 
 }
@@ -70,7 +66,55 @@
 
 /* ---- desktop/ laptop formatting ------- */ 
 
+
+/* -------- Navbar Styling ---------- */
+.navcontainer {
+    display: flex; 
+    flex-wrap: wrap; 
+}
+.navbar {
+    background-color: var(--tertiary-color);
+    flex-basis: 100%; 
+    flex-direction: row; 
+}
+
+.nav-list {
+    list-style: none; 
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0; 
+}
+
+.nav-item {
+    list-style: none; 
+    flex-shrink: 1; 
+}
+
+.link-text {
+    color: var(--quaternary-color); 
+}
+
+.navbar img {
+    width: 10%; 
+    height: auto; 
+    list-style: none; 
+}
+
+/* -------- Header Styling ------- */
+.header {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color); 
+    display: flex; 
+    justify-content: space-between;
+}
+
 .header img {
     width: 5%;
     height: auto; 
+}
+
+/* ------- Footer Styling ------- */ 
+.footer {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color);
 }
