@@ -8,19 +8,32 @@
     --septary-color: #475FD7;
 }
 
-
+@media only screen and (max-width: 768px) {
 /* -------- Navbar Styling ---------- */
+.navcontainer {
+    display: flex; 
+    flex-wrap: wrap; 
+}
 .navbar {
     background-color: var(--tertiary-color);
-    display: flex;
+    flex-basis: 100%; 
+    margin: 0; 
+    padding: 0; 
+    flex-direction: row; 
 }
 
 .nav-list {
-    justify-content: space-evenly;
+    list-style: none; 
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0; 
+    flex-direction: row; 
 }
 
 .nav-item {
-    list-style: none;
+    list-style: none; 
+    flex-shrink: 1; 
+    font-size: 5px; 
 }
 
 .link-text {
@@ -42,8 +55,7 @@
 }
 
 .header img {
-    width: 5%;
-    height: auto;
+    display: none; 
 }
 
 /* ----- Calendar Styling -------- */
@@ -80,4 +92,15 @@
 .footer {
     background-color: var(--quinary-color);
     color: var(--tertiary-color);
+}
+
+}
+
+
+
+/* ---- desktop/ laptop formatting ------- */ 
+
+.header img {
+    width: 5%;
+    height: auto; 
 }
