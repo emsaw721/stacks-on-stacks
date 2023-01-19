@@ -12,7 +12,7 @@
 /* -------- Navbar Styling ---------- */
 .navbar {
     background-color: var(--tertiary-color);
-    display: flex; 
+    display: flex;
 }
 
 .nav-list {
@@ -20,33 +20,63 @@
 }
 
 .nav-item {
-    list-style: none; 
+    list-style: none;
 }
 
 .link-text {
-    color: var(--quaternary-color); 
+    color: var(--quaternary-color);
 }
 
 .navbar img {
-    width: 15%; 
-    height: auto; 
-    list-style: none; 
+    width: 15%;
+    height: auto;
+    list-style: none;
 }
 
 /* -------- Header Styling ------- */
 .header {
     background-color: var(--quinary-color);
-    color: var(--tertiary-color); 
-    display: flex; 
+    color: var(--tertiary-color);
+    display: flex;
     justify-content: space-between;
 }
 
 .header img {
     width: 5%;
-    height: auto; 
+    height: auto;
 }
 
-/* ------- Footer Styling ------- */ 
+/* ----- Calendar Styling -------- */
+.btn-add {
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    transition: all .5s ease-out;
+    background-size: 1px 100px;
+    background-position: 0px -10px;
+}
+
+.modalBackdrop {
+    background: rgba(0, 0, 0, .65);
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.modalContainer {
+    background-color: white;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+/* ------- Footer Styling ------- */
 .footer {
     background-color: var(--quinary-color);
     color: var(--tertiary-color);
