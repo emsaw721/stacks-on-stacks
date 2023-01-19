@@ -8,7 +8,18 @@
     --septary-color: #475FD7;
 }
 
+
+
 @media only screen and (min-width: 768px) {
 
 
+}
+
+
+/* ------ desktop/laptop formatting -------- */ 
+
+/* ------- Planner ---------- */ 
+
+.planner h1{
+    font-size: 2em; 
 }
