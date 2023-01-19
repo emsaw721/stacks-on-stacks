@@ -17,6 +17,7 @@ import Auth from '../utils/auth';
 >>>>>>> fa9f569a (added calendar)
 const Nav = () => {
     return(
+        // {Auth.loggedin() ? (
         <section className='navcontainer'>
         <nav className='navbar' >
             <ul className='nav-list'>
@@ -48,6 +49,7 @@ const Nav = () => {
             </ul>
         </nav>
         </section>
+        // ):()};
     )
 };
 =======
