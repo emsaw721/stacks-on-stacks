@@ -7,7 +7,7 @@ const Planner = () => {
 
     return (
         <section className='planner'>
-        <h1> You Budget Planner </h1>
+        <h1> Your Budget Planner </h1>
     <Doughnut data={{
         datasets: [
             {
