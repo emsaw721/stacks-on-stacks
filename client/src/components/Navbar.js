@@ -11,6 +11,7 @@ import Navpig from './oinktranspig.png';
 
 const Nav = () => {
     return(
+        <section className='navcontainer'>
         <nav className='navbar' >
             <ul className='nav-list'>
                 <li className='nav-item'>
@@ -30,7 +31,7 @@ const Nav = () => {
                 </li>
                 <li className='nav-item'>
                     {/* <Link to '/planner' className='nav-link'> */}
-                        <span className='link-text'>Budget Planner</span>
+                        <span className='link-text'>Planner</span>
                     {/* </Link> */}
                 </li>
                 <li className='nav-item'>
@@ -40,6 +41,7 @@ const Nav = () => {
                 </li>
             </ul>
         </nav>
+        </section>
     )
 };
 
