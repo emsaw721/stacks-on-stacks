@@ -4,13 +4,6 @@ import './components.css';
 import Navpig from './oinktranspig.png'; 
 import Auth from '../utils/auth';
 
-// import Expense from './pages/Expense';
-// import Income from './pages/Income';
-// import Planner from './pages/Planner';
-// import Dashboard from './pages/Dashboard'; 
- 
-
-
 const Nav = () => {
     return(
         // {Auth.loggedin() ? (
@@ -34,7 +27,7 @@ const Nav = () => {
                 </li>
                 <li className='nav-item'>
                     <Link to='/planner' className='nav-link'>
-                        <span className='link-text'>Planner</span>
+                        <span className='link-text'>Report</span>
                     </Link>
                 </li>
                 <li className='nav-item'>

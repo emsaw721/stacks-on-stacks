@@ -52,7 +52,6 @@ function App() {
           </Routes>
         </div>
         <Navbar />
-        <Planner></Planner>
         <Footer />
       </Router>
     </ApolloProvider>
