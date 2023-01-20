@@ -69,12 +69,11 @@
 }
 
 /* ----- Calendar Styling -------- */
-.btn-add {
-    background-color: #FA8BFF;
-    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-    transition: all .5s ease-out;
-    background-size: 1px 100px;
-    background-position: 0px -10px;
+
+.calendar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 .modalBackdrop {
