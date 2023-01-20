@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Modal, Tab, Nav } from 'react-bootstrap'
+import { Modal, Tab, Nav } from 'react-bootstrap';
 import './components.css';
 import Navpig from './oinktranspig.png';
 import LoginForm from './LoginForm';
