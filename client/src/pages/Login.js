@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
@@ -49,3 +50,7 @@ function Login(props) {
 }
 
 export default Login;
+=======
+// import React from 'react';
+// import 'pages.css';
+>>>>>>> b774e217 (added the html and css to dashboard page)

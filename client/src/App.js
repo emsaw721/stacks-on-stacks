@@ -1,13 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Hero from './components/Hero'; 
@@ -41,21 +33,15 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Header />
-      <Hero />
-      <Router>
-        <div className='content'>
-            <Routes>
-            {/* <Route path = '/' element={<Dashboard />} />  */}
-            <Route path = '/expense' element={<Expense />} />
-            <Route path='/planner' element={<Planner />} />
-            </Routes>
-        </div>
-        <Navbar />
-        <Footer />
-      </Router>
-    </ApolloProvider>
+    <div>
+    <Header />
+    <div>
+      <main>
+        <Dasboard />
+      </main>
+    </div>
+    <Nav />
+    </div>
   );
 }
 
