@@ -61,25 +61,73 @@
         margin-left: 25%;
     }
 
-    .header .loggedout {
-        flex-direction: column;
-    }
+.header .loggedout {
+    flex-direction: column;
+    flex-wrap: wrap; 
+}
+
+.header .loggedout h1 {
+    margin-left: 15%;
+    margin-top: 10%; 
+    font-size: 2em; 
+}
 
     .header .loggedout img {
         width: 100%;
         height: auto;
     }
 
-    .header .loggedin img {
-        display: none;
-    }
+.header .loggedin img {
+    display: none; 
+}
 
-    /* ------- Footer Styling ------- */
-    .footer {
-        background-color: var(--quinary-color);
-        color: var(--tertiary-color);
-    }
 
+.calendar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.modalBackdrop {
+    background: rgba(0, 0, 0, .65);
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.modalContainer {
+    background-color: white;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+.nav-pills .nav-link {
+    color: var(--septary-color); 
+}
+
+.nav-pills .nav-link.active{
+    color: var(--tertiary-color); 
+    background-color: var(--septary-color);
+}
+
+.modal-body button.btn.btn-success {
+    background-color: var(--quinary-color);
+    border-color: var(--quinary-color);
+}
+
+/* ------- Footer Styling ------- */ 
+.footer {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color);
+}
 }
 
 
@@ -132,6 +180,11 @@
     justify-content: center;
 }
 
+.header .loggedout {
+    flex-direction: column;
+    justify-content: center;
+}
+
 .header .loggedout h1 {
     margin-left: 15%;
     margin-top: 10%; 
@@ -178,6 +231,11 @@
 
 .nav-pills .nav-link {
     color: var(--septary-color); 
+}
+
+.nav-pills .nav-link.active{
+    color: var(--tertiary-color); 
+    background-color: var(--septary-color);
 }
 
 .nav-pills .nav-link.active{
