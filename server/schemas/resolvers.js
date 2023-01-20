@@ -15,11 +15,6 @@ const resolvers ={
             throw new AuthenticationError("You are not logged in!");
         
         },
-        user: async (parent, { username })=>{
-            return User.findOne({username})
-            .select('-__v -password')
-            .select('email')
-        },
         users: async ()=>{
             return User.find()
             .select('-__v -password')
@@ -63,7 +58,62 @@ const resolvers ={
                 return transaction;
             }
             throw new AuthenticationError('You need to be logged in!');
-        }
+        },
+        monthlyexpense: async (parent, args, context) =>{
+            if (context.user) {
+                // Find the transaction by its _id
+                const transactions = await Transactions.find({username: context.user.username, firstcategory:"Expense", yearmonth:args.yearmonth});
+                if (!transactions) {
+                    throw new Error('Transaction not found');
+                }
+                return transactions;
+            }
+            throw new AuthenticationError('You need to be logged in!');
+        },
+        monthlyexpensecat:async (parent, args, context) =>{
+            if (context.user) {
+                // Find the transaction by its _id
+                const transactions = await Transactions.find({username: context.user.username, firstcategory:"Expense", yearmonth:args.yearmonth, secondcategory:args.secondcategory});
+                if (!transactions) {
+                    throw new Error('Transaction not found');
+                }
+                return transactions;
+            }
+            throw new AuthenticationError('You need to be logged in!');
+        },
+        monthlybudget: async (parent, args, context) =>{
+            if (context.user) {
+                // Find the transaction by its _id
+                const transactions = await Transactions.find({username: context.user.username, firstcategory:"Budget", yearmonth:args.yearmonth});
+                if (!transactions) {
+                    throw new Error('Transaction not found');
+                }
+                return transactions;
+            }
+            throw new AuthenticationError('You need to be logged in!');
+        },
+        monthlybudgetcat:async (parent, args, context) =>{
+            if (context.user) {
+                // Find the transaction by its _id
+                const transactions = await Transactions.find({username: context.user.username, firstcategory:"Budget", yearmonth:args.yearmonth, secondcategory:args.secondcategory});
+                if (!transactions) {
+                    throw new Error('Transaction not found');
+                }
+                return transactions;
+            }
+            throw new AuthenticationError('You need to be logged in!');
+        },
+        monthlyincome: async (parent, args, context) =>{
+            if (context.user) {
+                // Find the transaction by its _id
+                const transactions = await Transactions.find({username: context.user.username, firstcategory:"Income", yearmonth:args.yearmonth});
+                if (!transactions) {
+                    throw new Error('Transaction not found');
+                }
+                return transactions;
+            }
+            throw new AuthenticationError('You need to be logged in!');
+        },
     },
 
     Mutation: {
