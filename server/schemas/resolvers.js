@@ -15,11 +15,6 @@ const resolvers ={
             throw new AuthenticationError("You are not logged in!");
         
         },
-        user: async (parent, { username })=>{
-            return User.findOne({username})
-            .select('-__v -password')
-            .select('email')
-        },
         users: async ()=>{
             return User.find()
             .select('-__v -password')
