@@ -16,11 +16,13 @@
 .navcontainer {
     display: flex; 
     flex-wrap: wrap; 
+    list-style: none; 
 }
 .navbar {
     background-color: var(--tertiary-color);
     flex-basis: 100%; 
     flex-direction: row; 
+    list-style: none;
 }
 
 .nav-list {
@@ -33,6 +35,7 @@
 .nav-item {
     list-style: none; 
     flex-shrink: 1; 
+    list-style: none; 
 }
 
 .link-text {
@@ -40,7 +43,7 @@
 }
 
 .navbar img {
-    width: 10%; 
+    width: 20%; 
     height: auto; 
     list-style: none; 
 }

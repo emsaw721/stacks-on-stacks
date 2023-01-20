@@ -24,6 +24,18 @@
     font-size: 2em; 
 }
 
+.report-tbl {
+    margin: 5%;
+}
+
+.maincats {
+    margin: 5%;
+}
+
+.subcats {
+    
+}
+
 .expected {
     display: flex;
     flex-direction: column;

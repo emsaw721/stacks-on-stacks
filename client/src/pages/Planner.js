@@ -44,41 +44,45 @@ const changeOther = (event) => {
     return (
         <section className='report'>
             <h1> Your Progress Report </h1>
-            <table>
+            <table className='report-tbl'>
+                <thead>
                 <tr className='maincats'>
                     <th>Category</th>
                     <th>Expected</th>
                     <th>Actual</th>
                 </tr>
-                <tr className='subcats'>
-                    <td>Rent</td>
+                </thead>
+                <tbody>
+                <tr>
+                    <td className='subcats'>Rent</td>
                     <td className='expected'>
                         <input onChange={changeRent} value={rent} />
                         <button onClick={saveRent}>Save Amount</button>
                     </td>
                 </tr>
-                <tr className='subcats'>
-                    <td>Utilities</td>
+                <tr>
+                    <td className='subcats'>Utilities</td>
                     <td className='expected'>
                         <input onChange={changeUtil} value={util} />
                         <button onClick={saveUtil}>Save Amount</button>
                     </td>
                 </tr>
-                <tr className='subcats'>
-                    <td>Grocery</td>
+                <tr>
+                    <td className='subcats'>Grocery</td>
                     <td className='expected'>
                         <input onChange={changeGrocery} value={grocery} />
                         <button onClick={saveGrocery}>Save Amount</button>
                     </td>
                 </tr>
-                <tr className='subcats'>
-                    <td>Other</td>
+                <tr>
+                    <td className='subcats'>Other</td>
                     <td className='expected'>
                         <input onChange={changeOther} value={other} />
                         <button onClick={saveOther}>Save Amount</button>
                     </td>
                 </tr>
                 {/* <tr><select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} name='category-dropdown'></select></tr> */}
+                </tbody>
             </table>
         </section>
     )
