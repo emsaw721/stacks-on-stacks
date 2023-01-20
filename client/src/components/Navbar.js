@@ -21,11 +21,6 @@ const Navbar = () => {
                         <span className='link-text'>Expense</span>
                         {/* </Link> */}
                     </li>
-                    <li className='nav-item'>
-                        {/* <Link to '/income' className='nav-link'> */}
-                        <span className='link-text'>Income</span>
-                        {/* </Link> */}
-                    </li>
                     <li className='dash-icon'>
                         {/* <Link to '/dashboard' className='nav-link'> */}
                         <img src={Navpig} />
