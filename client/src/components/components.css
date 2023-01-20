@@ -137,14 +137,16 @@
 
 /* -------- Navbar Styling ---------- */
 .navcontainer {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; 
+    flex-wrap: wrap; 
+    list-style: none; 
 }
 
 .navbar {
     background-color: var(--tertiary-color);
-    flex-basis: 100%;
-    flex-direction: row;
+    flex-basis: 100%; 
+    flex-direction: row; 
+    list-style: none;
 }
 
 .nav-list {
@@ -155,8 +157,9 @@
 }
 
 .nav-item {
-    list-style: none;
-    flex-shrink: 1;
+    list-style: none; 
+    flex-shrink: 1; 
+    list-style: none; 
 }
 
 .link-text {
@@ -164,9 +167,9 @@
 }
 
 .navbar img {
-    width: 10%;
-    height: auto;
-    list-style: none;
+    width: 20%; 
+    height: auto; 
+    list-style: none; 
 }
 
 /* -------- Header Styling ------- */
