@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/emsaw721/stacks-on-stacks/issues"
   },
-  "homepage": "https://github.com/emsaw721/stacks-on-stacks#readme"
+  "homepage": "https://github.com/emsaw721/stacks-on-stacks#readme",
+  "dependencies": {
+    "react-bootstrap": "^2.7.0"
+  }
 }
