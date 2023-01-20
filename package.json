@@ -25,7 +25,11 @@
   },
   "homepage": "https://github.com/emsaw721/stacks-on-stacks#readme",
   "dependencies": {
+<<<<<<< HEAD
     "apollo": "^2.34.0",
     "react": "^18.2.0"
+=======
+    "react-bootstrap": "^2.7.0"
+>>>>>>> 6094eda8332c634e93e40f7642c5f4c4e3f9424b
   }
 }

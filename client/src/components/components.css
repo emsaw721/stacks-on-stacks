@@ -8,19 +8,28 @@
     --septary-color: #475FD7;
 }
 
-
+@media only screen and (max-width: 768px) {
 /* -------- Navbar Styling ---------- */
+.navcontainer {
+    display: flex; 
+    flex-wrap: wrap; 
+}
 .navbar {
     background-color: var(--tertiary-color);
-    display: flex; 
+    flex-basis: 100%; 
+    flex-direction: row; 
 }
 
 .nav-list {
-    justify-content: space-evenly;
+    list-style: none; 
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0; 
 }
 
 .nav-item {
     list-style: none; 
+    flex-shrink: 1; 
 }
 
 .link-text {
@@ -28,7 +37,7 @@
 }
 
 .navbar img {
-    width: 15%; 
+    width: 20%; 
     height: auto; 
     list-style: none; 
 }
@@ -38,15 +47,197 @@
     background-color: var(--quinary-color);
     color: var(--tertiary-color); 
     display: flex; 
-    justify-content: space-between;
 }
 
-.header img {
-    width: 5%;
+.header .loggedin {
+    justify-content: center;
+    text-align: center;
+}
+
+.header .loggedout {
+    flex-direction: column;
+    flex-wrap: wrap; 
+}
+
+.header .loggedout h1 {
+    margin-left: 15%;
+    margin-top: 10%; 
+    font-size: 2em; 
+}
+
+.header .loggedout img {
+    width: 100%;
     height: auto; 
 }
 
+.header .loggedin img {
+    display: none; 
+}
+
+
+.calendar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.modalBackdrop {
+    background: rgba(0, 0, 0, .65);
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.modalContainer {
+    background-color: white;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+.nav-pills .nav-link {
+    color: var(--septary-color); 
+}
+
+.nav-pills .nav-link.active{
+    color: var(--tertiary-color); 
+    background-color: var(--septary-color);
+}
+
+.modal-body button.btn.btn-success {
+    background-color: var(--quinary-color);
+    border-color: var(--quinary-color);
+}
+
 /* ------- Footer Styling ------- */ 
+.footer {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color);
+}
+}
+
+
+
+/* ---- desktop/ laptop formatting ------- */ 
+
+
+/* -------- Navbar Styling ---------- */
+.navcontainer {
+    display: flex; 
+    flex-wrap: wrap; 
+}
+.navbar {
+    background-color: var(--tertiary-color);
+    flex-basis: 100%; 
+    flex-direction: row; 
+}
+
+.nav-list {
+    list-style: none; 
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0; 
+}
+
+.nav-item {
+    list-style: none; 
+    flex-shrink: 1; 
+}
+
+.link-text {
+    color: var(--quaternary-color);
+}
+
+.navbar img {
+    width: 10%; 
+    height: auto; 
+    list-style: none; 
+}
+
+/* -------- Header Styling ------- */
+.header {
+    background-color: var(--quinary-color);
+    color: var(--tertiary-color); 
+    display: flex; 
+}
+
+.header .loggedin {
+    justify-content: center;
+    text-align: center;
+    margin-left: 25%;
+}
+
+.header .loggedout {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header .loggedout h1 {
+    margin-left: 15%;
+    margin-top: 10%; 
+    font-size: 5em; 
+}
+
+.header .loggedout img {
+    width: 100%;
+    height: auto; 
+}
+
+.header .loggedin img {
+    display: none; 
+}
+
+/* ----- Calendar Styling -------- */
+
+.calendar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.modalCBackdrop {
+    background: rgba(0, 0, 0, .65);
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.modalCalendar {
+    background-color: white;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+.nav-pills .nav-link {
+    color: var(--septary-color); 
+}
+
+.nav-pills .nav-link.active{
+    color: var(--tertiary-color); 
+    background-color: var(--septary-color);
+}
+
+.modal-body button.btn.btn-success {
+    background-color: var(--quinary-color);
+    border-color: var(--quinary-color);
+}
+
+/* ------- Footer Styling ------- */
 .footer {
     background-color: var(--quinary-color);
     color: var(--tertiary-color);
