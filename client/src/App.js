@@ -42,18 +42,20 @@ function App() {
     <ApolloProvider client={client}>
       <Header />
       <Router>
-        <div className='content'>
-          <Routes>
-            {/* <Route exact path = '/' component={Dashboard} /> 
+        <>
+          <div className='content'>
+            <Routes>
+              {/* <Route exact path = '/' component={Dashboard} /> 
         <Route exact path = '/expense' component={Expense} />
         <Route exact path = '/income' component={Income} /> */}
-            <Route path='/planner' element={<Planner />} />
-            {/* <Route exact path = '/signout' component={Signout} />  */}
-          </Routes>
-        </div>
-        <Navbar />
-        <Planner></Planner>
-        <Footer />
+              <Route path='/planner' element={<Planner />} />
+              {/* <Route exact path = '/signout' component={Signout} />  */}
+            </Routes>
+          </div>
+          <Navbar/>
+          <Planner/>
+          <Footer/>
+        </>
       </Router>
     </ApolloProvider>
   );

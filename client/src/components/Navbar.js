@@ -21,7 +21,7 @@ const AppNav = () => {
         // {Auth.loggedin() ? (
         <section className='navcontainer'>
             <nav className='navbar' >
-                <ul className='nav-list'>
+                <ul>
                     <li className='nav-item'>
                         {/* <Link to '/expense' className='nav-link'> */}
                         <span className='link-text'>Expense</span>
@@ -47,11 +47,11 @@ const AppNav = () => {
                             <span className='link-text'>Signout</span>
                         </Link>
                     </li>
-                    <li className='nav-item'>
+                    {/* <li className='nav-item'> */}
                         <Nav.Link onClick={() => setShowModal(true)}>
                             Login/Signup
                         </Nav.Link>
-                    </li>
+                    {/* </li> */}
                 </ul>
             </nav>
             {/* set modal data up */}
