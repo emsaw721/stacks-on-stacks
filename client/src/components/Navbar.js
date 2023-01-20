@@ -5,13 +5,6 @@ import './components.css';
 import Navpig from './oinktranspig.png';
 import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm'
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Modal, Tab, Nav } from 'react-bootstrap'
-import './components.css';
-import Navpig from './oinktranspig.png';
-import LoginForm from './LoginForm';
-import SignUpForm from './SignupForm'
 import Auth from '../utils/auth';
 
 // import Expense from './pages/Expense';
@@ -62,11 +55,11 @@ const AppNav = () => {
                             <span className='link-text'>Signout</span>
                         </Link>
                     </li>
-                    {/* <li className='nav-item'> */}
+                    {/* ):(<li className='nav-item'> */}
                         <Nav.Link onClick={() => setShowModal(true)}>
                             Login/Signup
                         </Nav.Link>
-                    {/* </li> */}
+                    {/* </li> )}*/}
                 </ul>
             </nav>
             {/* set modal data up */}
@@ -105,5 +98,4 @@ const AppNav = () => {
     )
 };
 
-export default AppNav; 
 export default AppNav; 
