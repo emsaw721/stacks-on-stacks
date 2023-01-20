@@ -7,6 +7,9 @@ import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm'
 import Auth from '../utils/auth';
 
+const Nav = () => {
+    return(
+
 // import Expense from './pages/Expense';
 // import Income from './pages/Income';
 // import Planner from './pages/Planner';
