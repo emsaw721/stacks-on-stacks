@@ -1,2 +1,2 @@
-import React from 'react';
-import 'pages.css';
+// import React from 'react';
+// import 'pages.css';

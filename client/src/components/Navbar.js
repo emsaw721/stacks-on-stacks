@@ -1,11 +1,11 @@
-import React from 'react'; 
-import './pages.css'; 
-import Navpig from 'oinktranspig.png'; 
+// import React from 'react'; 
+// import './pages.css'; 
+// import Navpig from 'oinktranspig.png'; 
 
-function Nav({currectPage, handlePageChange}) {
-    return(
-        
-    )
-}
+// function Nav({currectPage, handlePageChange}) {
+//     return(
+//         console.log('hello')
+//     )
+// }
 
-export default Nav; 
+// export default Nav; 
