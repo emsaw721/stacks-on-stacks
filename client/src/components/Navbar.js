@@ -61,10 +61,10 @@ const Navbar = () => {
                     <Modal.Header closeButton>
                         <Modal.Title id='signup-modal'>
                             <Nav variant='pills'>
-                                <Nav.Item>
+                                <Nav.Item className='modal-login'>
                                     <Nav.Link eventKey='login'>Login</Nav.Link>
                                 </Nav.Item>
-                                <Nav.Item>
+                                <Nav.Item className='modal-signup'>
                                     <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
                                 </Nav.Item>
                             </Nav>
