@@ -9,9 +9,9 @@ const Modal = ({ onClose, calDate }) => {
     const todaysDate = format((calDate), 'MMM dd yyy')
 
     return (
-        <div className="modalBackdrop" id="modal" aria-labelledby="task-form-modal"
+        <div className="modalCBackdrop" id="modal" aria-labelledby="task-form-modal"
             aria-hidden="true">
-            <div className="modalContainer">
+            <div className="modalCalendar">
                 <div className="modal-header">
                     <h5 className="modal-title" id="myModalTitle">{(todaysDate)}</h5>
                 </div>
