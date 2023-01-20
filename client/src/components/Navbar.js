@@ -7,12 +7,21 @@ import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm'
 import Auth from '../utils/auth';
 
-const Nav = () => {
-    return(
+// import Expense from './pages/Expense';
+// import Income from './pages/Income';
+// import Planner from './pages/Planner';
+// import Dashboard from './pages/Dashboard'; 
+
+
+
+const AppNav = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    return (
         // {Auth.loggedin() ? (
         <section className='navcontainer'>
             <nav className='navbar' >
-                <ul>
+                <ul className='nav-list'>
                     <li className='nav-item'>
                         {/* <Link to '/expense' className='nav-link'> */}
                         <span className='link-text'>Expense</span>
@@ -20,15 +29,7 @@ const Nav = () => {
                     </li>
                     <li className='nav-item'>
                         {/* <Link to '/income' className='nav-link'> */}
-                        {/* </Link> */}
-                    </li>
-                    <li className='nav-item'>
-                        {/* <Link to '/income' className='nav-link'> */}
                         <span className='link-text'>Income</span>
-                        {/* </Link> */}
-                    </li>
-                    <li className='dash-icon'>
-                        {/* <Link to '/dashboard' className='nav-link'> */}
                         {/* </Link> */}
                     </li>
                     <li className='dash-icon'>
