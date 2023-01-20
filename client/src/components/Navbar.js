@@ -21,7 +21,7 @@ const AppNav = () => {
         // {Auth.loggedin() ? (
         <section className='navcontainer'>
             <nav className='navbar' >
-                <ul className='nav-list'>
+                <ul>
                     <li className='nav-item'>
                         {/* <Link to '/expense' className='nav-link'> */}
                         <span className='link-text'>Expense</span>
