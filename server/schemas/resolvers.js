@@ -59,7 +59,7 @@ const resolvers ={
             }
             throw new AuthenticationError('You need to be logged in!');
         },
-        monthlyexpense: async (parent, args, context) =>{
+        monthexpense: async (parent, args, context) =>{
             if (context.user) {
                 // Find the transaction by its _id
                 const transactions = await Transactions.find({username: context.user.username, firstcategory:"Expense", yearmonth:args.yearmonth});
@@ -70,7 +70,7 @@ const resolvers ={
             }
             throw new AuthenticationError('You need to be logged in!');
         },
-        monthlyexpensecat:async (parent, args, context) =>{
+        monthexpensecat:async (parent, args, context) =>{
             if (context.user) {
                 // Find the transaction by its _id
                 const transactions = await Transactions.find({username: context.user.username, firstcategory:"Expense", yearmonth:args.yearmonth, secondcategory:args.secondcategory});
@@ -81,7 +81,7 @@ const resolvers ={
             }
             throw new AuthenticationError('You need to be logged in!');
         },
-        monthlybudget: async (parent, args, context) =>{
+        monthbudget: async (parent, args, context) =>{
             if (context.user) {
                 // Find the transaction by its _id
                 const transactions = await Transactions.find({username: context.user.username, firstcategory:"Budget", yearmonth:args.yearmonth});
@@ -92,7 +92,7 @@ const resolvers ={
             }
             throw new AuthenticationError('You need to be logged in!');
         },
-        monthlybudgetcat:async (parent, args, context) =>{
+        monthbudgetcat:async (parent, args, context) =>{
             if (context.user) {
                 // Find the transaction by its _id
                 const transactions = await Transactions.find({username: context.user.username, firstcategory:"Budget", yearmonth:args.yearmonth, secondcategory:args.secondcategory});
@@ -103,7 +103,7 @@ const resolvers ={
             }
             throw new AuthenticationError('You need to be logged in!');
         },
-        monthlyincome: async (parent, args, context) =>{
+        monthincome: async (parent, args, context) =>{
             if (context.user) {
                 // Find the transaction by its _id
                 const transactions = await Transactions.find({username: context.user.username, firstcategory:"Income", yearmonth:args.yearmonth});
@@ -113,7 +113,7 @@ const resolvers ={
                 return transactions;
             }
             throw new AuthenticationError('You need to be logged in!');
-        },
+        }
     },
 
     Mutation: {
