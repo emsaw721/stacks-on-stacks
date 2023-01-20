@@ -29,7 +29,7 @@ export const QUERY_ME = gql`
 }
 `; 
 
-export const QUERY_TRANSACITONS = gql`
+export const QUERY_TRANSACTIONS = gql`
 query transactions($username: String!) {
     transactions(username: $username) {
         _id
@@ -59,4 +59,8 @@ query transaction($id: ID!) {
 }`;
 
 export const QUERY_BUDGET = gql`
-query budget()`
+query budget($username: username) {
+    budget(username: $username){
+
+    }
+}`
