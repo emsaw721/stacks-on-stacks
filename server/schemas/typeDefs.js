@@ -42,7 +42,11 @@ const typeDefs = gql`
         budget(username: String!): [Transaction]
         transaction(_id: ID!): Transaction
         category: [Firstcategory]
-        monthlytransction(yearmonth: String!):[Transaction]
+        monthlyexpense(yearmonth: String!):[Transaction]
+        monthlyexpensecat(yearmonth: String!,secondcategory:String!):[Transaction]
+        monthlybudget(yearmonth: String!):[Transaction]
+        monthlybudgetcat(yearmonth: String!,secondcategory:String!):[Transaction]
+        monthlyincome(yearmonth: String!):[Transaction]
     }
 
     type Mutation {
