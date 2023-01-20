@@ -48,14 +48,12 @@ function App() {
               {/* <Route exact path = '/' component={Dashboard} /> 
         <Route exact path = '/expense' component={Expense} />
         <Route exact path = '/income' component={Income} /> */}
-              <Route path='/planner' element={<Planner />} />
-              {/* <Route exact path = '/signout' component={Signout} />  */}
-            </Routes>
-          </div>
-          <Navbar/>
-          <Planner/>
-          <Footer/>
-        </>
+            <Route path='/planner' element={<Planner />} />
+            {/* <Route exact path = '/signout' component={Signout} />  */}
+          </Routes>
+        </div>
+        <Navbar />
+        <Footer />
       </Router>
     </ApolloProvider>
   );

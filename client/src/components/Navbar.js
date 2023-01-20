@@ -7,17 +7,8 @@ import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm'
 import Auth from '../utils/auth';
 
-// import Expense from './pages/Expense';
-// import Income from './pages/Income';
-// import Planner from './pages/Planner';
-// import Dashboard from './pages/Dashboard'; 
-
-
-
-const AppNav = () => {
-    const [showModal, setShowModal] = useState(false);
-
-    return (
+const Nav = () => {
+    return(
         // {Auth.loggedin() ? (
         <section className='navcontainer'>
             <nav className='navbar' >
