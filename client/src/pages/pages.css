@@ -15,39 +15,81 @@
   font-style: italic;
 }
 /* Dashboard Section */
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 100%;
-  height: auto;
+.banner{
+    background-color: var(--quaternary-color);
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    padding: 30px;
+    color: var(--sextary-color);
+    position: relative;
+}
+.banner p{
+    font-size: 14pt;
 }
 
-.topics {
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  padding-top: 20px;
-  border-radius: 10px;
-  background: linear-gradient(--quinary-color, --secondary-color);
-  align-items: center;
-  text-align: center;
+
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+
 }
 
-.topics p {
-  padding: 10px;
-  text-align: center;
-  align-items: center;
-}
-.categories .topics {
-  box-shadow: 0px 10px 20px 0px rgb(32, 32, 32);
+.btn{
+    background-color:#011936;
+    outline: none;
+    border: none;
+    box-shadow:  0px 5px 10px 0px #5d5d5d ;
+    padding: 10px;
+    border-radius: 8px;
+    color: #475fd7;
+
 }
 
-.input {
-  align-items: center;
-  text-align: center;
-  padding: 10px 0px 10px 0px;
-  margin-top: 10px;
+.topics{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background: linear-gradient(#9fcc2e, #858585);
+    align-items: center;
+    text-align: center;
+    color:#011936;
+}
+
+.topics p{
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    font-size: 15pt;
+}
+
+
+
+.topics h2{
+    color: #ec4f46;
+    font-size: 24pt;
+}
+.categories .topics{
+    box-shadow: 0px 10px 20px 0px rgb(32, 32, 32);
+}
+
+.input{
+    align-items: center;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    margin-top: 10px;
+    font-size: 13pt;
+    background: transparent;
+    outline: none !important;
+    border-color: #475fd7;
+    box-shadow:  0px 5px 10px 0px #5d5d5d ;
+    border-radius: 8px;
 }
 
 /* Header Section */
