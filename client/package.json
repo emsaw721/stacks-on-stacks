@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.4",
+    "@apollo/react-hooks": "^4.0.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.3",
     "chart.js": "^4.1.2",
     "date-fns": "^2.29.3",
     "graphql": "^16.6.0",
