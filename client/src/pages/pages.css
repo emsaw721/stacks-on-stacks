@@ -20,6 +20,12 @@
 
 /* ------- Planner ---------- */ 
 
-.planner h1{
+.report h1{
     font-size: 2em; 
 }
+
+.expected {
+    display: flex;
+    flex-direction: column;
+}
+

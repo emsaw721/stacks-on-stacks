@@ -42,38 +42,38 @@ const changeOther = (event) => {
     setOther(event.target.value); 
 }
     return (
-        <section className='planner'>
+        <section className='report'>
             <h1> Your Progress Report </h1>
             <table>
-                <tr>
+                <tr className='maincats'>
                     <th>Category</th>
                     <th>Expected</th>
                     <th>Actual</th>
                 </tr>
-                <tr>
+                <tr className='subcats'>
                     <td>Rent</td>
-                    <td>
+                    <td className='expected'>
                         <input onChange={changeRent} value={rent} />
                         <button onClick={saveRent}>Save Amount</button>
                     </td>
                 </tr>
-                <tr>
+                <tr className='subcats'>
                     <td>Utilities</td>
-                    <td>
+                    <td className='expected'>
                         <input onChange={changeUtil} value={util} />
                         <button onClick={saveUtil}>Save Amount</button>
                     </td>
                 </tr>
-                <tr>
+                <tr className='subcats'>
                     <td>Grocery</td>
-                    <td>
+                    <td className='expected'>
                         <input onChange={changeGrocery} value={grocery} />
                         <button onClick={saveGrocery}>Save Amount</button>
                     </td>
                 </tr>
-                <tr>
+                <tr className='subcats'>
                     <td>Other</td>
-                    <td>
+                    <td className='expected'>
                         <input onChange={changeOther} value={other} />
                         <button onClick={saveOther}>Save Amount</button>
                     </td>
