@@ -15,10 +15,15 @@ const Navbar = () => {
         // {Auth.loggedin() ? (
         <section className='navcontainer'>
             <nav className='navbar' >
-                <ul>
+                <ul className='nav-list'>
                     <li className='nav-item'>
                         {/* <Link to '/expense' className='nav-link'> */}
                         <span className='link-text'>Expense</span>
+                        {/* </Link> */}
+                    </li>
+                    <li className='nav-item'>
+                        {/* <Link to '/income' className='nav-link'> */}
+                        <span className='link-text'>Income</span>
                         {/* </Link> */}
                     </li>
                     <li className='dash-icon'>
