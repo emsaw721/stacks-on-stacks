@@ -4,7 +4,7 @@ import Cal from '../components/Calendar'
 // import {useQuery} from '@apollo/client';
 // import {QUERY_TRANSACTIONS} from '../utils/queries';
 import './pages.css';
-
+import Bar from '../components/ProgressBar';
 const Planner = () => {
 //    const {data, isLoading} = useAPI(); 
 //    const [selectedCategory, setSelectedCategory] = useState(''); 
