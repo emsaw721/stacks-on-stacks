@@ -241,6 +241,7 @@
     background-color: var(--septary-color);
 }
 
+<<<<<<< HEAD
 .nav-pills .nav-link.active{
     color: var(--tertiary-color); 
     background-color: var(--septary-color);
@@ -254,6 +255,17 @@
 /* --------- progress-bar -------------*/
 .progressBar {
     margin: 10px;
+=======
+.modal-body button.btn.btn-success {
+    background-color: var(--quinary-color);
+    border-color: var(--quinary-color);
+    margin-top: 10px;
+}
+
+/* ------- progress bar ------ */
+
+.progressBar{
+>>>>>>> 892afe7d (added the logic to update progress-bar)
     display: flex;
     justify-content: center;
 }
