@@ -2,9 +2,10 @@ import React from 'react'
 import ProgressBar from "@ramonak/react-progress-bar";
 
 const Bar = () => {
-    // const expenseTotal = 
+    const expenseTotal = 80
+    const budget = 100
     return (
-        <ProgressBar completed={60} width={200} maxCompleted={100} className="progressBar" bgColor='#011936'/>
+        <ProgressBar completed={expenseTotal} width={200} maxCompleted={budget} className="progressBar" bgColor='#011936'/>
     )
 };
 
