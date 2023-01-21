@@ -12,8 +12,9 @@ const Navbar = () => {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        // {Auth.loggedin() ? (
         <section className='navcontainer'>
+            <>
+            {Auth.loggedIn() ? (
             <nav className='navbar' >
                 <ul>
                     <li className='nav-item'>
@@ -36,13 +37,19 @@ const Navbar = () => {
                             <span className='link-text'>Signout</span>
                         </Link>
                     </li>
-                    {/* ):(<li className='nav-item'> */}
+                    </ul>
+            </nav>
+                     ):(
+                        <nav className='navbar' >
+                        <ul>
+                            <li className='nav-item'>
                         <Nav.Link onClick={() => setShowModal(true)}>
                             Login/Signup
                         </Nav.Link>
-                    {/* </li> )}*/}
-                </ul>
-            </nav>
+                     </li>
+                     </ul>
+                     </nav> )}
+            </>
             {/* set modal data up */}
             <Modal
                 size='lg'
@@ -54,10 +61,10 @@ const Navbar = () => {
                     <Modal.Header closeButton>
                         <Modal.Title id='signup-modal'>
                             <Nav variant='pills'>
-                                <Nav.Item>
+                                <Nav.Item className='modal-login'>
                                     <Nav.Link eventKey='login'>Login</Nav.Link>
                                 </Nav.Item>
-                                <Nav.Item>
+                                <Nav.Item className='modal-signup'>
                                     <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
                                 </Nav.Item>
                             </Nav>
