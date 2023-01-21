@@ -24,7 +24,7 @@ const Navbar = () => {
                     </li>
                     <li className='dash-icon'>
                         {/* <Link to '/dashboard' className='nav-link'> */}
-                        <img src={Navpig} />
+                        <img src={Navpig} alt="pig" />
                         {/* </Link> */}
                     </li>
                     <li className='nav-item'>
