@@ -120,6 +120,14 @@
 .modal-body button.btn.btn-success {
     background-color: var(--quinary-color);
     border-color: var(--quinary-color);
+    margin-top: 10px;
+}
+
+/* ------- progress bar ------ */
+
+.progressBar{
+    display: flex;
+    justify-content: center;
 }
 
 /* ------- Footer Styling ------- */
