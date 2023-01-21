@@ -10,12 +10,12 @@ const Header = () => {
         {Auth.loggedIn() ? (
         <div className='loggedin'>
         <h1>Hello, Username!</h1>
-        <img src={Oinkicon} /> 
+        <img src={Oinkicon} alt=""/> 
         </div>
         ):(
             <div className='loggedout'>
             <h1>Welcome to Oink!</h1>
-            <img src={Welcomeicon} />
+            <img src={Welcomeicon} alt=""/>
             </div>
             )}
     </section>
