@@ -6,6 +6,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.4",
     "@apollo/react-hooks": "^4.0.0",
+    "@ramonak/react-progress-bar": "^5.0.3",    
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -14,6 +15,7 @@
     "date-fns": "^2.29.3",
     "graphql": "^16.6.0",
     "jwt-decode": "^3.1.2",
+    "progress-bar": "^0.1.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-calendar": "^4.0.0",
