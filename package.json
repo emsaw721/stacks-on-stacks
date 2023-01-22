@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/emsaw721/stacks-on-stacks#readme",
   "dependencies": {
+    "@ramonak/react-progress-bar": "^5.0.3",
     "react-bootstrap": "^2.7.0"
   }
 }
