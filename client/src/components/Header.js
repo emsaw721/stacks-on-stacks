@@ -7,20 +7,21 @@ import decode from 'jwt-decode';
 
 
 const Header = () => {
+   let username=''
+    const token = localStorage.getItem('id_token');
 
-    let username = ""
-    const token = localStorage.getItem('id_token')
-    
     if (token) {
         const decoded = decode(token); 
-       username = decoded.data.username
+      
+       username = decoded.data.username;
     }
+
 
     return (
         <section className='header'>
             {Auth.loggedIn() ? (
                 <div className='loggedin'>
-                    <h1>Hello, { username}!</h1>
+                    <h1>Hello, {username}!</h1>
                     <img src={Oinkicon} alt="" />
                 </div>
             ) : (
