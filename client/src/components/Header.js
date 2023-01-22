@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './components.css';
 import Auth from '../utils/auth';
 import Oinkicon from './oinkicon1.png';
@@ -7,21 +7,20 @@ import decode from 'jwt-decode';
 
 
 const Header = () => {
-   let username=''
-    const token = localStorage.getItem('id_token');
+    const [user, setUser] = useState("username")
 
-    if (token) {
-        const decoded = decode(token); 
-      
-       username = decoded.data.username;
-    }
-
+    useEffect(() => {
+      localStorage.setItem('username', JSON.stringify(user)); //changed
+    }, [user]);
+  console.log(user)
+    const userName = JSON.parse(localStorage.getItem('userFormData.username')) //changed
+    console.log(userName)
 
     return (
         <section className='header'>
             {Auth.loggedIn() ? (
                 <div className='loggedin'>
-                    <h1>Hello, {username}!</h1>
+                    <h1>Hello, {userName}!</h1>
                     <img src={Oinkicon} alt="" />
                 </div>
             ) : (
