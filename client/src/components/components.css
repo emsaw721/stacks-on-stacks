@@ -281,7 +281,7 @@
         width: 100%; 
         font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
-    
+
     .header .loggedout {
         flex-direction: column;
         flex-wrap: wrap; 
