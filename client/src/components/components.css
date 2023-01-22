@@ -16,6 +16,7 @@
 .navcontainer {
     display: flex;
     flex-wrap: wrap;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .navbar {
@@ -59,6 +60,13 @@
     margin-left: 25%;
 }
 
+.header .loggedin h1 {
+    margin-top: 10%;
+    margin-left: 15%; 
+    font-size: 5em;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
 .header .loggedout {
     flex-direction: column;
     justify-content: center;
@@ -66,8 +74,9 @@
 
 .header .loggedout h1 {
     margin-left: 15%;
-    margin-top: 10%;
-    font-size: 5em;
+    margin-top: 10%; 
+    font-size: 5em; 
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 .header .loggedout img {
@@ -186,6 +195,11 @@
         text-align: center;
     }
 
+    .header .loggedin h1 {
+        margin-top: 10%; 
+        margin-left: 0; 
+    }
+    
     .header .loggedout {
         flex-direction: column;
         flex-wrap: wrap;

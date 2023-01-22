@@ -67,6 +67,35 @@ query transaction($id: ID!) {
 export const QUERY_BUDGET = gql`
 query budget($username: username) {
     budget(username: $username){
+        _id
+        amount
+        date
+        secondCategory
+    }
+}`
 
+export const QUERY_CATEGORY = gql`
+query category($id: ID!) {
+    category(_id: $id){
+        _id
+        firstCategory
+        secondCategory
+    }
+}`
+
+export const QUERY_MONTHEXPENSECAT = gql`
+query monthexpensecat($id: ID!) {
+    monthexpensecat(_id: $id) {
+        yearmonth
+        secondCategory
+    }
+}`
+
+export const QUERY_MONTHEXPENSE = gql`
+query monthexpense($id: ID!) {
+    monthexpense(_id: $id) {
+        yearmonth
+        secondCategory
+        amount
     }
 }`

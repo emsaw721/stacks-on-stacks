@@ -1,20 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import {QUERY_ME} from '../utils/queries'; 
 import './components.css';
 import Auth from '../utils/auth';
 import Oinkicon from './oinkicon1.png';
 import Welcomeicon from './welcomepig.png';
-import decode from 'jwt-decode';
+
 
 
 const Header = () => {
-    const [user, setUser] = useState("username")
 
-    useEffect(() => {
-      localStorage.setItem('username', JSON.stringify(user)); //changed
-    }, [user]);
-  console.log(user)
-    const userName = JSON.parse(localStorage.getItem('userFormData.username')) //changed
-    console.log(userName)
+
+const {data} = useQuery(QUERY_ME);
+const username = data?.me;
+console.log(username);
 
     return (
         <section className='header'>
@@ -23,7 +22,7 @@ const Header = () => {
 </style>
             {Auth.loggedIn() ? (
                 <div className='loggedin'>
-                    <h1>Hello, {userName}!</h1>
+                    <h1>Hello, {username}!</h1>
                     <img src={Oinkicon} alt="" />
                 </div>
             ) : (
