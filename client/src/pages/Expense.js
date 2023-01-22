@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import {Form, Button, Alert, FormControl} from 'react-bootstrap'
 // import { Link } from 'react-router-dom';
 import { ADD_TRANSACTION } from '../utils/mutations';
 import Auth from '../utils/auth';
@@ -34,24 +35,45 @@ function Expense(props) {
         amount: '',
       });
     };
+  
+  // const [open, setOpen] = React.useState(false);
+  // const handleOpen = () => {
+  //   setOpen(!open)
+  // };
 
     return (
-        <main className="flex-row justify-center mb-4">
+      <main className="flex-row justify-center mb-4">
+        
+        {/* <div className='dropdow'>
+          <button onClick={handleOpen}>Category</button>
+          {open ? (
+            <ul>
+              <li>Rent</li>
+              <li>Medical</li>
+              <li>Utilities</li>
+            </ul>
+          ):null}
+</div> */}
+
+
+
+
+
           <div className="col-12 col-md-6">
             <div className="card">
               <h4 className="card-header">Add Your Expenses</h4>
               <div className="card-body">
-                <form onSubmit={handleFormSubmit}>
-                  <input
+                <Form onSubmit={handleFormSubmit}>
+                  <Form.Control
                     className="form-input"
                     placeholder="Housing"
                     name="Housing"
                     type="expense"
                     id="Housing"
-                    value={ExpenseFormData.Housing}
+                    value={ExpenseFormData.firstcategory}
                     onChange={handleInputChange}
                   />
-                  <input
+                  <Form.Control
                     className="form-input"
                     placeholder="Utilities"
                     name="Utilities"
@@ -60,7 +82,7 @@ function Expense(props) {
                     value={ExpenseFormData.Utilities}
                     onChange={handleInputChange}
                   />
-                  <input
+                  <Form.Control
                     className="form-input"
                     placeholder="Food/Grocery"
                     name="Food/Grocery"
@@ -69,7 +91,7 @@ function Expense(props) {
                     value={ExpenseFormData.Food}
                     onChange={handleInputChange}
                   />
-                  <input
+                  <Form.Control
                     className="form-input"
                     placeholder="Transportation"
                     name="Transportation"
@@ -78,7 +100,7 @@ function Expense(props) {
                     value={ExpenseFormData.Transportation}
                     onChange={handleInputChange}
                   />
-                  <input
+                  <Form.Control
                     className="form-input"
                     placeholder="Insurance"
                     name="Insurance"
@@ -87,7 +109,7 @@ function Expense(props) {
                     value={ExpenseFormData.Insurance}
                     onChange={handleInputChange}
                   />
-                  <input
+                  <Form.Control
                     className="form-input"
                     placeholder="Education"
                     name="Education"
@@ -96,7 +118,7 @@ function Expense(props) {
                     value={ExpenseFormData.Education}
                     onChange={handleInputChange}
                   />
-                  <input
+                  <Form.Control
                     className="form-input"
                     placeholder="Medical"
                     name="Medical"
@@ -105,7 +127,7 @@ function Expense(props) {
                     value={ExpenseFormData.Medical}
                     onChange={handleInputChange}
                   />
-                  <input
+                  <Form.Control
                     className="form-input"
                     placeholder="Personal Spending"
                     name="Personal"
@@ -114,7 +136,7 @@ function Expense(props) {
                     value={ExpenseFormData.Personal}
                     onChange={handleInputChange}
                   />
-                   <input
+                   <Form.Control
                     className="form-input"
                     placeholder="Other/etc."
                     name="Other"
@@ -123,10 +145,12 @@ function Expense(props) {
                     value={ExpenseFormData.Other}
                     onChange={handleInputChange}
                   />
-                  <button className="btn d-block w-100" type="submit">
+                <Button
+                  disabled={!(ExpenseFormData.firstcategory && ExpenseFormData.secondcategory)}
+                  type='submit' variant='success' className='subbtn'>
                     Submit
-                  </button>
-                </form>
+                  </Button>
+                </Form>
     
               </div>
             </div>

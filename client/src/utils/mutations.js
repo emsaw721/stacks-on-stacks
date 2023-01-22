@@ -30,7 +30,15 @@ mutation addTransaction($username: String!, $amount: String!, $firstcategory: St
         _id
         username
         amount
-        firstcategory
+        date
+        yearmonth
+        firstcategory {
+          _id
+          firstCategory
+          secondCategory {
+            seconCategory
+          }
+        }
         secondcategory
         categoryNote
         location

@@ -15,8 +15,7 @@ const typeDefs = gql`
         amount:	Float
         date: String
         yearmonth: String
-        firstcategory: String
-        secondcategory: String
+        firstcategory: [Firstcategory]
         categoryNote: String
         location: String
         note: String

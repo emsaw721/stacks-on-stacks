@@ -66,8 +66,8 @@
 
 .header .loggedout h1 {
     margin-left: 15%;
-    margin-top: 10%; 
-    font-size: 5em; 
+    margin-top: 10%;
+    font-size: 5em;
 }
 
 .header .loggedout img {
@@ -109,11 +109,11 @@
 }
 
 .nav-pills .nav-link {
-    color: var(--septary-color); 
+    color: var(--septary-color);
 }
 
-.nav-pills .nav-link.active{
-    color: var(--tertiary-color); 
+.nav-pills .nav-link.active {
+    color: var(--tertiary-color);
     background-color: var(--septary-color);
 }
 
@@ -125,7 +125,7 @@
 
 /* ------- progress bar ------ */
 
-.progressBar{
+.progressBar {
     display: flex;
     justify-content: center;
 }
@@ -139,78 +139,79 @@
 /* ----- mobile formatting ------- */
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
+
     /* -------- Navbar Styling ---------- */
     .navcontainer {
-        display: flex; 
-        flex-wrap: wrap; 
+        display: flex;
+        flex-wrap: wrap;
     }
+
     .navbar {
         background-color: var(--tertiary-color);
-        flex-basis: 100%; 
-        flex-direction: row; 
+        flex-basis: 100%;
+        flex-direction: row;
     }
-    
+
     .nav-list {
-        list-style: none; 
+        list-style: none;
         position: -webkit-sticky;
         position: sticky;
-        bottom: 0; 
+        bottom: 0;
     }
-    
+
     .nav-item {
-        list-style: none; 
-        flex-shrink: 1; 
+        list-style: none;
+        flex-shrink: 1;
     }
-    
+
     .link-text {
-        color: var(--quaternary-color); 
+        color: var(--quaternary-color);
     }
-    
+
     .navbar img {
-        width: 20%; 
-        height: auto; 
-        list-style: none; 
+        width: 20%;
+        height: auto;
+        list-style: none;
     }
-    
+
     /* -------- Header Styling ------- */
     .header {
         background-color: var(--quinary-color);
-        color: var(--tertiary-color); 
-        display: flex; 
+        color: var(--tertiary-color);
+        display: flex;
     }
-    
+
     .header .loggedin {
         justify-content: center;
         text-align: center;
     }
-    
+
     .header .loggedout {
         flex-direction: column;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
     }
-    
+
     .header .loggedout h1 {
         margin-left: 15%;
-        margin-top: 10%; 
-        font-size: 2em; 
+        margin-top: 10%;
+        font-size: 2em;
     }
-    
+
     .header .loggedout img {
         width: 100%;
-        height: auto; 
+        height: auto;
     }
-    
+
     .header .loggedin img {
-        display: none; 
+        display: none;
     }
-    
-    
+
     .calendar {
         display: flex;
         justify-content: center;
         padding: 10px;
     }
-    
+
     .modalBackdrop {
         background: rgba(0, 0, 0, .65);
         bottom: 0;
@@ -221,7 +222,7 @@
         top: 0;
         z-index: 1;
     }
-    
+
     .modalContainer {
         background-color: white;
         border-radius: 5px;
@@ -231,24 +232,34 @@
         height: 300px;
         text-align: center;
     }
-    
+
     .nav-pills .nav-link {
-        color: var(--septary-color); 
+        color: var(--septary-color);
     }
-    
-    .nav-pills .nav-link.active{
-        color: var(--tertiary-color); 
+
+    .nav-pills .nav-link.active {
+        color: var(--tertiary-color);
         background-color: var(--septary-color);
     }
-    
-    .modal-body button.btn.btn-success {
+
+    .button.btn.btn-success {
         background-color: var(--quinary-color);
         border-color: var(--quinary-color);
     }
-    
-    /* ------- Footer Styling ------- */ 
+
+
+    /* ---------- Expense Styling -----------*/
+
+    .subbtn {
+        background-color: var(--quinary-color) !important;
+        border-color: var(--quinary-color);
+        margin-top: 10px;
+    }
+
+
+    /* ------- Footer Styling ------- */
     .footer {
         background-color: var(--quinary-color);
         color: var(--tertiary-color);
     }
-    }
+}
