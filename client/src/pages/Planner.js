@@ -1,18 +1,9 @@
-import React, { useState, useAPI } from 'react';
-import Bar from '../components/ProgressBar';
+import React, { useState} from 'react';
+// import Bar from '../components/ProgressBar';
 import Cal from '../components/Calendar'
-// import {useQuery} from '@apollo/client';
-// import {QUERY_TRANSACTIONS} from '../utils/queries';
 import './pages.css';
 
 const Planner = () => {
-//    const {data, isLoading} = useAPI(); 
-//    const [selectedCategory, setSelectedCategory] = useState(''); 
-//    const filterCategories = data.filter(budget => budget.category === selectedCategory);
-
-//query so category === transactions secondCategory, then get the amount from each transaction from that second category and display 
-
-// const {data} = useQuery(QUERY_TRANSACTIONS);
 const [rent, setRent] = useState('');
 const saveRent = () => {
     alert(rent)
@@ -45,6 +36,9 @@ const changeOther = (event) => {
 }
     return (
         <section className='report'>
+            <style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+</style>
             <h1> Your Progress Report </h1>
             <Cal />
             <table>
@@ -57,28 +51,28 @@ const changeOther = (event) => {
                     <td>Rent</td>
                     <td className='expected'>
                         <input onChange={changeRent} value={rent} />
-                        <button onClick={saveRent}>Save Amount</button>
+                        <button onClick={saveRent}>Save</button>
                     </td>
                 </tr>
                 <tr className='subcats'>
                     <td>Utilities</td>
                     <td className='expected'>
                         <input onChange={changeUtil} value={util} />
-                        <button onClick={saveUtil}>Save Amount</button>
+                        <button onClick={saveUtil}>Save</button>
                     </td>
                 </tr>
                 <tr className='subcats'>
                     <td>Grocery</td>
                     <td className='expected'>
                         <input onChange={changeGrocery} value={grocery} />
-                        <button onClick={saveGrocery}>Save Amount</button>
+                        <button onClick={saveGrocery}>Save</button>
                     </td>
                 </tr>
                 <tr className='subcats'>
                     <td>Other</td>
                     <td className='expected'>
                         <input onChange={changeOther} value={other} />
-                        <button onClick={saveOther}>Save Amount</button>
+                        <button onClick={saveOther}>Save</button>
                     </td>
                 </tr>
                 {/* <tr><select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} name='category-dropdown'></select></tr> */}

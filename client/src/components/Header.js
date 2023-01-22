@@ -18,6 +18,9 @@ const Header = () => {
 
     return (
         <section className='header'>
+            <style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+</style>
             {Auth.loggedIn() ? (
                 <div className='loggedin'>
                     <h1>Hello, {userName}!</h1>
