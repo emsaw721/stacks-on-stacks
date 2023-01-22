@@ -46,6 +46,7 @@ const changeOther = (event) => {
     return (
         <section className='report'>
             <h1> Your Progress Report </h1>
+            <Cal />
             <table>
                 <tr className='maincats'>
                     <th>Category</th>
@@ -82,8 +83,6 @@ const changeOther = (event) => {
                 </tr>
                 {/* <tr><select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} name='category-dropdown'></select></tr> */}
             </table>
-            <Cal></Cal>
-            <Bar></Bar>
         </section>
     )
 }
