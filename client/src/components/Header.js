@@ -12,8 +12,7 @@ const Header = () => {
 
 
 const {data} = useQuery(QUERY_ME);
-const username = data?.me;
-console.log(username);
+const userData = data?.me || {};
 
     return (
         <section className='header'>
@@ -22,7 +21,7 @@ console.log(username);
 </style>
             {Auth.loggedIn() ? (
                 <div className='loggedin'>
-                    <h1>Hello, {username}!</h1>
+                    <h1>Hello, {userData.username}!</h1>
                     <img src={Oinkicon} alt="" />
                 </div>
             ) : (
