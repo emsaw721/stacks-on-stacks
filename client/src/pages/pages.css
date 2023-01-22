@@ -5,7 +5,7 @@
     --quaternary-color: #011936;
     --quinary-color: #9FCC2E;
     --sextary-color: #EC4F46;
-    --septary-color: #475FD7;
+    --septary-color: #006edc;
 }
 
 
@@ -22,6 +22,12 @@
 
 .report h1{
     font-size: 2em; 
+    color: var(--quaternary-color);
+}
+
+.subcats button {
+    background-color: var(--septary-color); 
+    color: var(--tertiary-color);
 }
 
 .expected {

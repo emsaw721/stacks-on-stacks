@@ -16,6 +16,9 @@ const Navbar = () => {
             <>
             {Auth.loggedIn() ? (
             <nav className='navbar' >
+                <style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+</style>
                 <ul>
                     <li className='nav-item'>
                         {/* <Link to '/expense' className='nav-link'> */}
@@ -41,6 +44,9 @@ const Navbar = () => {
             </nav>
                      ):(
                         <nav className='navbar' >
+                            <style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+</style>
                         <ul>
                             <li className='nav-item'>
                         <Nav.Link onClick={() => setShowModal(true)}>
