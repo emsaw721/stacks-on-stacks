@@ -33,13 +33,14 @@ const Expense = (data) => {
 
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { ADD_TRANSACTION } from '../utils/mutations';
+import Auth from '../utils/auth';
 ;
 
 function Expense(props) {
     const [ExpenseFormData, setExpenseFormData] = useState({ firstcategory: '', secondcategory: '', amount: '' });
-    const [expense, { error }] = useMutation(ADD_TRANSACTION);
+    const [expense] = useMutation(ADD_TRANSACTION);
   
     const handleInputChange = (event) => {
         const { firstcategory, secondcategory, value } = event.target;
@@ -51,7 +52,7 @@ function Expense(props) {
   
       try {
         const { data } = await expense({
-          variables: { ...ExpenseformData },
+          variables: { ...ExpenseFormData },
         });
   
         Auth.login(data.login.token);
@@ -60,7 +61,7 @@ function Expense(props) {
       }
   
       // clear form values
-      setFormState({
+      setExpenseFormData({
         firstcategory: '',
         secondcategory: '',
         amount: '',
@@ -80,7 +81,7 @@ function Expense(props) {
                     name="Housing"
                     type="expense"
                     id="Housing"
-                    value={formState.Housing}
+                    value={ExpenseFormData.Housing}
                     onChange={handleInputChange}
                   />
                   <input
@@ -89,7 +90,7 @@ function Expense(props) {
                     name="Utilities"
                     type="expense"
                     id="Utilities"
-                    value={formState.Utilities}
+                    value={ExpenseFormData.Utilities}
                     onChange={handleInputChange}
                   />
                   <input
@@ -98,7 +99,7 @@ function Expense(props) {
                     name="Food/Grocery"
                     type="expense"
                     id="Food/grocery"
-                    value={formState.Food}
+                    value={ExpenseFormData.Food}
                     onChange={handleInputChange}
                   />
                   <input
@@ -107,7 +108,7 @@ function Expense(props) {
                     name="Transportation"
                     type="expense"
                     id="Transportation"
-                    value={formState.Transportation}
+                    value={ExpenseFormData.Transportation}
                     onChange={handleInputChange}
                   />
                   <input
@@ -116,7 +117,7 @@ function Expense(props) {
                     name="Insurance"
                     type="expense"
                     id="Insurance"
-                    value={formState.Insurance}
+                    value={ExpenseFormData.Insurance}
                     onChange={handleInputChange}
                   />
                   <input
@@ -125,7 +126,7 @@ function Expense(props) {
                     name="Education"
                     type="expense"
                     id="Education"
-                    value={formState.Education}
+                    value={ExpenseFormData.Education}
                     onChange={handleInputChange}
                   />
                   <input
@@ -134,7 +135,7 @@ function Expense(props) {
                     name="Medical"
                     type="expense"
                     id="Medical"
-                    value={formState.Medical}
+                    value={ExpenseFormData.Medical}
                     onChange={handleInputChange}
                   />
                   <input
@@ -143,7 +144,7 @@ function Expense(props) {
                     name="Personal"
                     type="expense"
                     id="Personal"
-                    value={formState.Personal}
+                    value={ExpenseFormData.Personal}
                     onChange={handleInputChange}
                   />
                    <input
@@ -152,7 +153,7 @@ function Expense(props) {
                     name="Other"
                     type="expense"
                     id="Other"
-                    value={formState.Other}
+                    value={ExpenseFormData.Other}
                     onChange={handleInputChange}
                   />
                   <button className="btn d-block w-100" type="submit">
