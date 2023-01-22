@@ -18,9 +18,9 @@ const Navbar = () => {
             <nav className='navbar' >
                 <ul>
                     <li className='nav-item'>
-                        {/* <Link to '/expense' className='nav-link'> */}
+                        <Link to='/expense' className='nav-link'>
                         <span className='link-text'>Expense</span>
-                        {/* </Link> */}
+                        </Link>
                     </li>
                     <li className='dash-icon'>
                         {/* <Link to '/dashboard' className='nav-link'> */}

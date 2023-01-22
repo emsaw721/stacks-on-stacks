@@ -11,7 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-// import Expense from './pages/Expense';
+import Expense from './pages/Expense';
 import Planner from './pages/Planner';
 // import Dashboard from './pages/Dashboard'; 
 
@@ -44,8 +44,8 @@ function App() {
       <Router>
         <div className='content'>
           <Routes>
-            {/* <Route path = '/' element={<Dashboard />} /> 
-            <Route path = '/expense' element={<Expense />} /> */}
+            {/* <Route path = '/' element={<Dashboard />} />  */}
+            <Route path = '/expense' element={<Expense />} />
             <Route path='/planner' element={<Planner />} />
           </Routes>
         </div>
