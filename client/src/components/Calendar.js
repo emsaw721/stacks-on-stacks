@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import './pages.css';
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
 import Modal from './Modalcalendar';
 
-const Planner = () => {
+const Cal = () => {
     const [calDate, onCalDateChange] = useState(new Date())
     const [isModalOpen, setIsModalOpen] = useState(false);
  
@@ -34,7 +33,7 @@ const Planner = () => {
 }
 
 
-export default Planner;
+export default Cal;
 
 
 
