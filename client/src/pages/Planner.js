@@ -1,9 +1,18 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
+import decode from 'jwt-decode';
+import {useQuery, useMutation} from '@apollo/client'; 
+import { QUERY_MONTHEXPENSE } from '../utils/queries';
 // import Bar from '../components/ProgressBar';
 import Cal from '../components/Calendar'
 import './pages.css';
 
 const Planner = () => {
+
+const {expense} = useQuery(QUERY_MONTHEXPENSE); 
+const userRent = expense?.rent;
+
+console.log(userRent); 
+
 const [rent, setRent] = useState('');
 const saveRent = () => {
     alert(rent)
@@ -42,17 +51,21 @@ const changeOther = (event) => {
             <h1> Your Progress Report </h1>
             <Cal />
             <table>
+               <thead>
                 <tr className='maincats'>
                     <th>Category</th>
                     <th>Expected</th>
                     <th>Actual</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr className='subcats'>
                     <td>Rent</td>
                     <td className='expected'>
                         <input onChange={changeRent} value={rent} />
                         <button onClick={saveRent}>Save</button>
                     </td>
+                    {/* <td>{actual}</td> */}
                 </tr>
                 <tr className='subcats'>
                     <td>Utilities</td>
@@ -76,6 +89,7 @@ const changeOther = (event) => {
                     </td>
                 </tr>
                 {/* <tr><select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} name='category-dropdown'></select></tr> */}
+                </tbody>
             </table>
         </section>
     )

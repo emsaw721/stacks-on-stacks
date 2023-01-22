@@ -23,6 +23,7 @@
 .report h1{
     font-size: 2em; 
     color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 .subcats button {
