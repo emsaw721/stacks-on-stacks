@@ -1,8 +1,10 @@
-import React, {useState, useAPI} from 'react';
+import React, { useState, useAPI } from 'react';
+import Bar from '../components/ProgressBar';
+import Cal from '../components/Calendar'
 // import {useQuery} from '@apollo/client';
 // import {QUERY_TRANSACTIONS} from '../utils/queries';
 import './pages.css';
-import Bar from '../components/ProgressBar';
+
 const Planner = () => {
 //    const {data, isLoading} = useAPI(); 
 //    const [selectedCategory, setSelectedCategory] = useState(''); 
@@ -84,6 +86,7 @@ const changeOther = (event) => {
                 {/* <tr><select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} name='category-dropdown'></select></tr> */}
                 </tbody>
             </table>
+            <Cal></Cal>
             <Bar></Bar>
         </section>
     )
