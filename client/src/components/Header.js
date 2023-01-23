@@ -9,10 +9,7 @@ import Welcomeicon from './welcomepig.png';
 
 
 const Header = () => {
-
-
 const {data} = useQuery(QUERY_ME);
-const userData = data?.me || {};
 
     return (
         <section className='header'>
@@ -21,7 +18,7 @@ const userData = data?.me || {};
 </style>
             {Auth.loggedIn() ? (
                 <div className='loggedin'>
-                    <h1>Hello, {userData.username}!</h1>
+                    <h1>Hello, {data.username}!</h1>
                     <img src={Oinkicon} alt="" />
                 </div>
             ) : (
