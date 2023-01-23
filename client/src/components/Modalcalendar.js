@@ -5,7 +5,7 @@ import { format } from 'date-fns'
 
 
 
-const Modal = ({ onClose, calDate }) => {
+const Modalcalendar = ({ onClose, calDate }) => {
     const todaysDate = format((calDate), 'MMM dd yyy')
 
     return (
@@ -28,4 +28,4 @@ const Modal = ({ onClose, calDate }) => {
 };
 
 
-export default Modal;
+export default Modalcalendar;
