@@ -25,14 +25,14 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_TRANSACTION = gql`
-mutation addTransaction($username: String!, $amount: String!, $firstcategory: String!, $secondcategory: String, $categoryNote: String, $location: String, $note: String ) {
-    addTransaction(username: $username, amount: $amount, firstcategory: $firstcategory, secondcategory: $secondcategory, categoryNote: $categoryNote, location: $location, note: $note){
+mutation addTransaction($username: String!, $amount: String!, $firstCategory: String!, $secondCategory: String!, $categoryNote: String, $location: String, $note: String ) {
+    addTransaction(username: $username, amount: $amount, firstCategory: $firstCategory, secondCategory: $secondCategory, categoryNote: $categoryNote, location: $location, note: $note){
       _id
       username
       amount
       date
       yearmonth
-      firstcategory {
+      firstCategory {
         _id
         firstCategory        
         secondCategory {

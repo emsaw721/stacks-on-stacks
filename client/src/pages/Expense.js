@@ -5,7 +5,7 @@ import Modalexpense from './Modalexpense';
 
 
 
-const Expense = (props) => {
+const Expense = (data) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 

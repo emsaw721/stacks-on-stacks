@@ -3,7 +3,6 @@ import { useMutation } from '@apollo/client';
 import './pages.css';
 import { Form, Button } from 'react-bootstrap'
 import { ADD_TRANSACTION } from '../utils/mutations';
-import Auth from '../utils/auth';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
