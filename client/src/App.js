@@ -9,11 +9,13 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
+import Hero from './components/Hero'; 
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Expense from './pages/Expense';
 import Planner from './pages/Planner';
 // import Dashboard from './pages/Dashboard'; 
+import Bar from './components/ProgressBar';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -41,6 +43,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Header />
+      <Hero>
+        <Bar />
+      </Hero>
       <Router>
         <div className='content'>
           <Routes>

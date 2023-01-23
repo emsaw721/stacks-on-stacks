@@ -220,6 +220,14 @@
         display: none;
     }
 
+    .hero {
+        background-color: var(--quaternary-color);
+        position: sticky;
+        position: -webkit-sticky; 
+        top: 0; 
+    }
+    
+    
     .calendar {
         display: flex;
         justify-content: center;
