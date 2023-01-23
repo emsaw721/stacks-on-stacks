@@ -218,13 +218,20 @@
         display: none; 
     }
 
+    /* ---- Hero Styling ------ */ 
+
     .hero {
         background-color: var(--quaternary-color);
         position: sticky;
         position: -webkit-sticky; 
         top: 0; 
+        /*make sure to change this for progress bar */
+        text-align: center;
     }
-    
+
+    .hero h3 {
+        color: var(--tertiary-color); 
+    }
     
     .calendar {
         display: flex;
