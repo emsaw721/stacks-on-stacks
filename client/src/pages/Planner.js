@@ -53,9 +53,9 @@ const changeOther = (event) => {
             <table>
                <thead>
                 <tr className='maincats'>
-                    <th>Category</th>
-                    <th>Expected</th>
-                    <th>Actual</th>
+                    <th className='main1'>Category</th>
+                    <th className='main2'>Expected</th>
+                    <th className='main3'>Actual</th>
                 </tr>
                 </thead>
                 <tbody>

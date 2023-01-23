@@ -26,6 +26,17 @@
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
+thead .maincats{
+    color: var(--quaternary-color); 
+    margin: 10%; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.main1 .main2 .main3 {
+    margin: 5%; 
+    
+}
 .subcats button {
     background-color: var(--septary-color); 
     color: var(--tertiary-color);
