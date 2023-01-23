@@ -9,13 +9,6 @@
 }
 
 
-
-@media only screen and (min-width: 768px) {
-
-
-}
-
-
 /* ------ desktop/laptop formatting -------- */ 
 
 /* ------- Planner ---------- */ 
@@ -26,18 +19,28 @@
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
-thead .maincats{
+.table{
     color: var(--quaternary-color); 
     margin: 10%; 
     display: flex;
-    justify-content: space-between;
 }
 
-.main1 .main2 .main3 {
+.cats .projection .reality {
     margin: 5%; 
-    
+    flex-direction: column; 
+    justify-content: space-between;
+    color: var(--quaternary-color); 
+
 }
-.subcats button {
+
+.cats h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.projection h2 {
+    margin-left: 20%;  
+}
+.expected button {
     background-color: var(--septary-color); 
     color: var(--tertiary-color);
 }
@@ -45,5 +48,90 @@ thead .maincats{
 .expected {
     display: flex;
     flex-direction: column;
+    margin-left: 20%; 
 }
 
+@media screen and (max-width: 768px) {
+
+    .report h1{
+        font-size: 2em; 
+        color: var(--quaternary-color);
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+    
+    .table{
+        color: var(--quaternary-color); 
+        display: flex;
+        justify-content: space-bewteen;
+    }
+
+    .table h2 {
+        color: var(--quaternary-color);
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+
+    .cats .projection .reality {
+        flex-direction: column; 
+        justify-content: space-evenly;
+        color: var(--quaternary-color); 
+    }
+
+    .cats {
+        margin-left: 0; 
+    }
+    
+    .cats h3 {
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .utilhead {
+        margin-top: 45px;
+    }
+
+    .grochead {
+        margin-top: 45px;
+    }
+
+    .othhead {
+        margin-top: 45px;
+    }
+
+    .expected input {
+        width: 100px; 
+        height: 20px; 
+        margin-bottom: 5px; 
+        margin-top: 15px; 
+        border: 1px solid var(--primary-color); 
+    }
+
+    .expected button {
+        background-color: var(--septary-color); 
+        color: var(--tertiary-color);
+        width: 100px; 
+        height: 40px; 
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+    
+    .reality h2 {
+        margin-left: 40px; 
+    }
+
+    .actual {
+        margin-left: 40px; 
+        color: var(--sextary-color); 
+    }
+
+    .utilact {
+        margin-top: 55px; 
+    }
+
+    .grocact {
+        margin-top: 55px; 
+    }
+
+    .othact {
+        margin-top: 55px; 
+    }
+}

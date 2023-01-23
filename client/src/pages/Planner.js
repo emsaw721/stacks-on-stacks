@@ -50,47 +50,55 @@ const changeOther = (event) => {
 </style>
             <h1> Your Progress Report </h1>
             <Cal />
-            <table>
-               <thead>
-                <tr className='maincats'>
-                    <th className='main1'>Category</th>
-                    <th className='main2'>Expected</th>
-                    <th className='main3'>Actual</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr className='subcats'>
-                    <td>Rent</td>
-                    <td className='expected'>
-                        <input onChange={changeRent} value={rent} />
-                        <button onClick={saveRent}>Save</button>
-                    </td>
-                    {/* <td>{actual}</td> */}
-                </tr>
-                <tr className='subcats'>
-                    <td>Utilities</td>
-                    <td className='expected'>
-                        <input onChange={changeUtil} value={util} />
-                        <button onClick={saveUtil}>Save</button>
-                    </td>
-                </tr>
-                <tr className='subcats'>
-                    <td>Grocery</td>
-                    <td className='expected'>
-                        <input onChange={changeGrocery} value={grocery} />
-                        <button onClick={saveGrocery}>Save</button>
-                    </td>
-                </tr>
-                <tr className='subcats'>
-                    <td>Other</td>
-                    <td className='expected'>
-                        <input onChange={changeOther} value={other} />
-                        <button onClick={saveOther}>Save</button>
-                    </td>
-                </tr>
-                {/* <tr><select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} name='category-dropdown'></select></tr> */}
-                </tbody>
-            </table>
+            <div>
+               <div>
+                <div className='table'>
+                    <div className='cats'>
+                        <h2>Category</h2>
+                        <div>
+                            <h3 className='renthead'>Rent</h3>
+                        </div>
+                        <div>
+                            <h3 className='utilhead'>Utilities</h3>
+                        </div>
+                        <div>
+                            <h3 className='grochead'>Grocery</h3>
+                        </div>
+                        <div>
+                            <h3 className='othhead'>Other</h3>
+                        </div>
+                    </div>
+                    <div className='projection'>
+                        <h2>Expected</h2>
+                        <div className='expected'>
+                            <input onChange={changeRent} value={rent} />
+                            <button onClick={saveRent}>Save</button>
+                        </div>
+                        <div className='expected'>
+                            <input onChange={changeUtil} value={util} />
+                            <button onClick={saveUtil}>Save</button>
+                        </div>
+                        <div className='expected'>
+                            <input onChange={changeGrocery} value={grocery} />
+                            <button onClick={saveGrocery}>Save</button>
+                        </div>
+                        <div className='expected'>
+                            <input onChange={changeOther} value={other} />
+                            <button onClick={saveOther}>Save</button>
+                        </div>
+                    </div>
+                    <div className='reality'>
+                        <h2>Actual</h2>
+                        <div className='actual'>
+                        <div className='rentact'>#</div>
+                        <div className='utilact'>#</div>
+                        <div className='grocact'>#</div>
+                        <div className='othact'>#</div>
+                        </div>
+                    </div>
+                </div>    
+                </div>
+            </div>
         </section>
     )
 }
