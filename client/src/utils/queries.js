@@ -33,14 +33,20 @@ export const QUERY_TRANSACTIONS = gql`
 query transactions($username: String!) {
     transactions(username: $username) {
         _id
+        username
         amount
         date
-        firstcategory
-        secondcategory
+        yearmonth
+        firstcategory {
+          _id
+          firstCategory
+          secondCategory {
+            secondCategory
+          }
+        }
         categoryNote
         location
         note
-    }
 }
 `;
 
