@@ -67,6 +67,9 @@ const changeOther = (event) => {
                         <div>
                             <h3 className='othhead'>Other</h3>
                         </div>
+                        <div>
+                            <h3 className='tothead'>Total</h3>
+                        </div>
                     </div>
                     <div className='projection'>
                         <h2>Expected</h2>
@@ -86,6 +89,7 @@ const changeOther = (event) => {
                             <input onChange={changeOther} value={other} />
                             <button onClick={saveOther}>Save</button>
                         </div>
+                        <div className='expectedtot'>####</div>
                     </div>
                     <div className='reality'>
                         <h2>Actual</h2>
@@ -94,9 +98,10 @@ const changeOther = (event) => {
                         <div className='utilact'>#</div>
                         <div className='grocact'>#</div>
                         <div className='othact'>#</div>
+                        <div className='totact'>####</div>
                         </div>
                     </div>
-                </div>    
+                </div>  
                 </div>
             </div>
         </section>
