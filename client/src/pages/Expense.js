@@ -33,162 +33,79 @@ const Expense = (data) => {
 
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import {Form, Button, Alert, FormControl} from 'react-bootstrap'
+import './pages.css';
+import { Form, Button, Alert, FormControl } from 'react-bootstrap'
 // import { Link } from 'react-router-dom';
 import { ADD_TRANSACTION } from '../utils/mutations';
 import Auth from '../utils/auth';
-;
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
-function Expense(props) {
-    const [ExpenseFormData, setExpenseFormData] = useState({ firstcategory: '', secondcategory: '', amount: '' });
-    const [expense] = useMutation(ADD_TRANSACTION);
-  
-    const handleInputChange = (event) => {
-        const { firstcategory, secondcategory, value } = event.target;
-        setExpenseFormData({ ...ExpenseFormData, [firstcategory]: [secondcategory], value });
-      };
-    
-    const handleFormSubmit = async (event) => {
-      event.preventDefault();
-  
-      try {
-        const { data } = await expense({
-          variables: { ...ExpenseFormData },
-        });
-  
-        Auth.login(data.login.token);
-      } catch (e) {
-        console.error(e);
-      }
-  
-      // clear form values
-      setExpenseFormData({
-        firstcategory: '',
-        secondcategory: '',
-        amount: '',
+
+const Expense = (props) => {
+
+  const [expenseFormState, setExpenseState] = useState({
+    firstCategory: 'Expense',
+    secondCategory: '',
+    amount: '',
+    categoryNote: ''
+  });
+
+  const [addExpense] = useMutation(ADD_TRANSACTION);
+
+  const handleInputChange = (event) => {
+    const { firstCategory, secondCategory, amount, categoryNote, value } = event.target;
+    setExpenseState({ ...expenseFormState, [firstCategory]: value, [secondCategory]: value, [amount]: value, [categoryNote]: value });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await addExpense({
+        variables: { ...expenseFormState },
       });
-    };
-  
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => {
-  //   setOpen(!open)
-  // };
 
-    return (
-      <main className="flex-row justify-center mb-4">
-        
-        {/* <div className='dropdow'>
-          <button onClick={handleOpen}>Category</button>
-          {open ? (
-            <ul>
-              <li>Rent</li>
-              <li>Medical</li>
-              <li>Utilities</li>
-            </ul>
-          ):null}
-</div> */}
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
+  const secondCategoryDropdown = ['Housing', 'Utility', 'Food', 'Transportation'];
 
-
-
-
-          <div className="col-12 col-md-6">
-            <div className="card">
-              <h4 className="card-header">Add Your Expenses</h4>
-              <div className="card-body">
-                <Form onSubmit={handleFormSubmit}>
-                  <Form.Control
-                    className="form-input"
-                    placeholder="Housing"
-                    name="Housing"
-                    type="expense"
-                    id="Housing"
-                    value={ExpenseFormData.firstcategory}
-                    onChange={handleInputChange}
-                  />
-                  <Form.Control
-                    className="form-input"
-                    placeholder="Utilities"
-                    name="Utilities"
-                    type="expense"
-                    id="Utilities"
-                    value={ExpenseFormData.Utilities}
-                    onChange={handleInputChange}
-                  />
-                  <Form.Control
-                    className="form-input"
-                    placeholder="Food/Grocery"
-                    name="Food/Grocery"
-                    type="expense"
-                    id="Food/grocery"
-                    value={ExpenseFormData.Food}
-                    onChange={handleInputChange}
-                  />
-                  <Form.Control
-                    className="form-input"
-                    placeholder="Transportation"
-                    name="Transportation"
-                    type="expense"
-                    id="Transportation"
-                    value={ExpenseFormData.Transportation}
-                    onChange={handleInputChange}
-                  />
-                  <Form.Control
-                    className="form-input"
-                    placeholder="Insurance"
-                    name="Insurance"
-                    type="expense"
-                    id="Insurance"
-                    value={ExpenseFormData.Insurance}
-                    onChange={handleInputChange}
-                  />
-                  <Form.Control
-                    className="form-input"
-                    placeholder="Education"
-                    name="Education"
-                    type="expense"
-                    id="Education"
-                    value={ExpenseFormData.Education}
-                    onChange={handleInputChange}
-                  />
-                  <Form.Control
-                    className="form-input"
-                    placeholder="Medical"
-                    name="Medical"
-                    type="expense"
-                    id="Medical"
-                    value={ExpenseFormData.Medical}
-                    onChange={handleInputChange}
-                  />
-                  <Form.Control
-                    className="form-input"
-                    placeholder="Personal Spending"
-                    name="Personal"
-                    type="expense"
-                    id="Personal"
-                    value={ExpenseFormData.Personal}
-                    onChange={handleInputChange}
-                  />
-                   <Form.Control
-                    className="form-input"
-                    placeholder="Other/etc."
-                    name="Other"
-                    type="expense"
-                    id="Other"
-                    value={ExpenseFormData.Other}
-                    onChange={handleInputChange}
-                  />
-                <Button
-                  disabled={!(ExpenseFormData.firstcategory && ExpenseFormData.secondcategory)}
-                  type='submit' variant='success' className='subbtn'>
-                    Submit
-                  </Button>
-                </Form>
-    
-
-export default Expense;
-              </div>
-            </div>
+  return (
+    <main className="flex-row justify-center mb-4">
+      <div className="col-12 col-md-6">
+        <div className="card">
+          <h4 className="card-header">Add Your Expenses</h4>
+          <div className="card-body">
+            <Form onSubmit={handleFormSubmit}>              
+              <Dropdown options={secondCategoryDropdown} onChange={handleInputChange} value={expenseFormState.secondCategory} placeholder="Select an option" className='form-input'></Dropdown>
+              <Form.Control
+                className="form-input"
+                placeholder="Total"
+                name="amount"
+                type="amount"
+                id="amount"
+                value={expenseFormState.amount}
+                onChange={handleInputChange}
+              />
+              <Form.Control
+                className="form-input"
+                placeholder="Notes"
+                name="categorynote"
+                type="categorynote"
+                id="categorynote"
+                value={expenseFormState.categoryNote}
+                onChange={handleInputChange}
+              />
+              <Button
+                disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
+                type='submit' variant='success' className='subbtn'>
+                Submit
+              </Button>
+            </Form>
           </div>
         </main>
       );
