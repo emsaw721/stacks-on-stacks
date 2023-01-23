@@ -5,7 +5,7 @@ import './components.css';
 const Hero = () => {
     return(
         <div className='hero'>
-            <Bar />
+          
             <h3>Need Content for Formatting</h3>
         </div>
     )

@@ -96,6 +96,10 @@
         margin-top: 45px;
     }
 
+    .tothead {
+        margin-top: 70px;
+    }
+
     .expected input {
         width: 100px; 
         height: 20px; 
@@ -112,6 +116,12 @@
         margin-bottom: 10px;
         border-radius: 5px;
         font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+
+    .expectedtot {
+        margin-top: 30%; 
+        margin-left: 20%;
+        color: var(--quaternary-color); 
     }
     
     .reality h2 {
@@ -133,5 +143,10 @@
 
     .othact {
         margin-top: 55px; 
+    }
+
+    .totact {
+        margin-top: 55px; 
+
     }
 }
