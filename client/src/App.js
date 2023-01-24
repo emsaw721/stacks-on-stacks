@@ -12,7 +12,7 @@ import Header from './components/Header';
 import Hero from './components/Hero'; 
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-//import Expense from './pages/Expense';
+import Expense from './pages/Expense';
 import Planner from './pages/Planner';
 //import Dashboard from './pages/Dashboard'; 
 import Bar from './components/ProgressBar';
@@ -46,7 +46,7 @@ function App() {
         <div className='content'>
             <Routes>
             {/* <Route path = '/' element={<Dashboard />} />  */}
-            {/*<Route path = '/expense' element={<Expense />} /> */}
+            <Route path = '/expense' element={<Expense />} />
             <Route path='/planner' element={<Planner />} />
             </Routes>
         </div>
