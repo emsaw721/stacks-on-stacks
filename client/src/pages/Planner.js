@@ -110,7 +110,3 @@ const changeOther = (event) => {
 
 
 export default Planner;
-
-
-
-
