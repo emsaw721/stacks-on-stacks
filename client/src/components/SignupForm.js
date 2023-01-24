@@ -16,7 +16,6 @@ const SignupForm = () => {
   const [createUser] = useMutation(ADD_USER)
 
   const handleInputChange = (event) => {
-  const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormState({ ...formState, [name]: value });
   };
@@ -25,8 +24,8 @@ const SignupForm = () => {
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
-    const loginForm = event.currentTarget;
-    if (loginForm.checkValidity() === false) {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
@@ -104,5 +103,5 @@ const SignupForm = () => {
     </>
   );
 };
-}; 
+
 export default SignupForm; 
