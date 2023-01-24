@@ -1,6 +1,4 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
-import {QUERY_ME} from '../utils/queries'; 
 import './components.css';
 import Auth from '../utils/auth';
 import Oinkicon from './oinkicon1.png';
@@ -11,23 +9,12 @@ import decode from 'jwt-decode';
 
 const Header = () => {
 
-    // const {data} = useQuery(QUERY_ME);
-    // const userData = data?.me; 
-    // //const userDataLength = Object.keys(userData); 
-    // console.log(userData.username); 
-
     const token = localStorage.getItem('id_token');
      console.log(token); 
 
-    const username = (token); 
+    const decoded = decode(token); 
+    const username = decoded.username; 
     
-    // if (token) {
-    //     const decoded = decode(token); 
-    //    username = decoded.data.username
-    // }
-  
-    // console.log(userDataLength); 
-
     return (
         <section className='header'>
             <style>
