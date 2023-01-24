@@ -39,6 +39,7 @@ query transactions($username: String!) {
         categoryNote
         location
         note
+    }
 }
 `;
 
