@@ -19,18 +19,13 @@
 
 .navbar {
     background-color: var(--tertiary-color);
-    width: 100%; 
-    margin-top: 20%;
 }
 
 .nav-list {
     display: flex; 
-    justify-content: space-around;
     list-style: none;
     text-decoration: none; 
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
+    justify-content: space-evenly;
 }
 
 .nav-item {
@@ -104,14 +99,12 @@
 .header .loggedin {
     justify-content: center;
     text-align: center;
-    margin-left: 25%;
 }
 
 .header .loggedin h1 {
     margin-top: 10%;
-    margin-left: 15%; 
+    margin-bottom: 10%; 
     font-size: 5em;
-    width: 100%; 
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
