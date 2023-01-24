@@ -13,42 +13,112 @@
 
 /* ------- Planner ---------- */ 
 
+div {
+    width: 100%; 
+}
 .report h1{
-    font-size: 2em; 
+    font-size: 3em; 
     color: var(--quaternary-color);
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
+.reportcontainer {
+    border-bottom: 2px dashed var(--secondary-color);
+    margin-top: 10%; 
+}
+
 .table{
     color: var(--quaternary-color); 
-    margin: 10%; 
-    display: flex;
+    width: 100%; 
+    display: flex; 
+}
+
+.table h2 {
+    color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 .cats .projection .reality {
-    margin: 5%; 
     flex-direction: column; 
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: var(--quaternary-color); 
-
 }
+
 
 .cats h3 {
     font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5em;
 }
 
-.projection h2 {
-    margin-left: 20%;  
+.utilhead {
+    margin-top: 45px;
 }
+
+.grochead {
+    margin-top: 45px;
+}
+
+.othhead {
+    margin-top: 45px;
+}
+
+.tothead {
+    margin-top: 70px;
+}
+
+.projection .expected {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.expected input {
+    width: 100px; 
+    height: 40px; 
+    margin-bottom: 5px; 
+    margin-top: 15px; 
+    border: 1px solid var(--primary-color); 
+}
+
 .expected button {
     background-color: var(--septary-color); 
     color: var(--tertiary-color);
+    width: 100px; 
+    height: 40px; 
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
-.expected {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20%; 
+.expectedtot {
+    margin-top: 30%; 
+    margin-left: 20%;
+    color: var(--quaternary-color); 
+}
+
+.reality h2 {
+    margin-left: 40px; 
+}
+
+.actual {
+    margin-left: 40px; 
+    color: var(--sextary-color); 
+}
+
+.utilact {
+    margin-top: 55px; 
+}
+
+.grocact {
+    margin-top: 55px; 
+}
+
+.othact {
+    margin-top: 55px; 
+}
+
+.totact {
+    margin-top: 55px; 
+
 }
 
 @media screen and (max-width: 768px) {

@@ -51,7 +51,7 @@ const changeOther = (event) => {
             <h1> Your Progress Report </h1>
             <Cal />
             <div>
-               <div>
+               <div className='reportcontainer'>
                 <div className='table'>
                     <div className='cats'>
                         <h2>Category</h2>

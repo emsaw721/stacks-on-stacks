@@ -21,9 +21,9 @@ const Navbar = () => {
             <nav className='navbar' >
                 <ul className='nav-list'>
                     <li className='nav-item dash-icon'>
-                        {/* <Link to '/dashboard' className='nav-link'> */}
+                        {/* <Link to '/dashboard' className='nav-link'>
                         <img src={Navpig} alt="pig" />
-                        {/* </Link> */}
+                         </Link> */}
                     </li>
                     <li className='nav-item'>
                         {/* <Link to '/expense' className='nav-link'> */}
