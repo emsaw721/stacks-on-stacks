@@ -8,7 +8,7 @@ const Hero = () => {
         <>
         {Auth.loggedIn() ? (
         <div className='hero'>
-            <h3><Bar></Bar></h3>
+            <h3>Need Content for Formatting</h3>
         </div>
         ):(
             <div className='heronone'></div>

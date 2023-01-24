@@ -30,4 +30,4 @@ const Expense = (data) => {
     );
 };
 
-export default Expense;
+export default Expense; 

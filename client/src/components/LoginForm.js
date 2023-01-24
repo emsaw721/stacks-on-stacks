@@ -4,9 +4,10 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import './components.css'; 
 
 const LoginForm = () => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [userFormInput, setUserFormInput] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
@@ -14,7 +15,7 @@ const LoginForm = () => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormState({ ...formState, [name]: value });
+    setUserFormInput({ ...userFormInput, [name]: value });
   };
 
   const handleFormSubmit = async (event) => {
@@ -29,10 +30,10 @@ const LoginForm = () => {
 
     try {
       const { data } = await loginUser({
-        variables: { ...formState },
+        variables: { ...userFormInput},
       });
 
-      Auth.login(data.login.token);
+      Auth.login(data.loginUser.token);
     } catch (e) {
       console.error(e);
     }
@@ -48,32 +49,32 @@ const LoginForm = () => {
           Something went wrong with your login credentials!
         </Alert>
         <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
+          <Form.Label className='formlabel' htmlFor='email'>Email</Form.Label>
           <Form.Control
             type='text'
             placeholder='Your email'
             name='email'
             onChange={handleInputChange}
-            value={formState.email}
+            value={userFormInput.email}
             required
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Label className='formlabel' htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
             placeholder='Your password'
             name='password'
             onChange={handleInputChange}
-            value={formState.password}
+            value={userFormInput.password}
             required
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={!(formState.email && formState.password)}
+          disabled={!(userFormInput.email && userFormInput.password)}
           type='submit'
           variant='success'
           className='subbtn'
@@ -81,7 +82,6 @@ const LoginForm = () => {
           Submit
         </Button>
       </Form>
-      {error && <div>Login failed</div>}
     </>
   );
 };

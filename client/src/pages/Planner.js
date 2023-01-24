@@ -1,17 +1,15 @@
 import React, { useState, useEffect} from 'react';
 import decode from 'jwt-decode';
-import {useQuery, useMutation} from '@apollo/client'; 
-import { QUERY_MONTHEXPENSE } from '../utils/queries';
-// import Bar from '../components/ProgressBar';
 import Cal from '../components/Calendar'
 import './pages.css';
+import { useQuery } from '@apollo/client';
+import { QUERY_BUDGET } from '../utils/queries';
+
 
 const Planner = () => {
 
-const {expense} = useQuery(QUERY_MONTHEXPENSE); 
-const userRent = expense?.rent;
-
-console.log(userRent); 
+    const {data} = useQuery(QUERY_BUDGET);
+    console.log(data); 
 
 const [rent, setRent] = useState('');
 const saveRent = () => {
@@ -110,7 +108,3 @@ const changeOther = (event) => {
 
 
 export default Planner;
-
-
-
-
