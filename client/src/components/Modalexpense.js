@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Modal, ModalTitle } from 'react-bootstrap'
 import { ADD_TRANSACTION } from '../utils/mutations';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
 
-const Modalexpense = ({ onClose }) => {
+const Modalexpense = ({ show, onClose }) => {
 
   const [validated] = useState(false);
 
@@ -45,41 +45,41 @@ const Modalexpense = ({ onClose }) => {
   const secondCategoryDropdown = ['Housing', 'Utility', 'Food', 'Transportation', 'Insurance', 'Education', 'Healthcare', 'Savings & Investiment', 'Personal spending', 'Others'];
 
   return (
-    <section className="flex-row justify-center mb-4">
-      <div className="col-12 col-md-6">
-        <div className="card">
-          <h4 className="card-header">Add Your Expenses</h4>
-          <div className="card-body">
-            <Form onSubmit={handleFormSubmit} noValidate validated={validated}>
-              <Dropdown options={secondCategoryDropdown} onChange={handleDropdownChange} value={expenseFormState.secondCategory} placeholder="Select an option" className='form-input'></Dropdown>
-              <Form.Control
-                className="form-input"
-                placeholder="Total"
-                name="amount"
-                type="amount"
-                id="amount"
-                value={expenseFormState.amount}
-                onChange={handleInputChange}
-              />
-              <Form.Control
-                className="form-input"
-                placeholder="Notes"
-                name="categoryNote"
-                type="categoryNote"
-                id="categoryNote"
-                value={expenseFormState.categoryNote}
-                onChange={handleInputChange}
-              />
-              <Button
-                disabled={!(expenseFormState.firstCategory && expenseFormState.secondCategory)}
-                type='submit' variant='success' className='subbtn'>
-                Submit
-              </Button>
-            </Form>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Modal
+      show={show}
+      onHide={() => onClose(false)}>
+      <Modal.Header closeButton>
+        <Modal.Title>Add Your Expenses</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Form onSubmit={handleFormSubmit} noValidate validated={validated}>
+          <Dropdown options={secondCategoryDropdown} onChange={handleDropdownChange} value={expenseFormState.secondCategory} placeholder="Select an option" className='form-input'></Dropdown>
+          <Form.Control
+            className="form-input"
+            placeholder="Total"
+            name="amount"
+            type="amount"
+            id="amount"
+            value={expenseFormState.amount}
+            onChange={handleInputChange}
+          />
+          <Form.Control
+            className="form-input"
+            placeholder="Notes"
+            name="categoryNote"
+            type="categoryNote"
+            id="categoryNote"
+            value={expenseFormState.categoryNote}
+            onChange={handleInputChange}
+          />
+          <Button
+            disabled={!(expenseFormState.firstCategory && expenseFormState.secondCategory)}
+            type='submit' variant='success' className='subbtn'>
+            Submit
+          </Button>
+        </Form>
+      </Modal.Body>
+    </Modal>
   );
 };
 

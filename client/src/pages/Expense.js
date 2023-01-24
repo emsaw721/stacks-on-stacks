@@ -19,9 +19,10 @@ const Expense = (data) => {
                 <div className="card">
                     <h4 className="card-header">Expense List</h4>
                     <div className="card-body">
-                        {isModalOpen && (
+                        <Modalexpense show={isModalOpen} onClose={setIsModalOpen}></Modalexpense>
+                        {/* {isModalOpen && (
                             <Modalexpense onClose={setIsModalOpen} />
-                        )}
+                        )} */}
                         <Button type='button' variant='success' className='subbtn' onClick={openLink}>
                             Add new expense
                         </Button>
