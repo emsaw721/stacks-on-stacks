@@ -77,7 +77,7 @@ const LoginForm = () => {
           disabled={!(formState.email && formState.password)}
           type='submit'
           variant='success'
-          className='subbtn'
+          className='subbtn formbtn'
           >
           Submit
         </Button>
