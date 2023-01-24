@@ -53,12 +53,12 @@
 
 /* ------- signup form --------- */ 
 
-.signupform h3 {
+.formlabel {
     color: var(--quaternary-color);
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.signupform input {
+.forminput {
     width: 100%; 
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -68,14 +68,11 @@
     border-radius: 0.375rem; 
 }
 
-.signupform button {
-    color: var(--tertiary-color);
-    background-color: var(--quinary-color);
-    border-color: var(--quinary-color);
-    margin-top: 10px;
+.formbtn {
+    color: var(--quinary-color); 
 }
 
-.signupform button:hover {
+.formbtn:hover {
     border-color: var(--quaternary-color); 
 }
 
