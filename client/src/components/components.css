@@ -69,12 +69,16 @@
 }
 
 .formbtn {
-    color: var(--quinary-color); 
+    color: var(--tertiary-color); 
+    background-color: var(--quinary-color);
 }
 
-.formbtn:hover {
+.formbtn :hover {
     border-color: var(--quaternary-color); 
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color); 
 }
+
 
 .nav-pills .nav-link {
     color: var(--septary-color); 
@@ -89,6 +93,12 @@
     background-color: var(--quinary-color);
     border-color: var(--quinary-color);
     margin-top: 10px;
+}
+
+.modal-body .button.btn.btn-success:hover {
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color); 
+    margin-top: 10px; 
 }
 
 /* -------- Header Styling ------- */
@@ -237,20 +247,22 @@
     /* ------- signup form --------- */ 
 
     .formlabel {
-    color: var(--quaternary-color);
-    font-family: 'IBM Plex Sans', sans-serif;
+        color: var(--quaternary-color);
+        font-family: 'IBM Plex Sans', sans-serif;
     }
 
 
     .formbtn {
-    color: var(--tertiary-color);
-    background-color: var(--quinary-color);
-    border-color: var(--quinary-color);
-    margin-top: 10px;
+        color: var(--tertiary-color);
+        background-color: var(--quinary-color);
+     border-color: var(--quinary-color);
+        margin-top: 10px;
     }
 
     .formbtn:hover {
-    border-color: var(--quaternary-color); 
+        border-color: var(--quaternary-color); 
+        background-color: var(--tertiary-color);
+        color: var(--quaternary-color); 
     }
     
     

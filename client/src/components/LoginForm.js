@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 import './components.css'; 
 
 const LoginForm = () => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [userFormInput, setUserFormInput] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
@@ -15,7 +15,7 @@ const LoginForm = () => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormState({ ...formState, [name]: value });
+    setUserFormInput({ ...userFormInput, [name]: value });
   };
 
   const handleFormSubmit = async (event) => {
@@ -30,7 +30,7 @@ const LoginForm = () => {
 
     try {
       const { data } = await loginUser({
-        variables: { ...formState },
+        variables: { ...userFormInput},
       });
 
       Auth.login(data.loginUser.token);
@@ -55,7 +55,7 @@ const LoginForm = () => {
             placeholder='Your email'
             name='email'
             onChange={handleInputChange}
-            value={formState.email}
+            value={userFormInput.email}
             required
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
@@ -68,16 +68,16 @@ const LoginForm = () => {
             placeholder='Your password'
             name='password'
             onChange={handleInputChange}
-            value={formState.password}
+            value={userFormInput.password}
             required
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={!(formState.email && formState.password)}
+          disabled={!(userFormInput.email && userFormInput.password)}
           type='submit'
           variant='success'
-          className='subbtn formbtn'
+          className='subbtn'
           >
           Submit
         </Button>
