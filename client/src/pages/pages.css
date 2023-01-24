@@ -1,60 +1,258 @@
 :root {
-  --primary-color: #0a0a0a;
-  --secondary-color: #858585;
-  --tertiary-color: #ffffff;
-  --quaternary-color: #011936;
-  --quinary-color: #9fcc2e;
-  --sextary-color: #ec4f46;
-  --septary-color: #475fd7;
+    --primary-color: #0A0A0A;
+    --secondary-color: #858585;
+    --tertiary-color: #FFFFFF;
+    --quaternary-color: #011936;
+    --quinary-color: #9FCC2E;
+    --sextary-color: #EC4F46;
+    --septary-color: #006edc;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-style: italic;
-}
-/* Dashboard Section */
+
+
+/* ------ desktop/laptop formatting -------- */ 
+/* dashboard section */
 .categories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 100%;
-  height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+  }
+  
+  .topics {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background: linear-gradient( #9FCC2E, #858585);
+    align-items: center;
+    text-align: center;
+  }
+  
+  .topics p {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+  }
+  .categories .topics {
+    box-shadow: 0px 10px 20px 0px rgb(32, 32, 32);
+  }
+  
+  .input {
+    align-items: center;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    margin-top: 10px;
+  }
+
+
+/* ------- Planner ---------- */ 
+
+div {
+    width: 100%; 
+}
+.report h1{
+    font-size: 3em; 
+    color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
-.topics {
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  padding-top: 20px;
-  border-radius: 10px;
-  background: linear-gradient(--quinary-color, --secondary-color);
-  align-items: center;
-  text-align: center;
+.reportcontainer {
+    border-bottom: 2px dashed var(--secondary-color);
+    margin-top: 10%; 
 }
 
-.topics p {
-  padding: 10px;
-  text-align: center;
-  align-items: center;
-}
-.categories .topics {
-  box-shadow: 0px 10px 20px 0px rgb(32, 32, 32);
+.table{
+    color: var(--quaternary-color); 
+    width: 100%; 
+    display: flex; 
 }
 
-.input {
-  align-items: center;
-  text-align: center;
-  padding: 10px 0px 10px 0px;
-  margin-top: 10px;
+.table h2 {
+    color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
-/* Header Section */
-/* Expense Section */
-/* Login Section */
-/* Planner Section */
-/* Signup Section */
-/* Footer Section */
+.cats .projection .reality {
+    flex-direction: column; 
+    justify-content: space-evenly;
+    color: var(--quaternary-color); 
+}
 
-/* Mobile responsiveness */
+
+.cats h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5em;
+}
+
+.utilhead {
+    margin-top: 45px;
+}
+
+.grochead {
+    margin-top: 45px;
+}
+
+.othhead {
+    margin-top: 45px;
+}
+
+.tothead {
+    margin-top: 70px;
+}
+
+.projection .expected {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.expected input {
+    width: 100px; 
+    height: 40px; 
+    margin-bottom: 5px; 
+    margin-top: 15px; 
+    border: 1px solid var(--primary-color); 
+}
+
+.expected button {
+    background-color: var(--septary-color); 
+    color: var(--tertiary-color);
+    width: 100px; 
+    height: 40px; 
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.expectedtot {
+    margin-top: 30%; 
+    margin-left: 20%;
+    color: var(--quaternary-color); 
+}
+
+.reality h2 {
+    margin-left: 40px; 
+}
+
+.actual {
+    margin-left: 40px; 
+    color: var(--sextary-color); 
+}
+
+.utilact {
+    margin-top: 55px; 
+}
+
+.grocact {
+    margin-top: 55px; 
+}
+
+.othact {
+    margin-top: 55px; 
+}
+
+.totact {
+    margin-top: 55px; 
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .report h1{
+        font-size: 2em; 
+        color: var(--quaternary-color);
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+    
+    .table{
+        color: var(--quaternary-color); 
+        display: flex;
+        justify-content: space-bewteen;
+    }
+
+    .table h2 {
+        color: var(--quaternary-color);
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+
+    .cats .projection .reality {
+        flex-direction: column; 
+        justify-content: space-evenly;
+        color: var(--quaternary-color); 
+    }
+
+    .cats {
+        margin-left: 0; 
+    }
+    
+    .cats h3 {
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .utilhead {
+        margin-top: 45px;
+    }
+
+    .grochead {
+        margin-top: 45px;
+    }
+
+    .othhead {
+        margin-top: 45px;
+    }
+
+    .tothead {
+        margin-top: 70px;
+    }
+
+    .expected input {
+        width: 100px; 
+        height: 20px; 
+        margin-bottom: 5px; 
+        margin-top: 15px; 
+        border: 1px solid var(--primary-color); 
+    }
+
+    .expected button {
+        background-color: var(--septary-color); 
+        color: var(--tertiary-color);
+        width: 100px; 
+        height: 40px; 
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+
+    .expectedtot {
+        margin-top: 30%; 
+        margin-left: 20%;
+        color: var(--quaternary-color); 
+    }
+    
+    .reality h2 {
+        margin-left: 40px; 
+    }
+
+    .actual {
+        margin-left: 40px; 
+        color: var(--sextary-color); 
+    }
+
+    .utilact {
+        margin-top: 55px; 
+    }
+
+    .grocact {
+        margin-top: 55px; 
+    }
+
+    .othact {
+        margin-top: 55px; 
+    }
+
+    .totact {
+        margin-top: 55px; 
+
+    }
+}

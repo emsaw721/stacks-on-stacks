@@ -1,25 +1,61 @@
 import React from 'react';
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
-import Login from './pages/Login';
-import Dasboard from './pages/Dasboard';
+import Header from './components/Header';
+import Hero from './components/Hero'; 
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 import Expense from './pages/Expense';
-import Signup from './pages/Signup';
-import Nav from './components/Navbar'; 
-import Header from './pages/Header'; 
+import Planner from './pages/Planner';
+//import Dashboard from './pages/Dashboard'; 
+import Bar from './components/ProgressBar';
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+
 
 
 function App() {
   return (
-    <div>
-    <Header />
-    <div>
-      <main>
-        <Dasboard />
-      </main>
-    </div>
-    <Nav />
-    </div>
+    <ApolloProvider client={client}>
+      <Header />
+      <Hero />
+      <Router>
+        <div className='content'>
+            <Routes>
+            {/* <Route path = '/' element={<Dashboard />} />  */}
+            <Route path = '/expense' element={<Expense />} />
+            <Route path='/planner' element={<Planner />} />
+            </Routes>
+        </div>
+        <Navbar />
+        <Footer />
+      </Router>
+    </ApolloProvider>
   );
 }
 
