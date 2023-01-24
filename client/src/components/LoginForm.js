@@ -4,6 +4,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import './components.css'; 
 
 const LoginForm = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -48,7 +49,7 @@ const LoginForm = () => {
           Something went wrong with your login credentials!
         </Alert>
         <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
+          <Form.Label className='formlabel' htmlFor='email'>Email</Form.Label>
           <Form.Control
             type='text'
             placeholder='Your email'
@@ -61,7 +62,7 @@ const LoginForm = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Label className='formlabel' htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
             placeholder='Your password'

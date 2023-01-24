@@ -1,6 +1,5 @@
 import React, { useState, useEffect} from 'react';
 import decode from 'jwt-decode';
-// import Bar from '../components/ProgressBar';
 import Cal from '../components/Calendar'
 import './pages.css';
 
