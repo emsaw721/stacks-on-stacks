@@ -2,6 +2,7 @@
 
 export const getME = (token) => {
     return fetch('/api/users/me', {
+        method: 'GET',
         headers: {
             'Content-Type':'application/json',
             authorization: `Bearer ${token}`,
@@ -16,6 +17,7 @@ export const createUser = (userData) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(userData),
+        
     });
 };
 
