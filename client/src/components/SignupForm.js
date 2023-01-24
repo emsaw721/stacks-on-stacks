@@ -140,12 +140,8 @@ const SignupForm = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-md-6">
-        <div className="card">
-          <h4 className="card-header">Sign Up</h4>
-          <div className="card-body">
-            <form onSubmit={handleFormSubmit}>
+            <form className='signupform' onSubmit={handleFormSubmit}>
+              <h3>Username</h3>
               <input
                 className="form-input"
                 placeholder="Your username"
@@ -155,6 +151,7 @@ const SignupForm = () => {
                 value={formState.username}
                 onChange={handleChange}
               />
+              <h3>Email</h3>
               <input
                 className="form-input"
                 placeholder="Your email"
@@ -164,6 +161,7 @@ const SignupForm = () => {
                 value={formState.email}
                 onChange={handleChange}
               />
+              <h3>Password</h3>
               <input
                 className="form-input"
                 placeholder="******"
@@ -177,12 +175,6 @@ const SignupForm = () => {
           Submit
               </button>
             </form>
-
-            {error && <div>Signup failed</div>}
-          </div>
-        </div>
-      </div>
-    </main>
   );
 };
 
