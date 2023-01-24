@@ -11,11 +11,12 @@ const typeDefs = gql`
 
     type Transaction {
         _id:ID
-        username:String
+        username: String
         amount:	Float
         date: String
         yearmonth: String
-        firstcategory: [Firstcategory]
+        firstCategory: String
+        secondCategory: String
         categoryNote: String
         location: String
         note: String
