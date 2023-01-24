@@ -14,19 +14,20 @@
 
 /* -------- Navbar Styling ---------- */
 .navcontainer {
-    display: flex;
-    flex-wrap: wrap;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .navbar {
     background-color: var(--tertiary-color);
-    flex-basis: 100%;
-    flex-direction: row;
+    width: 100%; 
+    margin-top: 20%;
 }
 
 .nav-list {
+    display: flex; 
+    justify-content: space-around;
     list-style: none;
+    text-decoration: none; 
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
@@ -34,17 +35,20 @@
 
 .nav-item {
     list-style: none;
-    flex-shrink: 1;
+    font-size: 2em;
+    text-decoration: none;
+    margin-left: 5%;
+    margin-right: 5%; 
+    margin-top: 20%; 
+}
+
+.nav-link:hover {
+    text-decoration: underline var(--septary-color);
 }
 
 .link-text {
     color: var(--quaternary-color);
-}
-
-.navbar img {
-    width: 10%;
-    height: auto;
-    list-style: none;
+    text-decoration: none; 
 }
 
 /* ------- signup form --------- */ 
@@ -107,6 +111,7 @@
     margin-top: 10%;
     margin-left: 15%; 
     font-size: 5em;
+    width: 100%; 
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
@@ -131,6 +136,20 @@
 
 .header .loggedin img {
     display: none;
+}
+
+/* ---- Hero Styling -------*/ 
+.hero {
+    background-color: var(--quaternary-color);
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 0; 
+    /*make sure to change this for progress bar */
+    text-align: center;
+}
+
+.hero h3 {
+    color: var(--tertiary-color); 
 }
 
 /* ----- Calendar Styling -------- */
@@ -183,7 +202,7 @@
 
 /* ----- mobile formatting ------- */
 
-@media screen and (min-width: 300px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     /* -------- Navbar Styling ---------- */
     .navcontainer {
@@ -263,29 +282,30 @@
 
     .header .loggedin h1 {
         margin-top: 10%; 
+        margin-bottom: 10%;
         margin-left: 15%; 
         font-size: 3em; 
+        width: 100%; 
         font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
     
     .header .loggedout {
         flex-direction: column;
         flex-wrap: wrap; 
-        width: 100%;
+        width: 100%; 
     }
 
     .header .loggedout h1 {
-        margin-left: 15%;
+        margin-left: 10%;
         margin-top: 10%; 
-        font-size: 2em; 
-        width: 100%;
+        font-size: 3em; 
         font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
 
     .header .loggedout img {
-        width: 100%;
-        height: auto; 
-        margin-left: 10%; 
+        width: 50%;
+        height: auto;
+        margin-left: 30%;
     }
 
     .header .loggedin img {
@@ -306,7 +326,7 @@
     .hero h3 {
         color: var(--tertiary-color); 
     }
-    
+
     .calendar {
         display: flex;
         justify-content: center;

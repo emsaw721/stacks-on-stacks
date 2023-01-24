@@ -13,22 +13,22 @@ const Navbar = () => {
 
     return (
         <section className='navcontainer'>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+</style>
             <>
             {Auth.loggedIn() ? (
             <nav className='navbar' >
-                <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
-</style>
-                <ul>
+                <ul className='nav-list'>
+                    <li className='nav-item dash-icon'>
+                        {/* <Link to '/dashboard' className='nav-link'> */}
+                        <img src={Navpig} alt="pig" />
+                        {/* </Link> */}
+                    </li>
                     <li className='nav-item'>
                         <Link to='/expense' className='nav-link'>
                         <span className='link-text'>Expense</span>
                         </Link>
-                    </li>
-                    <li className='dash-icon'>
-                        {/* <Link to '/dashboard' className='nav-link'> */}
-                        <img src={Navpig} alt="pig" />
-                        {/* </Link> */}
                     </li>
                     <li className='nav-item'>
                         <Link to='/planner' className='nav-link'>
@@ -36,8 +36,8 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link onClick={Auth.logout}>
-                            <span className='link-text'>Signout</span>
+                        <Link className='nav-link' onClick={Auth.logout}>
+                            <span className='link-text'>Logout</span>
                         </Link>
                     </li>
                     </ul>

@@ -20,7 +20,7 @@ const username = decoded.data.username;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
 </style>
 <div className='loggedin'>
-                    <h1>Hello,{username}!</h1>
+                    <h1>Hello, {username}!</h1>
                     <img src={Oinkicon} alt="" />
                 </div>
 </section>
