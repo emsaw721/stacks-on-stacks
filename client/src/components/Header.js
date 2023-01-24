@@ -9,11 +9,12 @@ import decode from 'jwt-decode';
 
 const Header = () => {
 
-    const token = localStorage.getItem('id_token');
-     console.log(token); 
+    const idtoken = localStorage.getItem('id_token');
+     console.log(idtoken); 
 
-    const decoded = decode(token); 
-    const username = decoded.username; 
+     const decoded = decode(idtoken);
+     console.log(decoded); 
+    const username = decoded.data.username; 
     
     return (
         <section className='header'>
