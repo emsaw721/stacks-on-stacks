@@ -37,6 +37,11 @@
     margin-top: 20%; 
 }
 
+.nav-link {
+    text-decoration: none; 
+    color: var(--quaternary-color); 
+}
+
 .nav-link:hover {
     text-decoration: underline var(--septary-color);
 }
@@ -111,6 +116,7 @@
 .header .loggedout {
     flex-direction: column;
     justify-content: center;
+    width: 50%; 
 }
 
 .header .loggedout h1 {
