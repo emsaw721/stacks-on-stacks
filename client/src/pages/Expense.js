@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './pages.css';
 import { Button } from 'react-bootstrap'
-import Modalexpense from './Modalexpense';
+import Modalexpense from '../components/Modalexpense';
 
 
 
@@ -9,8 +9,7 @@ const Expense = (data) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openLink = () => {
-        // onCalDateChange(calDate);
+    const openLink = () => {        
         setIsModalOpen(!isModalOpen);
     }
 

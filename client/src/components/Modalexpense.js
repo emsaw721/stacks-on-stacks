@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import './pages.css';
 import { Form, Button } from 'react-bootstrap'
 import { ADD_TRANSACTION } from '../utils/mutations';
 import Dropdown from 'react-dropdown';
