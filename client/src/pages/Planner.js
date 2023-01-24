@@ -1,18 +1,16 @@
-import React, { useState, useAPI } from 'react';
-import Bar from '../components/ProgressBar';
+import React, { useState, useEffect} from 'react';
+import decode from 'jwt-decode';
 import Cal from '../components/Calendar'
-// import {useQuery} from '@apollo/client';
-// import {QUERY_TRANSACTIONS} from '../utils/queries';
 import './pages.css';
+import { useQuery } from '@apollo/client';
+import { QUERY_BUDGET } from '../utils/queries';
+
 
 const Planner = () => {
-//    const {data, isLoading} = useAPI(); 
-//    const [selectedCategory, setSelectedCategory] = useState(''); 
-//    const filterCategories = data.filter(budget => budget.category === selectedCategory);
 
-//query so category === transactions secondCategory, then get the amount from each transaction from that second category and display 
+    const {data} = useQuery(QUERY_BUDGET);
+    console.log(data); 
 
-// const {data} = useQuery(QUERY_TRANSACTIONS);
 const [rent, setRent] = useState('');
 const saveRent = () => {
     alert(rent)
@@ -45,52 +43,68 @@ const changeOther = (event) => {
 }
     return (
         <section className='report'>
+            <style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+</style>
             <h1> Your Progress Report </h1>
-            <table>
-                <tr className='maincats'>
-                    <th>Category</th>
-                    <th>Expected</th>
-                    <th>Actual</th>
-                </tr>
-                <tr className='subcats'>
-                    <td>Rent</td>
-                    <td className='expected'>
-                        <input onChange={changeRent} value={rent} />
-                        <button onClick={saveRent}>Save Amount</button>
-                    </td>
-                </tr>
-                <tr className='subcats'>
-                    <td>Utilities</td>
-                    <td className='expected'>
-                        <input onChange={changeUtil} value={util} />
-                        <button onClick={saveUtil}>Save Amount</button>
-                    </td>
-                </tr>
-                <tr className='subcats'>
-                    <td>Grocery</td>
-                    <td className='expected'>
-                        <input onChange={changeGrocery} value={grocery} />
-                        <button onClick={saveGrocery}>Save Amount</button>
-                    </td>
-                </tr>
-                <tr className='subcats'>
-                    <td>Other</td>
-                    <td className='expected'>
-                        <input onChange={changeOther} value={other} />
-                        <button onClick={saveOther}>Save Amount</button>
-                    </td>
-                </tr>
-                {/* <tr><select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} name='category-dropdown'></select></tr> */}
-            </table>
-            <Cal></Cal>
-            <Bar></Bar>
+            <Cal />
+            <div>
+               <div className='reportcontainer'>
+                <div className='table'>
+                    <div className='cats'>
+                        <h2>Category</h2>
+                        <div>
+                            <h3 className='renthead'>Rent</h3>
+                        </div>
+                        <div>
+                            <h3 className='utilhead'>Utilities</h3>
+                        </div>
+                        <div>
+                            <h3 className='grochead'>Grocery</h3>
+                        </div>
+                        <div>
+                            <h3 className='othhead'>Other</h3>
+                        </div>
+                        <div>
+                            <h3 className='tothead'>Total</h3>
+                        </div>
+                    </div>
+                    <div className='projection'>
+                        <h2>Expected</h2>
+                        <div className='expected'>
+                            <input onChange={changeRent} value={rent} />
+                            <button onClick={saveRent}>Save</button>
+                        </div>
+                        <div className='expected'>
+                            <input onChange={changeUtil} value={util} />
+                            <button onClick={saveUtil}>Save</button>
+                        </div>
+                        <div className='expected'>
+                            <input onChange={changeGrocery} value={grocery} />
+                            <button onClick={saveGrocery}>Save</button>
+                        </div>
+                        <div className='expected'>
+                            <input onChange={changeOther} value={other} />
+                            <button onClick={saveOther}>Save</button>
+                        </div>
+                        <div className='expectedtot'>####</div>
+                    </div>
+                    <div className='reality'>
+                        <h2>Actual</h2>
+                        <div className='actual'>
+                        <div className='rentact'>#</div>
+                        <div className='utilact'>#</div>
+                        <div className='grocact'>#</div>
+                        <div className='othact'>#</div>
+                        <div className='totact'>####</div>
+                        </div>
+                    </div>
+                </div>  
+                </div>
+            </div>
         </section>
     )
 }
 
 
 export default Planner;
-
-
-
-

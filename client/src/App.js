@@ -7,17 +7,21 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/Header';
+import Hero from './components/Hero'; 
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Expense from './pages/Expense';
 import Planner from './pages/Planner';
-// import Dashboard from './pages/Dashboard'; 
+//import Dashboard from './pages/Dashboard'; 
+import Bar from './components/ProgressBar';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
+
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
@@ -35,19 +39,18 @@ const client = new ApolloClient({
 });
 
 
-
-
 function App() {
   return (
     <ApolloProvider client={client}>
       <Header />
+      <Hero />
       <Router>
         <div className='content'>
-          <Routes>
+            <Routes>
             {/* <Route path = '/' element={<Dashboard />} />  */}
             <Route path = '/expense' element={<Expense />} />
             <Route path='/planner' element={<Planner />} />
-          </Routes>
+            </Routes>
         </div>
         <Navbar />
         <Footer />
