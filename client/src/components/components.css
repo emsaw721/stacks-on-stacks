@@ -193,11 +193,14 @@
     .header .loggedin {
         justify-content: center;
         text-align: center;
+        margin: 0; 
     }
 
     .header .loggedin h1 {
-        margin-top: 10%; 
-        margin-left: 0; 
+        margin-top:10%; 
+        margin-left: 15%; 
+        font-size: 3em; 
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
     
     .header .loggedout {
@@ -207,8 +210,9 @@
 
     .header .loggedout h1 {
         margin-left: 15%;
-        margin-top: 10%;
-        font-size: 2em;
+        margin-top: 10%; 
+        font-size: 2em; 
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
 
     .header .loggedout img {
