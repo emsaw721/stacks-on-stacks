@@ -7,14 +7,14 @@ import decode from 'jwt-decode';
 
 const Header = () => {
 const loggedIn = Auth.loggedIn();
-// if(loggedIn) {
+ if(loggedIn) {
     const idtoken = localStorage.getItem('id_token');
     console.log(idtoken); 
 
-const decoded = decode(idtoken);
-console.log(decoded); 
+    const decoded = decode(idtoken);
+    console.log(decoded); 
 
-const username = decoded.data.username;
+    const username = decoded.data.username;
     return (
         <section className='header'>
         <style>
@@ -26,20 +26,20 @@ const username = decoded.data.username;
                 </div>
 </section>
     )
-// } 
-// else {
-//     return (
-//         <section className='header'>
-//         <style>
-// @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
-// </style>
-//         <div className='loggedout'>
-//         <h1>Welcome to Oink!</h1>
-//         <img src={Welcomeicon} alt="" />
-//     </div>
-//     </section>
-//     )
-// }
+} 
+else {
+    return (
+        <section className='header'>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+</style>
+        <div className='loggedout'>
+        <h1>Welcome to Oink!</h1>
+        <img src={Welcomeicon} alt="" />
+    </div>
+    </section>
+    )
+}
 }
 
 export default Header; 
