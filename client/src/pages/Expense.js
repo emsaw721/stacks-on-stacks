@@ -12,7 +12,6 @@ const Expense = (data) => {
     const openLink = () => {        
         setIsModalOpen(!isModalOpen);
     }
-
     return (
         <section className="flex-row justify-center mb-4">
             <div className="col-12 col-md-6">
