@@ -32,7 +32,7 @@ const LoginForm = () => {
         variables: { ...formState },
       });
 
-      Auth.login(data.loginUser);
+      Auth.login(data.loginUser.token);
     } catch (error) {
       console.error(error);
       setShowAlert(true);
