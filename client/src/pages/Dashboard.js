@@ -5,15 +5,6 @@ import BudgetPlanner from './Planner'
 
 function MainDashboard() {
   return (
-    <div>
-      <section className="hero">
-        <div className="banner">
-          <p>
-            This progress bar shows how much money you have left that you can
-            spend
-          </p>
-        </div>
-      </section>
       <div className="categories">
         <div class="topics">
           <h2>Income</h2>
@@ -58,7 +49,6 @@ function MainDashboard() {
           />
         </div>
       </div>
-    </div>
   );
 }
 
