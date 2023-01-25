@@ -13,8 +13,8 @@ const Modalexpense = ({ show, onClose }) => {
   const [validated] = useState(false);
 
   const [expenseFormState, setExpenseState] = useState({
-    firstcategory: 'Expense',
-    secondcategory: '',
+    firstCategory: 'Expense',
+    secondCategory: '',
     amount: '',
     categoryNote: '',
     yearmonth: new Date()
@@ -25,7 +25,7 @@ const Modalexpense = ({ show, onClose }) => {
   });
 
   const handleDropdownChange = (event) => {
-    setExpenseState({ ...expenseFormState, secondcategory: event.value });
+    setExpenseState({ ...expenseFormState, secondCategory: event.value });
   };
 
   const handleInputChange = (event) => {
@@ -48,7 +48,7 @@ const Modalexpense = ({ show, onClose }) => {
           yearmonth: format(expenseFormState.yearmonth, 'yyyyMM')
         },
       });
-      AuthService.getToken();
+      AuthService.loggedIn(data);
     } catch (e) {
       console.error(e);
     }
@@ -90,8 +90,8 @@ const Modalexpense = ({ show, onClose }) => {
               value={expenseFormState.yearmonth}
           />
           <Button
-            disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
-            type='button' variant='success' className='subbtn' onClick={handleFormSubmit}>
+            disabled={!(expenseFormState.firstCategory && expenseFormState.secondCategory)}
+            type='submit' variant='success' className='subbtn'>
             Submit
           </Button>
         </Form>

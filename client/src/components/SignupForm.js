@@ -35,17 +35,25 @@ const SignupForm = () => {
         variables: { ...userFormData },
       });
 
-      AuthService.login(JSON.stringify(data.addUser));
-    } catch (e) {
-      console.error(e);
-    }
       console.log(data)
 
       AuthService.login(data.addUser.token);
     } catch (error) {
+      if (error.message.includes("duplicated")) {
+        errorMessage = "Username or email already exists!"
+      } else {
+        errorMessage = 'Something went wrong with your signup!'
+      }
       console.error(error);
       setShowAlert(true);
     };
+
+    setUserFormData({
+      username: '',
+      email: '',
+      password: '',
+    });
+
   };
 
   return (
