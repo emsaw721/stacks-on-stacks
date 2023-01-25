@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Form, Button, Modal, ModalTitle } from 'react-bootstrap'
+import { Form, Button, Modal } from 'react-bootstrap'
 import { ADD_TRANSACTION } from '../utils/mutations';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -82,7 +82,5 @@ const Modalexpense = ({ show, onClose }) => {
     </Modal>
   );
 };
-
-
 
 export default Modalexpense;
