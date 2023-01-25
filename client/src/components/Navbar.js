@@ -8,53 +8,53 @@ import SignUpForm from './SignupForm'
 import Auth from '../utils/auth';
 
 const Navbar = () => {
-   
+
     const [showModal, setShowModal] = useState(false);
 
     return (
         <section className='navcontainer'>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
-</style>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+            </style>
             <>
-            {Auth.loggedIn() ? (
-            <nav className='navbar' >
-                <ul className='nav-list'>
-                    <li className='nav-item dash-icon'>
-                        {/* <Link to '/dashboard' className='nav-link'>
+                {Auth.loggedIn() ? (
+                    <nav className='navbar' >
+                        <ul className='nav-list'>
+                            <li className='nav-item dash-icon'>
+                                {/* <Link to '/dashboard' className='nav-link'>
                         <img src={Navpig} alt="pig" />
                          </Link> */}
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/expense' className='nav-link'>
-                        <span className='link-text'>Expense</span>
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/planner' className='nav-link'>
-                            <span className='link-text'>Report</span>
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link className='nav-link' onClick={Auth.logout}>
-                            <span className='link-text'>Logout</span>
-                        </Link>
-                    </li>
-                    </ul>
-            </nav>
-                     ):(
-                        <nav className='navbar' >
-                            <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
-</style>
+                            </li>
+                            <li className='navigation-item'>
+                                <Link to='/expense' className='nav-link'>
+                                    <span className='link-text'>Expense</span>
+                                </Link>
+                            </li>
+                            <li className='navigation-item'>
+                                <Link to='/planner' className='nav-link'>
+                                    <span className='link-text'>Report</span>
+                                </Link>
+                            </li>
+                            <li className='navigation-item'>
+                                <Link className='nav-link' onClick={Auth.logout}>
+                                    <span className='link-text'>Logout</span>
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
+                ) : (
+                    <nav className='navbar' >
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+                        </style>
                         <ul>
-                            <li className='nav-item'>
-                        <Nav.Link onClick={() => setShowModal(true)}>
-                            Login/Signup
-                        </Nav.Link>
-                     </li>
-                     </ul>
-                     </nav> )}
+                            <li className='navigation-item'>
+                                <Nav.Link onClick={() => setShowModal(true)}>
+                                    Login/Signup
+                                </Nav.Link>
+                            </li>
+                        </ul>
+                    </nav>)}
             </>
             {/* set modal data up */}
             <Modal

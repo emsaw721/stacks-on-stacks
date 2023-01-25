@@ -28,7 +28,7 @@
     justify-content: space-evenly;
 }
 
-.nav-item {
+.navigation-item {
     list-style: none;
     font-size: 2em;
     text-decoration: none;
@@ -53,7 +53,7 @@
 
 /* ------- signup form --------- */ 
 
-.formlabel {
+/* .formlabel {
     color: var(--quaternary-color);
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -81,13 +81,13 @@
 .formbtn {
     color: var(--tertiary-color); 
     background-color: var(--quinary-color);
-}
+} */
 
-.formbtn :hover {
+/* .formbtn :hover {
     border-color: var(--quaternary-color); 
     background-color: var(--tertiary-color);
     color: var(--quaternary-color); 
-}
+} */
 
 
 .nav-pills .nav-link {
@@ -200,10 +200,10 @@
 
 /* ------- progress bar ------ */
 
-.progressBar {
+/* .progressBar {
     display: flex;
     justify-content: center;
-}
+} */
 
 /* ------- Footer Styling ------- */
 .footer {
@@ -324,7 +324,7 @@
     /* ---- Hero Styling ------ */ 
 
     .hero {
-        background-color: var(--quaternary-color);
+        /* background-color: var(--quaternary-color); */
         position: sticky;
         position: -webkit-sticky; 
         top: 0; 
@@ -332,9 +332,9 @@
         text-align: center;
     }
 
-    .hero h3 {
+    /* .hero h3 {
         color: var(--tertiary-color); 
-    }
+    } */
 
     .calendar {
         display: flex;
