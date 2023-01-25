@@ -15,8 +15,8 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Expense from './pages/Expense';
 import Planner from './pages/Planner';
-// import Dashboard from './pages/Dashboard'; 
-import Bar from './components/ProgressBar';
+//import Dashboard from './pages/Dashboard'; 
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
