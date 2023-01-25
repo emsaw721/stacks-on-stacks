@@ -6,13 +6,15 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 
-function Income() {
+function Income(show) {
+
+    const [startDate, setStartDate] = useState(new Date());
 
     const [incomeFormState, setIncomeState] = useState({
         firstcategory: 'Income',
         amount: '',
         note: '',
-        date: ''
+        date: startDate
     });
 
     const [addIncome] = useMutation(ADD_INCOME);
@@ -20,6 +22,10 @@ function Income() {
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setIncomeState({ ...incomeFormState, [name]: value });
+    };
+
+    const handleDateSelect = (event) => {
+        setIncomeState({ ...startDate, date: event.value });
     };
 
     const handleFormSubmit = async (event) => {
@@ -38,40 +44,57 @@ function Income() {
 
 
     return (
-        <Modal
-            show={show}
-            onHide={() => onClose(false)}>
-            <Modal.Header closeButton>
-                <Modal.Title>Income List</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <Form onSubmit={handleFormSubmit} noValidate validated={validated}>
-                    <Form.Control
-                        className="form-input"
-                        placeholder="Total"
-                        name="amount"
-                        type="amount"
-                        id="incomeamount"
-                        value={incomeFormState.amount}
-                        onChange={handleInputChange}
-                    />
-                    <Form.Control
-                        className="form-input"
-                        placeholder="Notes"
-                        name="incomeNote"
-                        type="incomeNote"
-                        id="incomeNote"
-                        value={incomeFormState.note}
-                        onChange={handleInputChange}
-                    />
-                    <Button
-                        disabled={!(incomeFormState.firstcategory)}
-                        type='submit' variant='success' className='subbtn'>
-                        addExpense
-                    </Button>
-                </Form>
-            </Modal.Body>
-        </Modal>
+        <section>
+            <Modal
+                show={show}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Income</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form onSubmit={handleFormSubmit}>
+                        <Form.Control
+                            className="form-input"
+                            placeholder="Total"
+                            name="amount"
+                            type="number"
+                            id="incomeamount"
+                            value={incomeFormState.amount}
+                            onChange={handleInputChange}
+                        />
+                        <Form.Control
+                            className="form-input"
+                            placeholder="Notes"
+                            name="note"
+                            type="text"
+                            id="incomeNote"
+                            value={incomeFormState.note}
+                            onChange={handleInputChange}
+                        />
+                        <DatePicker
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            onSelect={handleDateSelect}
+                            value={incomeFormState.date}                            
+                        />                        
+                        <Button
+                            disabled={!(incomeFormState.firstcategory)}
+                            type='submit' variant='success' className='subbtn'>
+                            Add
+                        </Button>
+                        <Button
+                            disabled={!(incomeFormState.firstcategory)}
+                            type='submit' variant='success' className='subbtn'>
+                            Edit
+                        </Button>
+                        <Button
+                            disabled={!(incomeFormState.firstcategory)}
+                            type='submit' variant='success' className='subbtn'>
+                            Delete
+                        </Button>
+                    </Form>
+                </Modal.Body>
+            </Modal>
+        </section>
     )
 }
 

@@ -12,7 +12,12 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
-  let errorMessage = 'Something went wrong with your signup!'
+  setUserFormData({
+    username: '',
+    email: '',
+    password: '',
+  });
+
 
   const [createUser] = useMutation(ADD_USER)
 
@@ -40,20 +45,9 @@ const SignupForm = () => {
 
       Auth.login(data.addUser.token);
     } catch (error) {
-      if (error.message.includes("duplicated")) {
-        errorMessage = "Username or email already exists!"
-      } else {
-        errorMessage = 'Something went wrong with your signup!'
-      }
       console.error(error);
       setShowAlert(true);
     };
-
-    setUserFormData({
-      username: '',
-      email: '',
-      password: '',
-    });
 
   };
 
@@ -66,7 +60,7 @@ const SignupForm = () => {
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-          {errorMessage}
+          Something went wrong with your login!
         </Alert>
         <Form.Group>
           <Form.Label className='formlabel' htmlFor='username'>Username</Form.Label>
