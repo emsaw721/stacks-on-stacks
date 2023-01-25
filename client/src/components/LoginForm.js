@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+import AuthService from '../utils/auth';
 import './components.css'; 
 
 const LoginForm = () => {
@@ -33,7 +33,7 @@ const LoginForm = () => {
         variables: { ...userFormInput},
       });
 
-      Auth.login(data.loginUser.token);
+      AuthService.login(data.userFormInput.password);
     } catch (e) {
       console.error(e);
     }

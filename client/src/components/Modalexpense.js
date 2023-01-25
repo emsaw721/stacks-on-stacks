@@ -4,7 +4,7 @@ import { Form, Button, Modal, ModalTitle } from 'react-bootstrap'
 import { ADD_TRANSACTION } from '../utils/mutations';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-
+import AuthService from '../utils/auth';
 
 const Modalexpense = ({ show, onClose }) => {
 
@@ -14,7 +14,9 @@ const Modalexpense = ({ show, onClose }) => {
     firstCategory: 'Expense',
     secondCategory: '',
     amount: '',
-    categoryNote: ''
+    categoryNote: '',
+    yearmonth: '',
+    username: ''
   });
 
   const [addExpense] = useMutation(ADD_TRANSACTION);
@@ -36,7 +38,7 @@ const Modalexpense = ({ show, onClose }) => {
       const { data } = await addExpense({
         variables: { ...expenseFormState },
       });
-      console.log(data);
+      AuthService.getToken();
     } catch (e) {
       console.error(e);
     }

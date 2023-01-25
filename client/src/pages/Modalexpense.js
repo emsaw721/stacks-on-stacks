@@ -4,7 +4,7 @@ import './pages.css';
 import { Form, Button } from 'react-bootstrap'
 // import { Link } from 'react-router-dom';
 import { ADD_TRANSACTION } from '../utils/mutations';
-import Auth from '../utils/auth';
+import AuthService from '../utils/auth';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
@@ -17,7 +17,8 @@ const Modalexpense = (props) => {
     firstCategory: 'Expense',
     secondCategory: '',
     amount: '',
-    categoryNote: ''
+    categoryNote: '',
+    username: ''
   });
 
   const [addExpense] = useMutation(ADD_TRANSACTION);
@@ -35,7 +36,7 @@ const Modalexpense = (props) => {
         variables: { ...expenseFormState },
       });
 
-      Auth.login(data.login.token);
+      AuthService.getToken();
     } catch (e) {
       console.error(e);
     }

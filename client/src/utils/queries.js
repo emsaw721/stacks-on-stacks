@@ -54,6 +54,7 @@ query transaction($id: ID!) {
         categoryNote
         location
         note
+        
     }
 }`;
 
