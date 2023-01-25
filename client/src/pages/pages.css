@@ -16,6 +16,14 @@
 div {
     width: 100%; 
 }
+.fullwidth {
+    width: 100%; 
+}
+
+.report {
+    width: 100%; 
+}
+
 .report h1{
     font-size: 3em; 
     color: var(--quaternary-color);
@@ -25,6 +33,7 @@ div {
 .reportcontainer {
     border-bottom: 2px dashed var(--secondary-color);
     margin-top: 10%; 
+    width: 100%; 
 }
 
 .table{

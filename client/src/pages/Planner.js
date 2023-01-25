@@ -48,7 +48,7 @@ const changeOther = (event) => {
 </style>
             <h1> Your Progress Report </h1>
             <Cal />
-            <div>
+            <div className='fullwidth'>
                <div className='reportcontainer'>
                 <div className='table'>
                     <div className='cats'>
