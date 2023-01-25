@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Expense from './pages/Expense';
 import Planner from './pages/Planner';
-//import Dashboard from './pages/Dashboard'; 
+// import Dashboard from './pages/Dashboard'; 
 import Bar from './components/ProgressBar';
 
 const httpLink = createHttpLink({
