@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Modal, Tab, Nav } from 'react-bootstrap';
@@ -94,16 +93,4 @@ const Navbar = () => {
 };
 
 export default Navbar; 
-=======
-// import React from 'react'; 
-// import './pages.css'; 
-// import Navpig from 'oinktranspig.png'; 
 
-// function Nav({currectPage, handlePageChange}) {
-//     return(
-//         console.log('hello')
-//     )
-// }
-
-// export default Nav; 
->>>>>>> b774e217 (added the html and css to dashboard page)
