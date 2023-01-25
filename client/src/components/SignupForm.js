@@ -6,11 +6,13 @@ import Auth from '../utils/auth';
 
 const SignupForm = () => {
   // set initial form state  
-  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: ''}); 
+  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
+
+  let errorMessage = 'Something went wrong with your signup!'
 
   const [createUser] = useMutation(ADD_USER)
 
@@ -30,18 +32,23 @@ const SignupForm = () => {
     }
 
     try {
-      const {data} = await createUser({
+      const { data } = await createUser({
         variables: { ...userFormData },
-      }); 
+      });
 
       console.log(data)
 
       Auth.login(data.addUser.token);
     } catch (error) {
+      if (error.message.includes("duplicated")) {
+        errorMessage = "Username or email already exists!"
+      } else {
+        errorMessage = 'Something went wrong with your signup!'
+      }
       console.error(error);
       setShowAlert(true);
-    }; 
-    
+    };
+
     setUserFormData({
       username: '',
       email: '',
@@ -52,16 +59,15 @@ const SignupForm = () => {
 
   return (
     <>
-    <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
-</style>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+      </style>
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-          Something went wrong with your signup!
+          {errorMessage}
         </Alert>
-
         <Form.Group>
           <Form.Label className='formlabel' htmlFor='username'>Username</Form.Label>
           <Form.Control
@@ -104,7 +110,7 @@ const SignupForm = () => {
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
           variant='success'
-          >
+        >
           Submit
         </Button>
       </Form>
@@ -112,7 +118,7 @@ const SignupForm = () => {
   );
 };
 
-export default SignupForm; 
+export default SignupForm;
 
 
 // const SignupForm = () => {
