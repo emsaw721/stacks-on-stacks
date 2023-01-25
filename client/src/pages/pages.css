@@ -130,9 +130,10 @@ div {
 }
 
 .expectedtot {
-    margin-top: 30%; 
-    margin-left: 20%;
+    margin-top: 10%; 
+    margin-left: 10%;
     color: var(--quaternary-color); 
+    font-size: 1.5em; 
 }
 
 .reality h2 {

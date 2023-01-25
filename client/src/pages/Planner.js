@@ -90,19 +90,19 @@ let sum = arr.reduce(function(prev, current) {
                     <div className='projection'>
                         <h2>Expected</h2>
                         <div className='expected'>
-                            <input onChange={changeRent} value={rent} />
+                            <input onChange={changeRent} value={rent} placeholder={savedRent} />
                             <button onClick={saveRent}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeUtil} value={util} />
+                            <input onChange={changeUtil} value={util} placeholder={savedUtility} />
                             <button onClick={saveUtil}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeGrocery} value={grocery} />
+                            <input onChange={changeGrocery} value={grocery} placeholder={savedGrocery} />
                             <button onClick={saveGrocery}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeOther} value={other} />
+                            <input onChange={changeOther} value={other} placeholder={savedOther} />
                             <button onClick={saveOther}>Save</button>
                         </div>
                         <div className='expectedtot'>{sum}</div>
