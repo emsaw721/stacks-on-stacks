@@ -18,7 +18,7 @@ const transactionSchema = new Schema(
     },
     yearmonth:{
       type: String,
-      required:true,
+      required:false,
     },
     firstcategory:{
         required: true,

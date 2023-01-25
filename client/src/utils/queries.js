@@ -64,7 +64,7 @@ query budget($username: username) {
         _id
         amount
         date
-        secondCategory
+        secondcategory
     }
 }`
 

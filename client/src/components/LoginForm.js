@@ -33,11 +33,7 @@ const LoginForm = () => {
         variables: { ...userFormInput},
       });
 
-<<<<<<< HEAD
-      AuthService.login(data.userFormInput.password);
-=======
-      Auth.login(data.login.token);
->>>>>>> 7d130ae61dbbdb0303d4fef67c315897b3d244c1
+      AuthService.login(data.login.token);
     } catch (e) {
       setShowAlert(true)
       console.error(e);
