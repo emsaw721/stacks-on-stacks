@@ -24,11 +24,9 @@
     "url": "https://github.com/emsaw721/stacks-on-stacks/issues"
   },
   "homepage": "https://github.com/emsaw721/stacks-on-stacks#readme",
-  "dependencies": {
-    "@ramonak/react-progress-bar": "^5.0.3",
+  "dependencies": {    
     "jwt-decode": "^3.1.2",
-    "react-bootstrap": "^2.7.0",
-    "react-datepicker": "^4.8.0",
+    "react-bootstrap": "^2.7.0",    
     "react-router-dom": "^6.7.0"
   }
 }

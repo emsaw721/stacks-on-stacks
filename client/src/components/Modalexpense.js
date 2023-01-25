@@ -58,7 +58,7 @@ const Modalexpense = ({ show, onClose }) => {
             className="form-input"
             placeholder="Total"
             name="amount"
-            type="amount"
+            type="number"
             id="amount"
             value={expenseFormState.amount}
             onChange={handleInputChange}
@@ -67,7 +67,7 @@ const Modalexpense = ({ show, onClose }) => {
             className="form-input"
             placeholder="Notes"
             name="categoryNote"
-            type="categoryNote"
+            type="text"
             id="categoryNote"
             value={expenseFormState.categoryNote}
             onChange={handleInputChange}
