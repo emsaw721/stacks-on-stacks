@@ -11,7 +11,7 @@ const LoginForm = () => {
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
-  const [loginUser, {error}] = useMutation(LOGIN_USER)
+  const [loginUser] = useMutation(LOGIN_USER)
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -33,7 +33,7 @@ const LoginForm = () => {
         variables: { ...userFormInput},
       });
 
-      Auth.login(data.loginUser.token);
+      Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
