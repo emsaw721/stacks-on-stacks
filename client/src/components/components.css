@@ -37,6 +37,11 @@
     margin-top: 20%; 
 }
 
+.nav-link {
+    text-decoration: none; 
+    color: var(--quaternary-color); 
+}
+
 .nav-link:hover {
     text-decoration: underline var(--septary-color);
 }
@@ -48,9 +53,19 @@
 
 /* ------- signup form --------- */ 
 
-.signupform h3 {
+.formlabel {
     color: var(--quaternary-color);
     font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.forminput {
+    width: 100%; 
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400; 
+    border: 1px solid var(--secondary-color); 
+    border-radius: 0.375rem; 
 }
 
 .signupform input {
@@ -63,16 +78,17 @@
     border-radius: 0.375rem; 
 }
 
-.signupform button {
-    color: var(--tertiary-color);
+.formbtn {
+    color: var(--tertiary-color); 
     background-color: var(--quinary-color);
-    border-color: var(--quinary-color);
-    margin-top: 10px;
 }
 
-.signupform button:hover {
+.formbtn :hover {
     border-color: var(--quaternary-color); 
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color); 
 }
+
 
 .nav-pills .nav-link {
     color: var(--septary-color); 
@@ -87,6 +103,12 @@
     background-color: var(--quinary-color);
     border-color: var(--quinary-color);
     margin-top: 10px;
+}
+
+.modal-body .button.btn.btn-success:hover {
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color); 
+    margin-top: 10px; 
 }
 
 /* -------- Header Styling ------- */
@@ -111,6 +133,7 @@
 .header .loggedout {
     flex-direction: column;
     justify-content: center;
+    width: 50%; 
 }
 
 .header .loggedout h1 {
@@ -233,30 +256,23 @@
 
     /* ------- signup form --------- */ 
 
-    .signupform h3 {
-    color: var(--quaternary-color);
-    font-family: 'IBM Plex Sans', sans-serif;
+    .formlabel {
+        color: var(--quaternary-color);
+        font-family: 'IBM Plex Sans', sans-serif;
     }
 
-    .signupform input {
-    width: 100%; 
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 400; 
-    border: 1px solid var(--secondary-color); 
-    border-radius: 0.375rem; 
+
+    .formbtn {
+        color: var(--tertiary-color);
+        background-color: var(--quinary-color);
+     border-color: var(--quinary-color);
+        margin-top: 10px;
     }
 
-    .signupform button {
-    color: var(--tertiary-color);
-    background-color: var(--quinary-color);
-    border-color: var(--quinary-color);
-    margin-top: 10px;
-    }
-
-    .signupform button:hover {
-    border-color: var(--quaternary-color); 
+    .formbtn:hover {
+        border-color: var(--quaternary-color); 
+        background-color: var(--tertiary-color);
+        color: var(--quaternary-color); 
     }
     
     

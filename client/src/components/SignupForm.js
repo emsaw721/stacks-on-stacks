@@ -7,6 +7,7 @@ import Auth from '../utils/auth';
 // const SignupForm = () => {
 //   // set initial form state
 //   const [formState, setFormState] = useState({ username: '', email: '', password: '' });
+//   //const [userFormData, setUserFormData] = useState({ username: '', email: '', password: ''}); 
 //   // set state for form validation
 //   const [validated] = useState(false);
 //   // set state for alert
@@ -34,12 +35,15 @@ import Auth from '../utils/auth';
 //         variables: { ...formState },
 //       }); 
 
-   
-//       Auth.login(data.createUser);
+//       console.log(data)
+
+//       Auth.login(JSON.stringify(data.createUser));
+
 //     } catch (error) {
 //       console.error(error);
 //       setShowAlert(true);
-//     }
+//       }; 
+
 //   };
 
 //   return (
@@ -55,7 +59,7 @@ import Auth from '../utils/auth';
 //         </Alert>
 
 //         <Form.Group>
-//           <Form.Label htmlFor='username'>Username</Form.Label>
+//           <Form.Label className='formlabel' htmlFor='username'>Username</Form.Label>
 //           <Form.Control
 //             type='text'
 //             placeholder='Your username'
@@ -68,7 +72,7 @@ import Auth from '../utils/auth';
 //         </Form.Group>
 
 //         <Form.Group>
-//           <Form.Label htmlFor='email'>Email</Form.Label>
+//           <Form.Label className='formlabel' htmlFor='email'>Email</Form.Label>
 //           <Form.Control
 //             type='email'
 //             placeholder='Your email address'
@@ -81,7 +85,7 @@ import Auth from '../utils/auth';
 //         </Form.Group>
 
 //         <Form.Group>
-//           <Form.Label htmlFor='password'>Password</Form.Label>
+//           <Form.Label className='formlabel' htmlFor='password'>Password</Form.Label>
 //           <Form.Control
 //             type='password'
 //             placeholder='Your password'
@@ -92,7 +96,7 @@ import Auth from '../utils/auth';
 //           />
 //           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
 //         </Form.Group>
-//         <Button
+//         <Button className='formbtn'
 //           disabled={!(formState.username && formState.email && formState.password)}
 //           type='submit'
 //           variant='success'
@@ -104,7 +108,8 @@ import Auth from '../utils/auth';
 //   );
 // };
 
-// export default SignupForm;
+// export default SignupForm; 
+
 
 const SignupForm = () => {
   const [formState, setFormState] = useState({
@@ -141,7 +146,7 @@ const SignupForm = () => {
 
   return (
             <form className='signupform' onSubmit={handleFormSubmit}>
-              <h3>Username</h3>
+              <h3 className='formlabel'>Username</h3>
               <input
                 className="form-input"
                 placeholder="Your username"

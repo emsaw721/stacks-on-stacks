@@ -7,6 +7,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/Header';
 import Hero from './components/Hero'; 
@@ -16,6 +17,7 @@ import Expense from './pages/Expense';
 import Planner from './pages/Planner';
 // import Dashboard from './pages/Dashboard'; 
 import Bar from './components/ProgressBar';
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -35,8 +37,6 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
-
 
 
 function App() {
