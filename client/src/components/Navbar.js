@@ -22,8 +22,8 @@ const Navbar = () => {
                         <ul className='nav-list'>
                             <li className='nav-item dash-icon'>
                                 <Link to='/dash' className='nav-link'>
-                        <img src={Navpig} alt="pig" />
-                         </Link>
+                                    <img src={Navpig} alt="pig" />
+                                </Link>
                             </li>
                             <li className='navigation-item'>
                                 <Link to='/expense' className='nav-link'>

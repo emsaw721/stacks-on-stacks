@@ -26,16 +26,16 @@
     display: flex; 
     list-style: none;
     text-decoration: none; 
-    justify-content: space-evenly;
+    justify-content: center;
+    margin: 0; 
+    padding: 0; 
 }
 
 .navigation-item {
     list-style: none;
     font-size: 2em;
     text-decoration: none;
-    margin-left: 5%;
-    margin-right: 5%; 
-    margin-top: 20%; 
+    padding: 2px; 
 }
 
 .nav-link {
@@ -51,6 +51,7 @@
     color: var(--tertiary-color);
     text-decoration: none; 
 }
+
 
 
 
@@ -228,36 +229,44 @@
 
     /* -------- Navbar Styling ---------- */
     .navcontainer {
-        display: flex;
-        flex-wrap: wrap;
+        font-family: 'IBM Plex Sans', sans-serif;
     }
-
+    
     .navbar {
-        background-color: var(--tertiary-color);
-        flex-basis: 100%;
-        flex-direction: row;
+        background-color: var(--quinary-color);
     }
-
+    
     .nav-list {
+        display: flex; 
+        flex-wrap: wrap;
         list-style: none;
-        position: -webkit-sticky;
-        position: sticky;
-        bottom: 0;
+        text-decoration: none; 
+        justify-content: space-evenly;
     }
-
-    .nav-item {
+    
+    .navigation-item {
         list-style: none;
-        flex-shrink: 1;
+        font-size: 1.5em;
+        text-decoration: none;
     }
-
+    
+    .nav-link {
+        text-decoration: none; 
+        color: var(--quaternary-color); 
+    }
+    
+    .nav-link:hover {
+        text-decoration: underline var(--septary-color);
+    }
+    
     .link-text {
-        color: var(--quaternary-color);
+        color: var(--tertiary-color);
+        text-decoration: none; 
     }
 
-    .navbar img {
-        width: 20%;
-        height: auto;
-        list-style: none;
+    .dash-icon {
+        width: 2%; 
+        height: auto; 
     }
 
     /* ------- signup form --------- */ 
@@ -283,10 +292,12 @@
     
     
     /* -------- Header Styling ------- */
+
     .header {
         background-color: var(--quinary-color);
         color: var(--tertiary-color);
         display: flex;
+        text-align: center; 
     }
 
     .header .loggedin {
@@ -296,23 +307,16 @@
     }
 
     .header .loggedin h1 {
-        margin-top: 10%; 
-        margin-bottom: 10%;
-        margin-left: 15%; 
         font-size: 3em; 
-        width: 100%; 
         font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
 
     .header .loggedout {
         flex-direction: column;
         flex-wrap: wrap; 
-        width: 100%; 
     }
 
     .header .loggedout h1 {
-        margin-left: 10%;
-        margin-top: 10%; 
         font-size: 3em; 
         font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
