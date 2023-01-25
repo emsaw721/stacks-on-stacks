@@ -3,24 +3,26 @@ import decode from 'jwt-decode';
 import Cal from '../components/Calendar'
 import './pages.css';
 import { useQuery } from '@apollo/client';
-import { QUERY_BUDGET } from '../utils/queries';
+import { QUERY_MONTHEXPENSE } from '../utils/queries';
 
 
 const Planner = () => {
 
-    const {data} = useQuery(QUERY_BUDGET);
-    console.log(data); 
+    // const {data} = useQuery(QUERY_MONTHEXPENSE);
+    // console.log(data); 
 
 const [rent, setRent] = useState('');
 const saveRent = () => {
-    alert(rent)
+    alert(rent);
+    localStorage.setItem('rent', rent);
 }
 const changeRent = (event) => {
     setRent(event.target.value); 
 }
 const [util, setUtil] = useState('');
 const saveUtil = () => {
-    alert(util)
+    alert(util);
+    localStorage.setItem('util', util);
 }
 const changeUtil = (event) => {
     setUtil(event.target.value); 
@@ -29,6 +31,7 @@ const changeUtil = (event) => {
 const [grocery, setGrocery] = useState('');
 const saveGrocery = () => {
     alert(grocery)
+    localStorage.setItem('grocery', grocery)
 }
 const changeGrocery = (event) => {
     setGrocery(event.target.value); 
@@ -37,10 +40,25 @@ const changeGrocery = (event) => {
 const [other, setOther] = useState('');
 const saveOther = () => {
     alert(other)
+    localStorage.setItem('other', other)
 }
 const changeOther = (event) => {
     setOther(event.target.value); 
 }
+
+const savedRent = localStorage.getItem('rent');
+const savedUtility = localStorage.getItem('util'); 
+const savedGrocery = localStorage.getItem('grocery');
+const savedOther = localStorage.getItem('other'); 
+
+let arr = [savedRent, savedUtility, savedGrocery, savedOther]; 
+console.log(arr); 
+
+let sum = arr.reduce(function(prev, current) {
+    return prev + +current
+  }, 0);
+  console.log(sum) 
+
     return (
         <section className='report'>
             <style>
@@ -87,7 +105,7 @@ const changeOther = (event) => {
                             <input onChange={changeOther} value={other} />
                             <button onClick={saveOther}>Save</button>
                         </div>
-                        <div className='expectedtot'>####</div>
+                        <div className='expectedtot'>{sum}</div>
                     </div>
                     <div className='reality'>
                         <h2>Actual</h2>
