@@ -11,8 +11,8 @@ const Modalexpense = ({ show, onClose }) => {
   const [validated] = useState(false);
 
   const [expenseFormState, setExpenseState] = useState({
-    firstCategory: 'Expense',
-    secondCategory: '',
+    firstcategory: 'Expense',
+    secondcategory: '',
     amount: '',
     categoryNote: ''
   });
@@ -20,7 +20,7 @@ const Modalexpense = ({ show, onClose }) => {
   const [addExpense] = useMutation(ADD_TRANSACTION);
 
   const handleDropdownChange = (event) => {
-    setExpenseState({ ...expenseFormState, secondCategory: event.value });
+    setExpenseState({ ...expenseFormState, secondcategory: event.value });
   };
 
   const handleInputChange = (event) => {
@@ -73,7 +73,7 @@ const Modalexpense = ({ show, onClose }) => {
             onChange={handleInputChange}
           />
           <Button
-            disabled={!(expenseFormState.firstCategory && expenseFormState.secondCategory)}
+            disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
             type='submit' variant='success' className='subbtn'>
             Submit
           </Button>

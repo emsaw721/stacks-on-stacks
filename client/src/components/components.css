@@ -200,10 +200,10 @@
 
 /* ------- progress bar ------ */
 
-.progressBar {
+/* .progressBar {
     display: flex;
     justify-content: center;
-}
+} */
 
 /* ------- Footer Styling ------- */
 .footer {
@@ -324,7 +324,7 @@
     /* ---- Hero Styling ------ */ 
 
     .hero {
-        background-color: var(--quaternary-color);
+        /* background-color: var(--quaternary-color); */
         position: sticky;
         position: -webkit-sticky; 
         top: 0; 
@@ -332,9 +332,9 @@
         text-align: center;
     }
 
-    .hero h3 {
+    /* .hero h3 {
         color: var(--tertiary-color); 
-    }
+    } */
 
     .calendar {
         display: flex;

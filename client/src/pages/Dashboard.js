@@ -10,7 +10,7 @@ function MainDashboard(){
         <h2>Income</h2>
         <p>please provide yout monthly income here</p>
         <span className="input-text">$</span>
-        <input type="text"  class="input" placeholder="Income balance"/>
+        <input type="text"  className="input" placeholder="Income balance"/>
         
       </div>
       <div className="topics">
