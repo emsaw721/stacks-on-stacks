@@ -62,3 +62,15 @@ export const REMOVE_TRANSACTION = gql`
         }
     }
 `; 
+
+export const ADD_INCOME = gql`
+mutation addIncome($username: String!, $amount: String!, $firstcategory: String! $note: String ) {
+    addTransaction(username: $username, amount: $amount, firstcategory: $firstcategory, note: $note){
+      _id
+      username
+      amount
+      date      
+      firstcategory 
+      note
+    }
+}`;
