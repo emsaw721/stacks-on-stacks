@@ -156,12 +156,13 @@
 
 /* ---- Hero Styling -------*/ 
 .hero {
-    background-color: var(--quaternary-color);
+    background-color: var(--septary-color);
     position: sticky;
     position: -webkit-sticky; 
     top: 0; 
     /*make sure to change this for progress bar */
     text-align: center;
+    padding: 10px; 
 }
 
 .hero h3 {
