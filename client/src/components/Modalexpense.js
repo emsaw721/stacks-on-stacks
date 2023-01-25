@@ -48,7 +48,7 @@ const Modalexpense = ({ show, onClose }) => {
           yearmonth: format(expenseFormState.yearmonth, 'yyyyMM')
         },
       });
-      console.log(data);
+      AuthService.getToken();
     } catch (e) {
       console.error(e);
     }

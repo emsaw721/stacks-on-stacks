@@ -35,6 +35,10 @@ const SignupForm = () => {
         variables: { ...userFormData },
       });
 
+      AuthService.login(JSON.stringify(data.addUser));
+    } catch (e) {
+      console.error(e);
+    }
       console.log(data)
 
       AuthService.login(data.addUser.token);
