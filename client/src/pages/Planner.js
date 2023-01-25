@@ -46,7 +46,7 @@ const changeOther = (event) => {
             <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
 </style>
-            <h1> Your Progress Report </h1>
+            <h1> Your Monthly Report </h1>
             <Cal/>
             <div>
                <div className='reportcontainer'>

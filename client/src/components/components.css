@@ -15,10 +15,11 @@
 /* -------- Navbar Styling ---------- */
 .navcontainer {
     font-family: 'IBM Plex Sans', sans-serif;
+    width: 100%; 
 }
 
 .navbar {
-    background-color: var(--tertiary-color);
+    background-color: var(--quaternary-color);
 }
 
 .nav-list {
@@ -47,13 +48,15 @@
 }
 
 .link-text {
-    color: var(--quaternary-color);
+    color: var(--tertiary-color);
     text-decoration: none; 
 }
 
+
+
 /* ------- signup form --------- */ 
 
-/* .formlabel {
+.formlabel {
     color: var(--quaternary-color);
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -81,13 +84,13 @@
 .formbtn {
     color: var(--tertiary-color); 
     background-color: var(--quinary-color);
-} */
+} 
 
-/* .formbtn :hover {
+.formbtn :hover {
     border-color: var(--quaternary-color); 
     background-color: var(--tertiary-color);
     color: var(--quaternary-color); 
-} */
+} 
 
 
 .nav-pills .nav-link {
@@ -113,7 +116,7 @@
 
 /* -------- Header Styling ------- */
 .header {
-    background-color: var(--quinary-color);
+    background-color: var(--quaternary-color);
     color: var(--tertiary-color);
     display: flex;
 }
@@ -156,16 +159,17 @@
 
 /* ---- Hero Styling -------*/ 
 .hero {
-    background-color: var(--quaternary-color);
+    background-color: var(--tertiary-color);
     position: sticky;
     position: -webkit-sticky; 
     top: 0; 
     /*make sure to change this for progress bar */
     text-align: center;
+    padding: 10px; 
 }
 
 .hero h3 {
-    color: var(--tertiary-color); 
+    color: var(--quaternary-color); 
 }
 
 /* ----- Calendar Styling -------- */
@@ -200,15 +204,17 @@
 
 /* ------- progress bar ------ */
 
-/* .progressBar {
+.progressBar {
     display: flex;
     justify-content: center;
-} */
+    background-color: var(--quinary-color);
+}
 
 /* ------- Footer Styling ------- */
 .footer {
-    background-color: var(--quinary-color);
-    color: var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 
