@@ -85,8 +85,8 @@ query monthexpensecat($id: ID!) {
 }`
 
 export const QUERY_MONTHEXPENSE = gql`
-query monthexpense($id: ID!) {
-    monthexpense(_id: $id) {
+query monthexpense($yearmonth: String!) {
+    monthexpense(yearmonth: $yearmonth) {
         yearmonth
         secondCategory
         amount

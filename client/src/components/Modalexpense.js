@@ -3,21 +3,44 @@ import { useMutation } from '@apollo/client';
 import { Form, Button, Modal } from 'react-bootstrap'
 import { ADD_TRANSACTION } from '../utils/mutations';
 import Dropdown from 'react-dropdown';
+import decode from 'jwt-decode'; 
 import 'react-dropdown/style.css';
 
 
 const Modalexpense = ({ show, onClose }) => {
-
   const [validated] = useState(false);
 
   const [expenseFormState, setExpenseState] = useState({
+    username: '',
     firstcategory: 'Expense',
     secondcategory: '',
     amount: '',
-    categoryNote: ''
+    categoryNote: '',
+    yearmonth: ''
   });
 
+
   const [addExpense] = useMutation(ADD_TRANSACTION);
+
+
+function addDate() {
+  const idtoken = localStorage.getItem('id_token');
+
+  const decoded = decode(idtoken);
+
+  const expenseDate = new Date(); 
+
+  const yearStamp = expenseDate.getFullYear(); 
+  const monthStamp = expenseDate.getMonth(); 
+
+  const dateArr = [yearStamp, monthStamp]; 
+
+  const yearMonthStamp = dateArr.join('-0'); 
+  console.log(yearMonthStamp); 
+
+  setExpenseState({ ...expenseFormState, yearmonth: yearMonthStamp, username: decoded.data.username })
+  console.log('adding yearMonthStamp'); 
+};
 
   const handleDropdownChange = (event) => {
     setExpenseState({ ...expenseFormState, secondcategory: event.value });
@@ -26,21 +49,32 @@ const Modalexpense = ({ show, onClose }) => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setExpenseState({ ...expenseFormState, [name]: value });
+
   };
 
   const handleFormSubmit = async (event) => {
-    console.log(expenseFormState)
     event.preventDefault();
+    addDate(); 
+    // check if form has everything (as per react-bootstrap docs)
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
 
     try {
       const { data } = await addExpense({
         variables: { ...expenseFormState },
       });
-      console.log(data);
+
+      console.log(data)
+
     } catch (e) {
       console.error(e);
     }
   };
+  
+  console.log(expenseFormState); 
 
   const secondCategoryDropdown = ['Housing', 'Utility', 'Food', 'Transportation', 'Insurance', 'Education', 'Healthcare', 'Savings & Investiment', 'Personal spending', 'Others'];
 
@@ -53,7 +87,7 @@ const Modalexpense = ({ show, onClose }) => {
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleFormSubmit} noValidate validated={validated}>
-          <Dropdown options={secondCategoryDropdown} onChange={handleDropdownChange} value={expenseFormState.secondCategory} placeholder="Select an option" className='form-input'></Dropdown>
+          <Dropdown options={secondCategoryDropdown} onChange={handleDropdownChange} value={expenseFormState.secondcategory} placeholder="Select an option" className='form-input'></Dropdown>
           <Form.Control
             className="form-input"
             placeholder="Total"

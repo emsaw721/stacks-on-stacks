@@ -49,7 +49,7 @@ const Navbar = () => {
                         </style>
                         <ul>
                             <li className='navigation-item'>
-                                <Nav.Link onClick={() => setShowModal(true)}>
+                                <Nav.Link className='loggedoutlink' onClick={() => setShowModal(true)}>
                                     Login/Signup
                                 </Nav.Link>
                             </li>
