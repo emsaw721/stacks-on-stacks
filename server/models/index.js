@@ -3,4 +3,4 @@ const Transactions = require('./Transactions');
 const FirstCategory = require("./FirstCategory");
 const SecondCategory = require("./SecondCategory")
 
-module.exports = { User, Transactions,FirstCategory,SecondCategory };
+module.exports = { User, Transactions,FirstCategory, SecondCategory };
