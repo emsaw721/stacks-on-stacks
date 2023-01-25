@@ -51,6 +51,16 @@
   }
 
 
+/* ----- Expense --------- */
+
+.expense {
+    display: flex; 
+    align-items: center;
+}
+.expense h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
 /* ------- Planner ---------- */ 
 
 div {
