@@ -26,16 +26,16 @@
     display: flex; 
     list-style: none;
     text-decoration: none; 
-    justify-content: center;
-    margin: 0; 
-    padding: 0; 
+    justify-content: space-evenly;
 }
 
 .navigation-item {
     list-style: none;
     font-size: 2em;
     text-decoration: none;
-    padding: 2px; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    margin-top: 20%; 
 }
 
 .nav-link {
@@ -52,7 +52,9 @@
     text-decoration: none; 
 }
 
-
+.dash-icon {
+    margin-left: 5%; 
+}
 
 
 /* ------- signup form --------- */ 
