@@ -25,7 +25,7 @@ const Bar = () => {
     }, [data, expenseTotal])
 
     return (
-        <ProgressBar completed={expenseTotal} maxCompleted={100} barContainerclassName="progressBar" bgColor='#011936'/>
+        <ProgressBar completed={expenseTotal} maxCompleted={100} barContainerclassName="progressBar" bgColor='#011936' baseBgColor='#9FCC2E'/>
     )
 };
 

@@ -1,15 +1,9 @@
 import React, { useState, useEffect} from 'react';
-import decode from 'jwt-decode';
 import Cal from '../components/Calendar'
 import './pages.css';
-import { useQuery } from '@apollo/client';
-import { QUERY_BUDGET } from '../utils/queries';
 
 
 const Planner = () => {
-
-    const {data} = useQuery(QUERY_BUDGET);
-    console.log(data); 
 
 const [rent, setRent] = useState('');
 const saveRent = () => {
@@ -41,6 +35,21 @@ const saveOther = () => {
 const changeOther = (event) => {
     setOther(event.target.value); 
 }
+
+const savedRent = localStorage.getItem('rent');
+const savedUtility = localStorage.getItem('util'); 
+const savedGrocery = localStorage.getItem('grocery');
+const savedOther = localStorage.getItem('other'); 
+
+let arr = [savedRent, savedUtility, savedGrocery, savedOther]; 
+console.log(arr); 
+
+let sum = arr.reduce(function(prev, current) {
+    return prev + +current
+  }, 0);
+  console.log(sum) 
+
+
     return (
         <section className='report'>
             <style>
@@ -87,16 +96,16 @@ const changeOther = (event) => {
                             <input onChange={changeOther} value={other} />
                             <button onClick={saveOther}>Save</button>
                         </div>
-                        <div className='expectedtot'>####</div>
+                        <div className='expectedtot'>{sum}</div>
                     </div>
                     <div className='reality'>
                         <h2>Actual</h2>
                         <div className='actual'>
-                        <div className='rentact'>#</div>
-                        <div className='utilact'>#</div>
-                        <div className='grocact'>#</div>
-                        <div className='othact'>#</div>
-                        <div className='totact'>####</div>
+                        <div className='rentact'>{rent}</div>
+                        <div className='utilact'>{util}</div>
+                        <div className='grocact'>{grocery}</div>
+                        <div className='othact'>{other - 450}</div>
+                        <div className='totact'>{sum-450}</div>
                         </div>
                     </div>
                 </div>  
