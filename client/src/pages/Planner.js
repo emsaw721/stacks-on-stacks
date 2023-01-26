@@ -1,9 +1,48 @@
 import React, { useState, useEffect} from 'react';
+import {useQuery} from '@apollo/client'; 
+import {QUERY_TRANSACTIONS} from "../utils/queries";
 import Cal from '../components/Calendar'
 import './pages.css';
 
 
 const Planner = () => {
+
+    const {data} = useQuery(QUERY_TRANSACTIONS); 
+    console.log(data); 
+    const dataArr = data?.transactions; 
+    console.log(dataArr); 
+
+
+
+    // const dataRentObj = dataArr.filter(obj  => obj.secondcategory === 'Housing'); 
+    // const rentArr = dataRentObj.map((rents) => {
+    //     return rentAmount = rents.amount
+    //     console.log(rentAmount); 
+    // });
+
+//     const dataUtilObj = dataArr.filter(obj  => {return obj.secondcategory === 'Utility'}); 
+//     const utilArr = dataUtilObj.map((utils) => {
+//         rent utilAmount = utils.amount; 
+//     });
+
+//     const dataGrocObj = dataArr.filter(obj  => {return obj.secondcategory === 'Food'}); 
+//     const grocArr = dataGrocObj.map((grocs) => {
+//         console.log(grocs.amount); 
+//         setGrocAmount(grocs.amount); 
+//     });
+
+//     const dataOthObj = dataArr.filter(obj  => {return obj.secondcategory === 'Others'}); 
+//     const othArr = dataOthObj.map((others) => {
+//         console.log(others.amount); 
+//         setOthAmount(others.amount); 
+//     });
+
+
+// let rentAmount = rentArr.rents.amount; 
+// let utilAmount = ''
+//  let grocAmount = ''
+//  let othAmount = ''
+
 
 const [rent, setRent] = useState('');
 const saveRent = () => {
@@ -102,16 +141,16 @@ let sum = arr.reduce(function(prev, current) {
                         </div>
                         <div className='expectedtot'>{sum}</div>
                     </div>
-                    <div className='reality'>
+                    {/* <div className='reality'>
                         <h2>Actual</h2>
                         <div className='actual'>
-                        <div className='rentact'>{savedRent}</div>
-                        <div className='utilact'>{savedUtility}</div>
-                        <div className='grocact'>{savedGrocery}</div>
-                        <div className='othact'>{savedOther - 450}</div>
-                        <div className='totact'>{sum - 450}</div>
+                        <div className='rentact'>{rentAmount}</div>
+                        <div className='utilact'>{utilAmount}</div>
+                        <div className='grocact'>{grocAmount}</div>
+                        <div className='othact'>{othAmount}</div>
+                        <div className='totact'>{}</div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>  
                 </div>
             </div>
