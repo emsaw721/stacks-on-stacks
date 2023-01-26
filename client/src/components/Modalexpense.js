@@ -31,7 +31,7 @@ const Modalexpense = ({ show, onClose }) => {
   };
 
   const handleFormSubmit = async (event) => {
-    console.log(expenseFormState)
+   
     event.preventDefault();
 
     try {

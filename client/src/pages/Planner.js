@@ -1,9 +1,20 @@
 import React, { useState, useEffect} from 'react';
-import decode from 'jwt-decode';
+import { useQuery } from '@apollo/client';
+import {QUERY_TRANSACTION} from '../utils/queries'; 
+import {useParams} from 'react-router-dom'; 
 import Cal from '../components/Calendar'
 import './pages.css';
 
-const Planner = () => { 
+const Planner = (props) => { 
+
+    const { id: _id} = useParams(); 
+    
+    const {data} = useQuery(QUERY_TRANSACTION, {
+        variables: { id: _id},
+    }); 
+
+    const transaction = data?.transaction || {}; 
+    console.log(transaction); 
 
 const [rent, setRent] = useState('');
 const saveRent = () => {
