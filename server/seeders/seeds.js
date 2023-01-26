@@ -17,7 +17,7 @@ db.once('open', async () => {
             firstcategory:"Cash",
             secondcategory:"Saving account",
             date:"2023-01-12",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -25,84 +25,84 @@ db.once('open', async () => {
             firstcategory:"Income",
             secondcategory:"Full time job income",
             date:"2023-01-12",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"2000.00",
             firstcategory:"Income",
             secondcategory:"Part time job income",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"600",
             firstcategory:"Budget",
             secondcategory:"Food",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"2000",
             firstcategory:"Budget",
             secondcategory:"Housing",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"200",
             firstcategory:"Budget",
             secondcategory:"Utility",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"200",
             firstcategory:"Budget",
             secondcategory:"Transportation",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"200",
             firstcategory:"Budget",
             secondcategory:"Insurance",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"100",
             firstcategory:"Budget",
             secondcategory:"Education",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"100",
             firstcategory:"Budget",
             secondcategory:"Medical & Healthcare",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"500",
             firstcategory:"Budget",
             secondcategory:"Saving & Investing",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"500",
             firstcategory:"Budget",
             secondcategory:"Personal Spending",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
             amount:"500",
             firstcategory:"Budget",
             secondcategory:"Others",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },        
         {
             username:"user1",
@@ -112,7 +112,7 @@ db.once('open', async () => {
             categoryNote:"Grocery",
             location:"HEB",
             date:"2023-01-21",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -123,7 +123,7 @@ db.once('open', async () => {
             location:"HEB",
             note:"Food for long weekend",
             date:"2023-01-14",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -131,7 +131,7 @@ db.once('open', async () => {
             firstcategory:"Expense",
             secondcategory:"Housing",
             categoryNote:"Mortgage",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -139,7 +139,7 @@ db.once('open', async () => {
             firstcategory:"Expense",
             secondcategory:"Utility",
             categoryNote:"Water",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -147,7 +147,7 @@ db.once('open', async () => {
             firstcategory:"Expense",
             secondcategory:"Utility",
             categoryNote:"Electricity",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -157,7 +157,7 @@ db.once('open', async () => {
             categoryNote:"gas",
             location:"Shell",
             date:"2023-01-17",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -167,7 +167,7 @@ db.once('open', async () => {
             categoryNote:"Car insurance",
             note:"Tesla",
             date:"2023-01-13",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -178,7 +178,7 @@ db.once('open', async () => {
             location:"Walgreen",
             note:"Tylano",
             date:"2023-01-16",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -188,7 +188,7 @@ db.once('open', async () => {
             categoryNote:"Saving deposit",
             location:"Chase",
             date:"2023-01-16",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user1",
@@ -199,7 +199,7 @@ db.once('open', async () => {
             location:"AMC, Houton",
             note:"Avatar II, The Way of Water",
             date:"2023-01-16",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
         {
             username:"user2",
@@ -210,7 +210,7 @@ db.once('open', async () => {
             location:"Barnes and noble",
             note:"Harry Potter and the Sorcerer's Stone",
             date:"2023-01-12",
-            yearmonth:"2023-01"
+            yearmonth:"202301"
         },
     );
 
