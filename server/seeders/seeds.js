@@ -29,6 +29,93 @@ db.once('open', async () => {
         },
         {
             username:"user1",
+            amount:"2000.00",
+            firstcategory:"Income",
+            secondcategory:"Part time job income",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"600",
+            firstcategory:"Budget",
+            secondcategory:"Food",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"2000",
+            firstcategory:"Budget",
+            secondcategory:"Housing",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"200",
+            firstcategory:"Budget",
+            secondcategory:"Utility",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"200",
+            firstcategory:"Budget",
+            secondcategory:"Transportation",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"200",
+            firstcategory:"Budget",
+            secondcategory:"Insurance",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"100",
+            firstcategory:"Budget",
+            secondcategory:"Education",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"100",
+            firstcategory:"Budget",
+            secondcategory:"Medical & Healthcare",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"500",
+            firstcategory:"Budget",
+            secondcategory:"Saving & Investing",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"500",
+            firstcategory:"Budget",
+            secondcategory:"Personal Spending",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"500",
+            firstcategory:"Budget",
+            secondcategory:"Others",
+            yearmonth:"2023-01"
+        },        
+        {
+            username:"user1",
+            amount:"112.45",
+            firstcategory:"Expense",
+            secondcategory:"Food",
+            categoryNote:"Grocery",
+            location:"HEB",
+            date:"2023-01-21",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
             amount:"83.32",
             firstcategory:"Expense",
             secondcategory:"Food",
@@ -36,6 +123,71 @@ db.once('open', async () => {
             location:"HEB",
             note:"Food for long weekend",
             date:"2023-01-14",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"1899",
+            firstcategory:"Expense",
+            secondcategory:"Housing",
+            categoryNote:"Mortgage",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"65.79",
+            firstcategory:"Expense",
+            secondcategory:"Utility",
+            categoryNote:"Water",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"48.99",
+            firstcategory:"Expense",
+            secondcategory:"Utility",
+            categoryNote:"Electricity",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"54.34",
+            firstcategory:"Expense",
+            secondcategory:"Transportation",
+            categoryNote:"gas",
+            location:"Shell",
+            date:"2023-01-17",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"128.78",
+            firstcategory:"Expense",
+            secondcategory:"Insurance",
+            categoryNote:"Car insurance",
+            note:"Tesla",
+            date:"2023-01-13",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"18.99",
+            firstcategory:"Expense",
+            secondcategory:"Medical & Healthcare",
+            categoryNote:"OTC",
+            location:"Walgreen",
+            note:"Tylano",
+            date:"2023-01-16",
+            yearmonth:"2023-01"
+        },
+        {
+            username:"user1",
+            amount:"18.99",
+            firstcategory:"Expense",
+            secondcategory:"Saving & Investing",
+            categoryNote:"Saving deposit",
+            location:"Chase",
+            date:"2023-01-16",
             yearmonth:"2023-01"
         },
         {
@@ -107,7 +259,7 @@ db.once('open', async () => {
                 {secondCategory:"Insurance"},
                 {secondCategory:"Education"},
                 {secondCategory:"Medical & Healthcare"},
-                {secondCategory:"saving & investing"},
+                {secondCategory:"Saving & Investing"},
                 {secondCategory:"Personal Spending"},
                 {secondCategory:"Others"}
             ]
