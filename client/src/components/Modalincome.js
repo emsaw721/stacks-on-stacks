@@ -38,6 +38,7 @@ const Modalincome = ({ show, onClose }) => {
                     yearmonth: format(incomeFormState.yearmonth, 'yyyyMM')
                 },
             });
+            onClose(false);
             console.log(data);
         } catch (e) {
             console.error(e);
