@@ -196,7 +196,7 @@ const resolvers ={
         updateTransaction: async (parent, args, context) => {
             if (context.user) {
                 // Find the transaction by its ID
-                const transaction = await Transactions.findById(args.id);
+                const transaction = await Transactions.findById(args._id);
                 if (!transaction) {
                     throw new Error('Transaction not found');
                 }
