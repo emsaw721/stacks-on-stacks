@@ -40,10 +40,11 @@ const Income = () => {
     }
 
     return (
-        <section className="flex-row justify-center mb-4">
+        <>
+        <section className="flex-row mb-4 d-flex justify-content-center">
             <div className="col-12 col-md-6">
-                <div className="card">
-                    <h4 className="card-header">Income</h4>
+                <div className="card text-center">
+                    <h3 className="card-header">Income</h3>
                     <div className="card-body">
                         <Modalincome show={isModalOpen} onClose={setIsModalOpen}></Modalincome>
                         <Button type='button' variant='success' className='subbtn' onClick={openLink}>
@@ -52,6 +53,8 @@ const Income = () => {
                     </div>
                 </div>
             </div>
+            </section>  
+        <section>  
             <Table>
                 <thead>
                     <tr>
@@ -77,7 +80,7 @@ const Income = () => {
                 </tbody>
             </Table>
         </section >
-
+</>
     );
 };
 

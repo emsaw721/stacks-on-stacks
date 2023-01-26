@@ -220,7 +220,14 @@ div {
     font-family: 'IBM Plex San Condensed', sans-serif;
     color: var(--quaternary-color); 
 }
+.table{
+    margin-top: 10px;
+    text-align: center;
+}
 
+.table th{
+    background-color:var(--secondary-color);
+}
 
 
 @media screen and (max-width: 768px) {

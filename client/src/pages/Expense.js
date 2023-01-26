@@ -38,10 +38,10 @@ const Expense = () => {
 
     return (
         <>
-        <section className="flex-row justify-center mb-4">
+        <section className="flex-row mb-4 d-flex justify-content-center">
             <div className="col-12 col-md-6">
-                <div className="card">
-                    <h4 className="card-header">Expense List</h4>
+                <div className="card text-center">
+                    <h3 className="card-header">Expense List</h3>
                     <div className="card-body">
                         <Modalexpense show={isModalOpen} onClose={setIsModalOpen}></Modalexpense>
                         <Button type='button' variant='success' className='subbtn' onClick={openLink}>
