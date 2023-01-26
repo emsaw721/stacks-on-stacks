@@ -64,7 +64,7 @@ const Modalexpense = ({ show, onClose }) => {
         <Modal.Title>Add Your Expenses</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form onSubmit={handleFormSubmit} noValidate validated={validated}>
+        <Form noValidate validated={validated}>
           <Dropdown options={secondCategoryDropdown} onChange={handleDropdownChange} value={expenseFormState.secondCategory} placeholder="Select an option" className='form-input'></Dropdown>
           <Form.Control
             className="form-input"
@@ -91,7 +91,7 @@ const Modalexpense = ({ show, onClose }) => {
           />
           <Button
             disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
-            type='submit' variant='success' className='subbtn' onClick={()=>window.location.reload(false)}>
+            type='button' variant='success' className='subbtn' onClick={handleFormSubmit}>
             Submit
           </Button>
         </Form>
