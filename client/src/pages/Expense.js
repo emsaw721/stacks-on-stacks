@@ -21,15 +21,12 @@ const Expense = (data) => {
     const transactionData = localStorage.getItem('transaction'); 
     console.log(transactionData); 
 
+    const transactionObj = JSON.parse(transactionData); 
+    console.log(transactionObj); 
 
-
-    const oneExpense = transactionData.secondcategory; 
+    const oneExpense = transactionObj.addTransaction.secondcategory; 
     console.log(oneExpense); 
 
-    // const [Expenses] = useState();
-    // let getExpensesList= Expenses.map((expenses) => {
-    //     return <li>{expenses}</li>
-    // }); 
 
     return (
         <section className="flex-row justify-center mb-4">
@@ -37,13 +34,13 @@ const Expense = (data) => {
                 <div className="card">
                     <h4 className="card-header">Expense List</h4>
                     <div className="card-body">
+                    <ul>
+                            <li>{oneExpense}</li>
+                    </ul>
                         <Modalexpense show={isModalOpen} onClose={setIsModalOpen}></Modalexpense>
                         <Button type='button' variant='success' className='subbtn' onClick={openLink}>
                             Add new expense
                         </Button>
-                        <ul>
-                            {/* <li>{getExpensesList}</li> */}
-                        </ul>
                     </div>
                 </div>
             </div>
