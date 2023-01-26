@@ -30,6 +30,7 @@ query transactions {
         date
         yearmonth
         firstcategory
+        secondcategory
         categoryNote
         location
         note
