@@ -91,8 +91,8 @@ const Modalexpense = ({ show, onClose }) => {
               value={expenseFormState.yearmonth}
           />
           <Button
-            disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
-            type='button' variant='success' className='subbtn' onClick={handleFormSubmit}>
+            disabled={!(expenseFormState.firstCategory && expenseFormState.secondCategory)}
+            type='submit' variant='success' className='subbtn'>
             Submit
           </Button>
         </Form>
