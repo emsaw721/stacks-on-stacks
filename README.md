@@ -31,6 +31,17 @@ Oink! is a personal finance tracking application. Here, a user can record and se
 ## Installation 
 
 ## Usage 
+The user can access the application website here : https://guarded-gorge-65763.herokuapp.com/ .
+
+When the user opens the application, they will see the homepage where they can sign-in or sign-up by selecting the signin/signup link at the bottom of the page. 
+![Alt text](./images/oink-homesceen.png)
+
+When the user selects the link, a modal will appear. If the user selects signup, then they will recieve the form to signup. 
+![Alt text](./images/oink-signup.png)
+
+If the user has already signed up, but would like to sign in, they can select singin, and will reciece the form to login. 
+![Alt text](./images/oink-login.png)
+
 
 ## Support 
 
