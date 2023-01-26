@@ -35,7 +35,6 @@
     text-decoration: none;
     margin-left: 5%;
     margin-right: 5%; 
-    margin-top: 20%; 
     color: var(--tertiary-color); 
 }
 
@@ -55,7 +54,7 @@
 }
 
 .dash-icon {
-    margin-left: 5%; 
+    margin: 10%; 
 }
 
 .loggedoutlink {
