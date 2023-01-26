@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from "react-bootstrap";
 import Modalincome from "../components/Modalincome";
-import { Link } from 'react-router-dom';
+
 
 
 function MainDashboard() {
@@ -15,9 +15,7 @@ function MainDashboard() {
       <div className="categories">
         <div className="topics">
           <h2>Income</h2>
-          <p>This page is to view your monthly income!</p>
-          {/* <span className="input-text">$</span> */}
-          {/* <input type="text"  className="input" placeholder="Income balance"/> */}
+          <p>This page is to view your monthly income!</p>       
 
           <Button className='dashbtn' type="button" onClick={() => setIsModalOpen(true)}>Add Income</Button>          
         </div>
