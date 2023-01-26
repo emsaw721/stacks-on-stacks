@@ -49,6 +49,7 @@ query transaction($id: ID!) {
         categoryNote
         location
         note
+        
     }
 }`;
 
@@ -58,7 +59,7 @@ query budget($username: username) {
         _id
         amount
         date
-        secondCategory
+        secondcategory
     }
 }`
 
