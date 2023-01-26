@@ -4,17 +4,24 @@ import {Button, Table} from 'react-bootstrap'
 import Modalexpense from '../components/Modalexpense';
 import {useMutation, useQuery} from "@apollo/client";
 import {QUERY_TRANSACTIONS} from "../utils/queries";
-import {REMOVE_TRANSACTION} from "../utils/mutations";
+import { REMOVE_TRANSACTION } from "../utils/mutations";
+import { format } from "date-fns"
 
 const Expense = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const {data} = useQuery(QUERY_TRANSACTIONS);
+    const { data } = useQuery(QUERY_TRANSACTIONS);
+    const [expenseList, setExpenseList] = useState([])
     const [removeTransaction] = useMutation(REMOVE_TRANSACTION);
 
     useEffect(() => {
         if (!data) return;
         console.log(data);
+        const yearMonth = format(new Date(), "yyyyMM");
+        let e = data.transactions
+        .filter(t => t.firstcategory === 'Expense' && t.yearmonth === yearMonth)        
+    setExpenseList(e)
+    console.log(e)
     }, [data])
 
     const openLink = () => {        
@@ -55,13 +62,13 @@ const Expense = () => {
                     </thead>
                     <tbody>
                     {
-                        data?.transactions.map(t => {
+                        expenseList.map(t => {
                             return (
-                                <tr>
+                                <tr key={t._id}>
                                     <td>{t.date}</td>
                                     <td>{t.amount}</td>
                                     <td>
-                                        <Button onClick={() => deleteExpense(t._id)}>Delete</Button>
+                                        <Button onClick={() => { deleteExpense(t._id); window.location.reload(false) }}>Delete</Button>
                                     </td>
                                 </tr>
                             )

@@ -18,11 +18,11 @@ const Income = () => {
         if (!data) return;
         console.log(data)
         const yearMonth = format(new Date(), "yyyyMM");
-        let e = data.transactions
+        let i = data.transactions
             .filter(t => t.firstcategory === 'Income' && t.yearmonth === yearMonth)
             .map(t => t.amount)
-        setIncomeTotal(e)
-        console.log(e)
+        setIncomeTotal(i)
+        console.log(i)
     }, [data, incomeTotal])
 
     return (
@@ -35,7 +35,7 @@ const Income = () => {
                             return (<div>{i.amount}</div>)
                         })} */}
                         <Button type='submit' variant='success' className='subbtn'>
-                            Update
+                            Delete
                         </Button>
                     </div>
                 </div>

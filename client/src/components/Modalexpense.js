@@ -31,7 +31,7 @@ const Modalexpense = ({ show, onClose }) => {
   };
 
   const handleDateSelect = (date) => {
-    setExpenseState({ ...setExpenseState, yearmonth: date });
+    setExpenseState({ ...expenseFormState, yearmonth: date });
   }
 
   const handleFormSubmit = async (event) => {
@@ -88,7 +88,7 @@ const Modalexpense = ({ show, onClose }) => {
           />
           <Button
             disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
-            type='submit' variant='success' className='subbtn'>
+            type='submit' variant='success' className='subbtn' onClick={()=>window.location.reload(false)}>
             Submit
           </Button>
         </Form>
