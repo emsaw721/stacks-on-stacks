@@ -39,11 +39,6 @@ const SignupForm = () => {
 
       AuthService.login(data.addUser.token);
     } catch (error) {
-      if (error.message.includes("duplicated")) {
-        errorMessage = "Username or email already exists!"
-      } else {
-        errorMessage = 'Something went wrong with your signup!'
-      }
       console.error(error);
       setShowAlert(true);
     };
