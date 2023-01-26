@@ -172,7 +172,7 @@ const resolvers ={
         removeTransaction: async (parent, args, context) => {
             if (context.user) {
                 // Find the transaction by its ID
-                const transaction = await Transactions.findById(args.id);
+                const transaction = await Transactions.findById(args._id);
                 if (!transaction) {
                     throw new Error('Transaction not found');
                 }
@@ -181,11 +181,11 @@ const resolvers ={
                     throw new AuthenticationError('You are not authorized to delete this transaction');
                 }
                 // Remove the transaction
-                await Transactions.findByIdAndDelete(args.id);
+                await Transactions.deleteOne(transaction);
                 // Update the user object's transactions array
                 await User.findByIdAndUpdate(
                     { _id: context.user._id },
-                    { $pull: { transactions: args.id } },
+                    { $pull: { transactions: args._id } },
                     { new: true }
                 );
                 return transaction;

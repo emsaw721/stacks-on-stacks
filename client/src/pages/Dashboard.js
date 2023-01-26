@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Button } from "react-bootstrap";
 import Modalincome from "../components/Modalincome";
+import { Link } from 'react-router-dom';
 
 
 function MainDashboard() {
 
-  const [isModalOpen, setIsModalOpen] = useState(false);  
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section>
@@ -32,7 +33,8 @@ function MainDashboard() {
           <p>This is your monthly "report card"! But in a fun way!</p>
         </div>
       </div>
-      <Modalincome show={isModalOpen} onClose={setIsModalOpen}></Modalincome>      
+      <Modalincome show={isModalOpen} onClose={setIsModalOpen}></Modalincome>
+
     </section>
   );
 }

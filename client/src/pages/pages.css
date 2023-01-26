@@ -118,13 +118,13 @@ div {
     margin-top: 10%; 
 }
 
-.table{
+.planner-table{
     color: var(--quaternary-color); 
     width: 100%; 
     display: flex; 
 }
 
-.table h2 {
+.planner-table h2 {
     color: var(--quaternary-color);
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }

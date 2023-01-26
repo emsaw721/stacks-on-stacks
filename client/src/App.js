@@ -52,7 +52,8 @@ function App() {
                         <Route path='/dash' element={<Dashboard />} />
                         <Route path='/income' element={<Income />} />
                         <Route path='/expense' element={<Expense />} />
-                        <Route path='/planner' element={<Planner />} />                        
+                        <Route path='/planner' element={<Planner />} />
+                        <Route path='/income' element={<Income />} />
                     </Routes>
                 </div>
                 <Navbar />
