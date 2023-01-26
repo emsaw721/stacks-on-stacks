@@ -4,7 +4,8 @@ import { Form, Button, Modal } from 'react-bootstrap'
 import { ADD_TRANSACTION } from '../utils/mutations';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-
+import DatePicker from "react-datepicker";
+import {format} from "date-fns";
 
 const Modalexpense = ({ show, onClose }) => {
 
@@ -14,7 +15,8 @@ const Modalexpense = ({ show, onClose }) => {
     firstcategory: 'Expense',
     secondcategory: '',
     amount: '',
-    categoryNote: ''
+    categoryNote: '',
+    yearmonth: new Date()
   });
 
   const [addExpense] = useMutation(ADD_TRANSACTION);
@@ -28,13 +30,20 @@ const Modalexpense = ({ show, onClose }) => {
     setExpenseState({ ...expenseFormState, [name]: value });
   };
 
+  const handleDateSelect = (date) => {
+    setExpenseState({ ...setExpenseState, yearmonth: date });
+  }
+
   const handleFormSubmit = async (event) => {
     console.log(expenseFormState)
     event.preventDefault();
 
     try {
       const { data } = await addExpense({
-        variables: { ...expenseFormState },
+        variables: {
+          ...expenseFormState,
+          yearmonth: format(expenseFormState.yearmonth, 'yyyyMM')
+        },
       });
       console.log(data);
     } catch (e) {
@@ -71,6 +80,11 @@ const Modalexpense = ({ show, onClose }) => {
             id="categoryNote"
             value={expenseFormState.categoryNote}
             onChange={handleInputChange}
+          />
+          <DatePicker
+              selected={expenseFormState.yearmonth}
+              onChange={(date) => handleDateSelect(date)}
+              value={expenseFormState.yearmonth}
           />
           <Button
             disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
