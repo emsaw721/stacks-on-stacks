@@ -63,7 +63,7 @@ let sum = arr.reduce(function(prev, current) {
             <Cal/>
             <div>
                <div className='reportcontainer'>
-                <div className='table'>
+                <div className='planner-table'>
                     <div className='cats'>
                         <h2>Category</h2>
                         <div>
