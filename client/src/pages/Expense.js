@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import React, {useEffect, useState} from 'react';
 import './pages.css';
-import {Button, Table} from 'react-bootstrap'
 import {Button, Table} from 'react-bootstrap'
 import Modalexpense from '../components/Modalexpense';
 import {useMutation, useQuery} from "@apollo/client";
@@ -31,17 +29,7 @@ const Expense = () => {
         });
     }
 
-
-    const deleteExpense = async (expenseId) => {
-        await removeTransaction({
-            variables: {
-                id: expenseId
-            }
-        });
-    }
-
     return (
-        <>
         <>
         <section className="flex-row justify-center mb-4">
             <div className="col-12 col-md-6">
