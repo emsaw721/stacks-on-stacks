@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Form, Button, Modal, ModalTitle } from 'react-bootstrap'
+import { Form, Button, Modal } from 'react-bootstrap'
 import { ADD_TRANSACTION } from '../utils/mutations';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -11,8 +11,8 @@ const Modalexpense = ({ show, onClose }) => {
   const [validated] = useState(false);
 
   const [expenseFormState, setExpenseState] = useState({
-    firstCategory: 'Expense',
-    secondCategory: '',
+    firstcategory: 'Expense',
+    secondcategory: '',
     amount: '',
     categoryNote: ''
   });
@@ -20,7 +20,7 @@ const Modalexpense = ({ show, onClose }) => {
   const [addExpense] = useMutation(ADD_TRANSACTION);
 
   const handleDropdownChange = (event) => {
-    setExpenseState({ ...expenseFormState, secondCategory: event.value });
+    setExpenseState({ ...expenseFormState, secondcategory: event.value });
   };
 
   const handleInputChange = (event) => {
@@ -58,7 +58,7 @@ const Modalexpense = ({ show, onClose }) => {
             className="form-input"
             placeholder="Total"
             name="amount"
-            type="amount"
+            type="number"
             id="amount"
             value={expenseFormState.amount}
             onChange={handleInputChange}
@@ -67,13 +67,13 @@ const Modalexpense = ({ show, onClose }) => {
             className="form-input"
             placeholder="Notes"
             name="categoryNote"
-            type="categoryNote"
+            type="text"
             id="categoryNote"
             value={expenseFormState.categoryNote}
             onChange={handleInputChange}
           />
           <Button
-            disabled={!(expenseFormState.firstCategory && expenseFormState.secondCategory)}
+            disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
             type='submit' variant='success' className='subbtn'>
             Submit
           </Button>
@@ -82,7 +82,5 @@ const Modalexpense = ({ show, onClose }) => {
     </Modal>
   );
 };
-
-
 
 export default Modalexpense;

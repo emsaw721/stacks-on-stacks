@@ -1,54 +1,40 @@
-import React from "react";
-import Oink from "../components/oinktranspig.png";
-import Expense from './Expense'
-import BudgetPlanner from './Planner'
+import React, { useState } from 'react'
+import { Button } from "react-bootstrap";
+import Modalincome from "../components/Modalincome";
+
 
 function MainDashboard() {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);  
+
   return (
+    <section>
+      <div className="hero"></div>
+
       <div className="categories">
-        <div class="topics">
+        <div className="topics">
           <h2>Income</h2>
-          <p>Please provide your monthly income here</p>
-          <span className="input-text">$</span>
-          <input type="text" class="input" placeholder="Income Balance" />
+          <p>please provide yout monthly income here</p>
+          {/* <span className="input-text">$</span> */}
+          {/* <input type="text"  className="input" placeholder="Income balance"/> */}
+
+          <Button type="button" onClick={() => setIsModalOpen(true)}>Add Income</Button>          
         </div>
         <div className="topics">
-          <h2>Transactions</h2>
-          <p>
-            Transactions is where you will see your real time expenses. When you
-            make a payment on one of the categories from your budget planner, it
-            will be logged here.
-          </p>
-          <input
-            type="button"
-            class="btn"
-            value="More Information"
-            onclick=""
-            a
-            href={Expense}
-          />
+          <h2>Expense</h2>
+          <p>add your real time transactions here</p>
         </div>
         <div className="topics">
           <h2>Stocks</h2>
-          <p>For Future Development</p>
+          <p>Coming Soon</p>
         </div>
         <div className="topics">
-          <h2>Budget Planner</h2>
-          <p>
-            This is a way for you to seperate your income total into
-            topics/catergories so that you can see how you should split your
-            money up.
-          </p>
-          <input
-            type="button"
-            class="btn"
-            value="More Information"
-            onclick=""
-            a
-            href={BudgetPlanner}
-          />
+          <h2>Topic Outline</h2>
+          <p> this is where you will categorize your monthly income. </p>
         </div>
       </div>
+      <Modalincome show={isModalOpen} onClose={setIsModalOpen}></Modalincome>      
+    </section>
   );
 }
 

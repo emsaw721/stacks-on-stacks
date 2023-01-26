@@ -28,25 +28,20 @@
     font-size: 14pt;
 }
 
-.categories{
+
+/* ------ desktop/laptop formatting -------- */ 
+
+/* dashboard section */
+.categories {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     height: auto;
-}
-
-.btn{
-    background-color:#011936;
-    outline: none;
-    border: none;
-    box-shadow:  0px 5px 10px 0px #5d5d5d ;
-    padding: 10px;
-    border-radius: 8px;
-    color: #475fd7;
-}
-
-.topics{
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  }
+  
+  .topics {
     width: 300px;
     height: 300px;
     margin: 20px;
@@ -55,21 +50,16 @@
     background: linear-gradient(#9fcc2e, #858585);
     align-items: center;
     text-align: center;
-    color:#011936;
-}
-
-.topics p{
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  }
+  
+  .topics p {
     padding: 10px;
     text-align: center;
     align-items: center;
-    font-size: 13pt;
-}
-
-.topics h2{
-    color: #ec4f46;
-    font-size: 24pt;
-}
-.categories .topics{
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .categories .topics {
     box-shadow: 0px 10px 20px 0px rgb(32, 32, 32);
 }
 
@@ -78,12 +68,44 @@
     text-align: center;
     padding: 10px 0px 10px 0px;
     margin-top: 10px;
-    font-size: 13pt;
-    background: transparent;
-    outline: none !important;
-    border-color: #475fd7;
-    box-shadow:  0px 5px 10px 0px #5d5d5d ;
-    border-radius: 8px;
+  }
+
+
+/* ----- Expense --------- */
+
+.expense {
+    display: flex; 
+    align-items: center;
+}
+.expense h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* ------- Planner ---------- */ 
+
+div {
+    width: 100%; 
+}
+.report h1{
+    font-size: 3em; 
+    color: var(--quinary-color);
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.reportcontainer {
+    border-bottom: 2px dashed var(--secondary-color);
+    margin-top: 10%; 
+}
+
+.table{
+    color: var(--quaternary-color); 
+    width: 100%; 
+    display: flex; 
+}
+
+.table h2 {
+    color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
 .cats .projection .reality {
@@ -123,7 +145,7 @@
     width: 100px; 
     height: 40px; 
     margin-bottom: 5px; 
-    margin-top: 15px; 
+    margin-top: 30px; 
     border: 1px solid var(--primary-color); 
 }
 
@@ -138,9 +160,10 @@
 }
 
 .expectedtot {
-    margin-top: 30%; 
-    margin-left: 20%;
+    margin-top: 10%; 
+    margin-left: 10%;
     color: var(--quaternary-color); 
+    font-size: 1.5em; 
 }
 
 .reality h2 {
@@ -169,12 +192,22 @@
 
 }
 
+.subbtn {
+    background-color: var(--quinary-color);
+    border: 1px solid var(--quinary-color); 
+    font-family: 'IBM Plex San Condensed', sans-serif;
+    color: var(--quaternary-color); 
+}
+
+
+
 @media screen and (max-width: 768px) {
 
     .report h1{
         font-size: 2em; 
-        color: var(--quaternary-color);
+        color: var(--quinary-color);
         font-family: 'IBM Plex Sans Condensed', sans-serif;
+        text-align: center;
     }
     
     .table{
@@ -249,22 +282,23 @@
     .actual {
         margin-left: 40px; 
         color: var(--sextary-color); 
+        font-size: 1.5em;
     }
 
     .utilact {
-        margin-top: 55px; 
+        margin-top: 45px; 
     }
 
     .grocact {
-        margin-top: 55px; 
+        margin-top: 45px; 
     }
 
     .othact {
-        margin-top: 55px; 
+        margin-top: 45px; 
     }
 
     .totact {
-        margin-top: 55px; 
+        margin-top: 45px; 
 
     }
 }

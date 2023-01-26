@@ -157,7 +157,7 @@ const resolvers ={
         addTransaction: async(parent, args, context) =>{
             if (context.user) {
                 // Create the new transaction object with the provided arguments
-                const transaction = await Transactions.create ({...args, username:context.user.username });
+                const transaction = await Transactions.create ({...args, username: context.user.username });
                 // Update the user object's transactions array
                 await User.findByIdAndUpdate(
                     {_id: context.user._id},

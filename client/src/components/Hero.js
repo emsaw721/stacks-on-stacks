@@ -8,6 +8,7 @@ const Hero = () => {
         <>
         {Auth.loggedIn() ? (
         <div className='hero'>
+            <h4>Remaining Account Balance</h4>
             <Bar />
         </div>
         ):(

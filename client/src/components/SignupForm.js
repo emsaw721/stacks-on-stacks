@@ -6,11 +6,12 @@ import Auth from '../utils/auth';
 
 const SignupForm = () => {
   // set initial form state  
-  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: ''}); 
+  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
+
 
   const [createUser] = useMutation(ADD_USER)
 
@@ -30,9 +31,9 @@ const SignupForm = () => {
     }
 
     try {
-      const {data} = await createUser({
+      const { data } = await createUser({
         variables: { ...userFormData },
-      }); 
+      });
 
       console.log(data)
 
@@ -40,28 +41,20 @@ const SignupForm = () => {
     } catch (error) {
       console.error(error);
       setShowAlert(true);
-    }; 
-    
-    setUserFormData({
-      username: '',
-      email: '',
-      password: '',
-    });
-
+    };
   };
 
   return (
     <>
-    <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
-</style>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+      </style>
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-          Something went wrong with your signup!
+          Something went wrong with your login!
         </Alert>
-
         <Form.Group>
           <Form.Label className='formlabel' htmlFor='username'>Username</Form.Label>
           <Form.Control
@@ -104,7 +97,7 @@ const SignupForm = () => {
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
           variant='success'
-          >
+        >
           Submit
         </Button>
       </Form>
@@ -112,79 +105,5 @@ const SignupForm = () => {
   );
 };
 
-export default SignupForm; 
+export default SignupForm;
 
-
-// const SignupForm = () => {
-//   const [formState, setFormState] = useState({
-//     username: '',
-//     email: '',
-//     password: '',
-//   });
-//   const [addUser, { error }] = useMutation(ADD_USER);
-
-//   // update state based on form input changes
-//   const handleChange = (event) => {
-//     const { name, value } = event.target;
-
-//     setFormState({
-//       ...formState,
-//       [name]: value,
-//     });
-//   };
-
-//   // submit form
-//   const handleFormSubmit = async (event) => {
-//     event.preventDefault();
-
-//     try {
-//       const { data } = await addUser({
-//         variables: { ...formState },
-//       });
-
-//       Auth.login(JSON.stringify(data.addUser));
-//     } catch (e) {
-//       console.error(e);
-//     }
-//   };
-
-//   return (
-//             <form className='signupform' onSubmit={handleFormSubmit}>
-//               <h3 className='formlabel'>Username</h3>
-//               <input
-//                 className="form-input"
-//                 placeholder="Your username"
-//                 name="username"
-//                 type="username"
-//                 id="username"
-//                 value={formState.username}
-//                 onChange={handleChange}
-//               />
-//               <h3>Email</h3>
-//               <input
-//                 className="form-input"
-//                 placeholder="Your email"
-//                 name="email"
-//                 type="email"
-//                 id="email"
-//                 value={formState.email}
-//                 onChange={handleChange}
-//               />
-//               <h3>Password</h3>
-//               <input
-//                 className="form-input"
-//                 placeholder="******"
-//                 name="password"
-//                 type="password"
-//                 id="password"
-//                 value={formState.password}
-//                 onChange={handleChange}
-//               />
-//               <button className="btn d-block w-100" type="submit">
-//           Submit
-//               </button>
-//             </form>
-//   );
-// };
-
-// export default SignupForm;

@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const secondCategorySchema = new Schema(
+const secondCategorySchema = new Schema( 
   {
     secondCategory: {
         required: true,
