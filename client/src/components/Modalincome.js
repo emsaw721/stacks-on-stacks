@@ -80,7 +80,7 @@ const Modalincome = ({ show, onClose }) => {
                         />
                         <Button
                             disabled={!(incomeFormState.firstcategory)}
-                            type='submit' variant='success' className='subbtn'>
+                            type='submit' variant='success' className='subbtn' onClick={() => window.location.reload(false)}>
                             Add
                         </Button>
                     </Form>
