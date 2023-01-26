@@ -28,9 +28,10 @@ const loggedIn = Auth.loggedIn();
 else {
     return (
         <section className='header'>
-        <style>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
 </style>
+
         <div className='loggedout'>
         <h1>Welcome to Oink!</h1>
         <img src={Welcomeicon} alt="" />

@@ -56,9 +56,10 @@ let sum = arr.reduce(function(prev, current) {
 
     return (
         <section className='report'>
-            <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
 </style>
+
             <h1> Your Progress Report </h1>
             <Cal/>
             <div>

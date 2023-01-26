@@ -43,6 +43,10 @@ const Income = () => {
 
     return (
         <>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
+</style>
+
         <section className="flex-row mb-4 d-flex justify-content-center">
             <div className="col-12 col-md-6">
                 <div className="card text-center">
