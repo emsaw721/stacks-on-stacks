@@ -18,7 +18,6 @@ Oink! is a personal finance tracking application. Here, a user can record and se
 
 ## Table of Contents 
 
-[Visuals](#visuals)<br>
 [Installation](#installation)<br>
 [Usage](#usage)<br>
 [Support](#support)<br>
@@ -26,8 +25,6 @@ Oink! is a personal finance tracking application. Here, a user can record and se
 [Acknowledgements](#acknowledgements)<br>
 [License](#license)<br>
 [Status](#project-status)
-
-## Visuals 
 
 ## Installation 
 
@@ -70,6 +67,9 @@ And in the income section, the user can see a list of their income sources as we
 
 
 ## Support 
+
+For support, the user can reach out to the repo owner or any of the other contributors of this project. 
+
 
 ## Roadmap
 
