@@ -13,7 +13,9 @@ const Income = () => {
 
     const [incomeTotal, setIncomeTotal] = useState([])
     const { data } = useQuery(QUERY_TRANSACTIONS);
-    const [removeTransaction] = useMutation(REMOVE_TRANSACTION);
+    const [removeTransaction] = useMutation(REMOVE_TRANSACTION, {
+        refetchQueries:[QUERY_TRANSACTIONS]
+    });
     const [isModalOpen, setIsModalOpen] = useState(false);
 
 
@@ -68,7 +70,7 @@ const Income = () => {
                                     <td>{t.date}</td>
                                     <td>{t.amount}</td>
                                     <td>
-                                        <Button onClick={() => { deleteIncome(t._id); window.location.reload(false) }}>Delete</Button>
+                                        <Button onClick={() => { deleteIncome(t._id) }}>Delete</Button>
                                     </td>
                                 </tr>
                             )

@@ -12,7 +12,9 @@ const Expense = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const { data } = useQuery(QUERY_TRANSACTIONS);
     const [expenseList, setExpenseList] = useState([])
-    const [removeTransaction] = useMutation(REMOVE_TRANSACTION);
+    const [removeTransaction] = useMutation(REMOVE_TRANSACTION, {
+        refetchQueries:[QUERY_TRANSACTIONS]
+    });
 
     useEffect(() => {
         if (!data) return;
@@ -68,7 +70,7 @@ const Expense = () => {
                                     <td>{t.date}</td>
                                     <td>{t.amount}</td>
                                     <td>
-                                        <Button onClick={() => { deleteExpense(t._id); window.location.reload(false) }}>Delete</Button>
+                                        <Button onClick={() => { deleteExpense(t._id) }}>Delete</Button>
                                     </td>
                                 </tr>
                             )

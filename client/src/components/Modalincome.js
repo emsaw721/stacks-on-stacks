@@ -5,6 +5,7 @@ import { ADD_TRANSACTION} from "../utils/mutations";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from 'date-fns'
+import { QUERY_TRANSACTIONS } from "../utils/queries";
 
 
 const Modalincome = ({ show, onClose }) => {
@@ -17,7 +18,9 @@ const Modalincome = ({ show, onClose }) => {
         yearmonth: new Date(),
     });
 
-    const [addTransaction] = useMutation(ADD_TRANSACTION);
+    const [addTransaction] = useMutation(ADD_TRANSACTION, {
+        refetchQueries:[QUERY_TRANSACTIONS]
+    });
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -54,7 +57,7 @@ const Modalincome = ({ show, onClose }) => {
                     <Modal.Title>Income</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form onSubmit={handleFormSubmit}>
+                    <Form>
                         <Form.Control
                             className="form-input"
                             placeholder="Total"
@@ -80,7 +83,7 @@ const Modalincome = ({ show, onClose }) => {
                         />
                         <Button
                             disabled={!(incomeFormState.firstcategory)}
-                            type='submit' variant='success' className='subbtn' onClick={() => window.location.reload(false)}>
+                            type='button' variant='success' className='subbtn' onClick={handleFormSubmit}>
                             Add
                         </Button>
                     </Form>
