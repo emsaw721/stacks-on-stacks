@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Modal, Tab, Nav } from 'react-bootstrap';
 import './components.css';
-import Navpig from './oinktranspig.png';
+import Navpig from './welcomeoink.png';
 import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm'
 import Auth from '../utils/auth';
@@ -21,9 +21,9 @@ const Navbar = () => {
                     <nav className='navbar' >
                         <ul className='nav-list'>
                             <li className='nav-item dash-icon'>
-                                {/* <Link to '/dashboard' className='nav-link'>
+                                <Link to= '/dash' className='nav-link'>
                         <img src={Navpig} alt="pig" />
-                         </Link> */}
+                         </Link>
                             </li>
                             <li className='navigation-item'>
                                 <Link to='/expense' className='nav-link'>
@@ -49,7 +49,7 @@ const Navbar = () => {
                         </style>
                         <ul>
                             <li className='navigation-item'>
-                                <Nav.Link onClick={() => setShowModal(true)}>
+                                <Nav.Link className='loggedoutlink' onClick={() => setShowModal(true)}>
                                     Login/Signup
                                 </Nav.Link>
                             </li>
