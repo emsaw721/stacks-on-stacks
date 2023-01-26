@@ -22,20 +22,14 @@ query Me{
 `; 
 
 export const QUERY_TRANSACTIONS = gql`
-query transactions($username: String!) {
-    transactions(username: $username) {
+query transactions {
+    transactions {
         _id
         username
         amount
         date
         yearmonth
-        firstcategory {
-          _id
-          firstCategory
-          secondCategory {
-            secondCategory
-          }
-        }
+        firstcategory
         categoryNote
         location
         note
