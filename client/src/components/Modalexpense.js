@@ -5,7 +5,8 @@ import { ADD_TRANSACTION } from '../utils/mutations';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import DatePicker from "react-datepicker";
-import {format} from "date-fns";
+import { format } from "date-fns";
+import { QUERY_TRANSACTIONS } from "../utils/queries";
 
 const Modalexpense = ({ show, onClose }) => {
 
@@ -19,7 +20,9 @@ const Modalexpense = ({ show, onClose }) => {
     yearmonth: new Date()
   });
 
-  const [addExpense] = useMutation(ADD_TRANSACTION);
+  const [addExpense] = useMutation(ADD_TRANSACTION, {
+    refetchQueries: [QUERY_TRANSACTIONS]
+  });
 
   const handleDropdownChange = (event) => {
     setExpenseState({ ...expenseFormState, secondcategory: event.value });
