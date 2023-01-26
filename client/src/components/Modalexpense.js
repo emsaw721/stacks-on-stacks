@@ -62,7 +62,7 @@ const Modalexpense = ({ show, onClose }) => {
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleFormSubmit} noValidate validated={validated}>
-          <Dropdown options={secondCategoryDropdown} onChange={handleDropdownChange} value={expenseFormState.secondCategory} placeholder="Select an option" className='form-input'></Dropdown>
+          <Dropdown options={secondCategoryDropdown} onChange={handleDropdownChange} value={expenseFormState.secondcategory} placeholder="Select an option" className='form-input'></Dropdown>
           <Form.Control
             className="form-input"
             placeholder="Total"

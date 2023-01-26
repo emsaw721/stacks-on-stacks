@@ -1,3 +1,5 @@
+import { useQuery } from '@apollo/client';
+import { QUERY_TRANSACTIONS } from '../utils/queries';
 import React, { useState, useEffect} from 'react';
 import Cal from '../components/Calendar'
 import './pages.css';
