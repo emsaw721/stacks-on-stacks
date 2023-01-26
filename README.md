@@ -36,6 +36,8 @@ In order to enjoy this application, the user simply needs to select the followin
 
 The user can access the application website here : https://guarded-gorge-65763.herokuapp.com/ .
 
+This application is formatted for desktop computers, laptop computers, and mobile phones. 
+
 When the user opens the application, they will see the homepage where they can sign-in or sign-up by selecting the signin/signup link at the bottom of the page. 
 ![Alt text](./images/oink-homesceen.png)
 
