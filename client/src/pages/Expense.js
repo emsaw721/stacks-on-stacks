@@ -16,16 +16,20 @@ const Expense = (data) => {
         setIsModalOpen(!isModalOpen);
     }
 
-    // const {transactions} = useQuery(QUERY_TRANSACTION);
+    let transactionsArr = []; 
 
-    const transactionData = localStorage.getItem('transaction'); 
+    const transactionData = localStorage.getItem('expenses'); 
     console.log(transactionData); 
+    transactionsArr.push(transactionData); 
 
-    const transactionObj = JSON.parse(transactionData); 
-    console.log(transactionObj); 
+    console.log(transactionsArr); 
 
-    const oneExpense = transactionObj.addTransaction.secondcategory; 
-    console.log(oneExpense); 
+
+    // const transactionObj = JSON.parse(transactionData); 
+    // console.log(transactionObj); 
+
+    // const oneExpense = transactionObj.addTransaction.secondcategory; 
+    // console.log(oneExpense); 
 
 
     return (
@@ -35,7 +39,7 @@ const Expense = (data) => {
                     <h4 className="card-header">Expense List</h4>
                     <div className="card-body">
                     <ul>
-                            <li>{oneExpense}</li>
+                            <li></li>
                     </ul>
                         <Modalexpense show={isModalOpen} onClose={setIsModalOpen}></Modalexpense>
                         <Button type='button' variant='success' className='subbtn' onClick={openLink}>

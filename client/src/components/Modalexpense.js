@@ -22,6 +22,7 @@ const Modalexpense = ({ show, onClose }) => {
 
   const [addExpense] = useMutation(ADD_TRANSACTION);
 
+ const allExpensesArr = []; 
 
 function addDate() {
   const idtoken = localStorage.getItem('id_token');
@@ -59,11 +60,13 @@ function addDate() {
         variables: { ...expenseFormState },
       });
 
-      console.log(`This is the data: ${JSON.stringify(data)}`);
-    localStorage.setItem('transaction', JSON.stringify(data)); 
+      const categoryStr = JSON.stringify(data); 
+      // const amountStr = JSON.stringify(data.addTransaction.amount); 
+      console.log( categoryStr); 
+      allExpensesArr.push(categoryStr); 
+      localStorage.setItem('expenses', allExpensesArr); 
   };
-
-  // console.log(`This is the expense form input ${JSON.stringify(expenseFormState)}`); 
+ 
   
   const secondCategoryDropdown = ['Housing', 'Utility', 'Food', 'Transportation', 'Insurance', 'Education', 'Healthcare', 'Savings & Investiment', 'Personal spending', 'Others'];
 
