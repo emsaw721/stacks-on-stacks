@@ -46,6 +46,9 @@ Once the user has either signed in or signed up, they will see the dashboard.
 ![Alt text](./images/oink-dash.png)
 The dashboard includes a summary of each section as well as the option to input your monthly income. 
 
+The user will also see a progress bar just underneath the header, this display how the user's overall spending compares to their income. This feature, like the header, footer, and navigation bar will persist on the screen as the user switches between sections. 
+![Alt text](./images/oink-balance-hero.png)
+
 The navigation bar to acces the other sections is located at the bottom of the webpage. When the user selects the report section, they will access their monthly budget report. Here, the user can set their budget for the month and see how their actual spending compares to their budget. A user can access their total income and total expenses for one day by selecting that day on the calendar at the top of the page and viewing the modal. 
 ![Alt text](./images/oink-report-top.png)
 ![Alt text](./images/oink-report-bottom.png)
