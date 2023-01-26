@@ -39,13 +39,8 @@ mutation addTransaction( $amount: String!, $firstcategory: String!, $secondcateg
       amount
       date
       yearmonth
-      firstcategory {
-        _id
-        firstCategory        
-        secondCategory {
-          secondCategory
-        }
-      }
+      firstcategory 
+      secondcategory       
       categoryNote
       location
       note

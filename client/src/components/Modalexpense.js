@@ -50,6 +50,7 @@ const Modalexpense = ({ show, onClose }) => {
         },
       });
       console.log(data);
+      onClose(false)
     } catch (e) {
       console.error(e);
     }
@@ -91,8 +92,8 @@ const Modalexpense = ({ show, onClose }) => {
               value={expenseFormState.yearmonth}
           />
           <Button
-            disabled={!(expenseFormState.firstCategory && expenseFormState.secondCategory)}
-            type='submit' variant='success' className='subbtn'>
+            disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
+            type='button' variant='success' className='subbtn' onClick={handleFormSubmit}>
             Submit
           </Button>
         </Form>
