@@ -41,6 +41,20 @@ const saveOther = () => {
 const changeOther = (event) => {
     setOther(event.target.value); 
 }
+
+const savedRent = localStorage.getItem('rent');
+const savedUtility = localStorage.getItem('util'); 
+const savedGrocery = localStorage.getItem('grocery');
+const savedOther = localStorage.getItem('other'); 
+
+let arr = [savedRent, savedUtility, savedGrocery, savedOther]; 
+console.log(arr); 
+
+let sum = arr.reduce(function(prev, current) {
+    return prev + +current
+  }, 0);
+  console.log(sum) 
+
     return (
         <section className='report'>
             <style>
@@ -87,7 +101,7 @@ const changeOther = (event) => {
                             <input onChange={changeOther} value={other} />
                             <button onClick={saveOther}>Save</button>
                         </div>
-                        <div className='expectedtot'>####</div>
+                        <div className='expectedtot'>{sum}</div>
                     </div>
                     <div className='reality'>
                         <h2>Actual</h2>
