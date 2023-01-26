@@ -20,7 +20,7 @@ const Navbar = () => {
                 {Auth.loggedIn() ? (
                     <nav className='navbar' >
                         <ul className='nav-list'>
-                            <li className='nav-item dash-icon'>
+                            <li className='navigation-item dash-icon'>
                                 <Link to= '/dash' className='nav-link'>
                         <img src={Navpig} alt="pig" />
                          </Link>

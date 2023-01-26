@@ -260,22 +260,23 @@ div {
     .actual {
         margin-left: 40px; 
         color: var(--sextary-color); 
+        font-size: 1.5em;
     }
 
     .utilact {
-        margin-top: 55px; 
+        margin-top: 45px; 
     }
 
     .grocact {
-        margin-top: 55px; 
+        margin-top: 45px; 
     }
 
     .othact {
-        margin-top: 55px; 
+        margin-top: 45px; 
     }
 
     .totact {
-        margin-top: 55px; 
+        margin-top: 45px; 
 
     }
 }
