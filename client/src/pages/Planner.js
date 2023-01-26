@@ -85,19 +85,19 @@ let sum = arr.reduce(function(prev, current) {
                     <div className='projection'>
                         <h2>Expected</h2>
                         <div className='expected'>
-                            <input onChange={changeRent} value={rent} />
+                            <input onChange={changeRent} value={rent} placeholder={savedRent} />
                             <button onClick={saveRent}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeUtil} value={util} />
+                            <input onChange={changeUtil} value={util} placeholder={savedUtility} />
                             <button onClick={saveUtil}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeGrocery} value={grocery} />
+                            <input onChange={changeGrocery} value={grocery} placeholder={savedGrocery} />
                             <button onClick={saveGrocery}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeOther} value={other} />
+                            <input onChange={changeOther} value={other} placeholder={savedOther} />
                             <button onClick={saveOther}>Save</button>
                         </div>
                         <div className='expectedtot'>{sum}</div>
@@ -105,11 +105,11 @@ let sum = arr.reduce(function(prev, current) {
                     <div className='reality'>
                         <h2>Actual</h2>
                         <div className='actual'>
-                        <div className='rentact'>{rent}</div>
-                        <div className='utilact'>{util}</div>
-                        <div className='grocact'>{grocery}</div>
-                        <div className='othact'>{other - 450}</div>
-                        <div className='totact'>{sum-450}</div>
+                        <div className='rentact'>{savedRent}</div>
+                        <div className='utilact'>{savedUtility}</div>
+                        <div className='grocact'>{savedGrocery}</div>
+                        <div className='othact'>{savedOther - 450}</div>
+                        <div className='totact'>{sum - 450}</div>
                         </div>
                     </div>
                 </div>  

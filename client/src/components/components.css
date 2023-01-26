@@ -242,11 +242,12 @@
     
     .navbar {
         background-color: var(--quinary-color);
+        margin: 0; 
+        padding: 0; 
+        display: flex; 
     }
     
     .nav-list {
-        display: flex; 
-        flex-wrap: wrap;
         list-style: none;
         text-decoration: none; 
         justify-content: space-evenly;
