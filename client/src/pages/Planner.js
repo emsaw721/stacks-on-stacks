@@ -7,6 +7,7 @@ const Planner = () => {
 
 const [rent, setRent] = useState('');
 const saveRent = () => {
+    localStorage.setItem('rent', rent); 
     alert(rent)
 }
 const changeRent = (event) => {
@@ -14,6 +15,7 @@ const changeRent = (event) => {
 }
 const [util, setUtil] = useState('');
 const saveUtil = () => {
+    localStorage.setItem('util', util)
     alert(util)
 }
 const changeUtil = (event) => {
@@ -22,6 +24,7 @@ const changeUtil = (event) => {
 
 const [grocery, setGrocery] = useState('');
 const saveGrocery = () => {
+    localStorage.setItem('grocery', grocery); 
     alert(grocery)
 }
 const changeGrocery = (event) => {
@@ -30,6 +33,7 @@ const changeGrocery = (event) => {
 
 const [other, setOther] = useState('');
 const saveOther = () => {
+    localStorage.setItem('other', other)
     alert(other)
 }
 const changeOther = (event) => {
