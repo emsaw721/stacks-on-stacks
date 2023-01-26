@@ -3,24 +3,26 @@ import decode from 'jwt-decode';
 import Cal from '../components/Calendar'
 import './pages.css';
 import { useQuery } from '@apollo/client';
-import { QUERY_BUDGET } from '../utils/queries';
+import { QUERY_MONTHEXPENSE } from '../utils/queries';
 
 
 const Planner = () => {
 
-    const {data} = useQuery(QUERY_BUDGET);
-    console.log(data); 
+    // const {data} = useQuery(QUERY_MONTHEXPENSE);
+    // console.log(data); 
 
 const [rent, setRent] = useState('');
 const saveRent = () => {
-    alert(rent)
+    alert(rent);
+    localStorage.setItem('rent', rent);
 }
 const changeRent = (event) => {
     setRent(event.target.value); 
 }
 const [util, setUtil] = useState('');
 const saveUtil = () => {
-    alert(util)
+    alert(util);
+    localStorage.setItem('util', util);
 }
 const changeUtil = (event) => {
     setUtil(event.target.value); 
@@ -29,6 +31,7 @@ const changeUtil = (event) => {
 const [grocery, setGrocery] = useState('');
 const saveGrocery = () => {
     alert(grocery)
+    localStorage.setItem('grocery', grocery)
 }
 const changeGrocery = (event) => {
     setGrocery(event.target.value); 
@@ -37,6 +40,7 @@ const changeGrocery = (event) => {
 const [other, setOther] = useState('');
 const saveOther = () => {
     alert(other)
+    localStorage.setItem('other', other)
 }
 const changeOther = (event) => {
     setOther(event.target.value); 
@@ -60,7 +64,7 @@ let sum = arr.reduce(function(prev, current) {
             <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@100;300;400&family=IBM+Plex+Sans:wght@100&display=swap');
 </style>
-            <h1> Your Progress Report </h1>
+            <h1> Your Monthly Report </h1>
             <Cal/>
             <div>
                <div className='reportcontainer'>
@@ -86,19 +90,19 @@ let sum = arr.reduce(function(prev, current) {
                     <div className='projection'>
                         <h2>Expected</h2>
                         <div className='expected'>
-                            <input onChange={changeRent} value={rent} />
+                            <input onChange={changeRent} value={rent} placeholder={savedRent} />
                             <button onClick={saveRent}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeUtil} value={util} />
+                            <input onChange={changeUtil} value={util} placeholder={savedUtility} />
                             <button onClick={saveUtil}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeGrocery} value={grocery} />
+                            <input onChange={changeGrocery} value={grocery} placeholder={savedGrocery} />
                             <button onClick={saveGrocery}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeOther} value={other} />
+                            <input onChange={changeOther} value={other} placeholder={savedOther} />
                             <button onClick={saveOther}>Save</button>
                         </div>
                         <div className='expectedtot'>{sum}</div>
