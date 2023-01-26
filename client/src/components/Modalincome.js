@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Modal } from 'react-bootstrap'
 import { useMutation } from "@apollo/client";
-import { ADD_INCOME } from "../utils/mutations";
+import { ADD_TRANSACTION } from "../utils/mutations";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from 'date-fns'
@@ -15,7 +15,7 @@ const Modalincome = ({ show, onClose }) => {
         yearmonth: new Date(),
     });
 
-    const [addIncome] = useMutation(ADD_INCOME);
+    const [addTransaction] = useMutation(ADD_TRANSACTION);
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -30,7 +30,7 @@ const Modalincome = ({ show, onClose }) => {
         event.preventDefault();
 
         try {
-            const { data } = await addIncome({
+            const { data } = await addTransaction({
                 variables: {
                     ...incomeFormState,
                     yearmonth: format(incomeFormState.yearmonth, 'yyyyMM')
