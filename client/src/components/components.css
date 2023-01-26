@@ -15,10 +15,11 @@
 /* -------- Navbar Styling ---------- */
 .navcontainer {
     font-family: 'IBM Plex Sans', sans-serif;
+    width: 100%; 
 }
 
 .navbar {
-    background-color: var(--tertiary-color);
+    background-color: var(--quaternary-color);
 }
 
 .nav-list {
@@ -35,7 +36,9 @@
     margin-left: 5%;
     margin-right: 5%; 
     margin-top: 20%; 
+    color: var(--tertiary-color); 
 }
+
 
 .nav-link {
     text-decoration: none; 
@@ -47,13 +50,22 @@
 }
 
 .link-text {
-    color: var(--quaternary-color);
+    color: var(--tertiary-color);
     text-decoration: none; 
 }
 
+.dash-icon {
+    margin-left: 5%; 
+}
+
+.loggedoutlink {
+    color: var(--tertiary-color); 
+}
+
+
 /* ------- signup form --------- */ 
 
-/* .formlabel {
+.formlabel {
     color: var(--quaternary-color);
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -81,13 +93,13 @@
 .formbtn {
     color: var(--tertiary-color); 
     background-color: var(--quinary-color);
-} */
+} 
 
-/* .formbtn :hover {
+.formbtn :hover {
     border-color: var(--quaternary-color); 
     background-color: var(--tertiary-color);
     color: var(--quaternary-color); 
-} */
+} 
 
 
 .nav-pills .nav-link {
@@ -113,7 +125,7 @@
 
 /* -------- Header Styling ------- */
 .header {
-    background-color: var(--quinary-color);
+    background-color: var(--quaternary-color);
     color: var(--tertiary-color);
     display: flex;
 }
@@ -156,16 +168,17 @@
 
 /* ---- Hero Styling -------*/ 
 .hero {
-    background-color: var(--quaternary-color);
+    background-color: var(--tertiary-color);
     position: sticky;
     position: -webkit-sticky; 
     top: 0; 
     /*make sure to change this for progress bar */
     text-align: center;
+    padding: 10px; 
 }
 
 .hero h3 {
-    color: var(--tertiary-color); 
+    color: var(--quaternary-color); 
 }
 
 /* ----- Calendar Styling -------- */
@@ -200,15 +213,17 @@
 
 /* ------- progress bar ------ */
 
-/* .progressBar {
+.progressBar {
     display: flex;
     justify-content: center;
-} */
+    background-color: var(--quinary-color);
+}
 
 /* ------- Footer Styling ------- */
 .footer {
-    background-color: var(--quinary-color);
-    color: var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 
@@ -222,36 +237,44 @@
 
     /* -------- Navbar Styling ---------- */
     .navcontainer {
-        display: flex;
-        flex-wrap: wrap;
+        font-family: 'IBM Plex Sans', sans-serif;
     }
-
+    
     .navbar {
-        background-color: var(--tertiary-color);
-        flex-basis: 100%;
-        flex-direction: row;
+        background-color: var(--quinary-color);
     }
-
+    
     .nav-list {
+        display: flex; 
+        flex-wrap: wrap;
         list-style: none;
-        position: -webkit-sticky;
-        position: sticky;
-        bottom: 0;
+        text-decoration: none; 
+        justify-content: space-evenly;
     }
-
-    .nav-item {
+    
+    .navigation-item {
         list-style: none;
-        flex-shrink: 1;
+        font-size: 1.5em;
+        text-decoration: none;
     }
-
+    
+    .nav-link {
+        text-decoration: none; 
+        color: var(--quaternary-color); 
+    }
+    
+    .nav-link:hover {
+        text-decoration: underline var(--septary-color);
+    }
+    
     .link-text {
-        color: var(--quaternary-color);
+        color: var(--tertiary-color);
+        text-decoration: none; 
     }
 
-    .navbar img {
-        width: 20%;
-        height: auto;
-        list-style: none;
+    .dash-icon {
+        width: 2%; 
+        height: auto; 
     }
 
     /* ------- signup form --------- */ 
@@ -277,10 +300,12 @@
     
     
     /* -------- Header Styling ------- */
+
     .header {
         background-color: var(--quinary-color);
         color: var(--tertiary-color);
         display: flex;
+        text-align: center; 
     }
 
     .header .loggedin {
@@ -290,23 +315,16 @@
     }
 
     .header .loggedin h1 {
-        margin-top: 10%; 
-        margin-bottom: 10%;
-        margin-left: 15%; 
         font-size: 3em; 
-        width: 100%; 
         font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
 
     .header .loggedout {
         flex-direction: column;
         flex-wrap: wrap; 
-        width: 100%; 
     }
 
     .header .loggedout h1 {
-        margin-left: 10%;
-        margin-top: 10%; 
         font-size: 3em; 
         font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
@@ -383,7 +401,7 @@
     .subbtn {
         background-color: var(--quinary-color) !important;
         border-color: var(--quinary-color);
-        margin-top: 10px;        
+        margin-top: 10px;
     }
 
 
