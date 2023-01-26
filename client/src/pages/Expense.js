@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './pages.css';
+import {Button, Table} from 'react-bootstrap'
 import {Button, Table} from 'react-bootstrap'
 import Modalexpense from '../components/Modalexpense';
 import {useMutation, useQuery} from "@apollo/client";
