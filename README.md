@@ -61,6 +61,13 @@ The navigation bar to acces the other sections is located at the bottom of the w
 ![Alt text](./images/oink-report-cal-modal.png)
 
 On the expenses page, the user can see a list of their input expenses as well as an option to add another expense. 
+![Alt text](./images/pink-expense-page.png)
+![Alt text](./images/oink-expenses-modal.png)
+
+And in the income section, the user can see a list of their income sources as well as an option to add another income transaction. This is perfect for users with multiple income sources. 
+![Alt text](./images/oink-income-page.png)
+![Alt text](./images/oink-income-modal.png)
+
 
 ## Support 
 
