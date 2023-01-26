@@ -2,14 +2,8 @@ import React, { useState, useEffect} from 'react';
 import decode from 'jwt-decode';
 import Cal from '../components/Calendar'
 import './pages.css';
-import { useQuery } from '@apollo/client';
-import { QUERY_TRANSACTION } from '../utils/queries';
 
-
-const Planner = () => {
-
-    const {data} = useQuery(QUERY_TRANSACTION);
-    console.log(JSON.stringify(data)); 
+const Planner = () => { 
 
 const [rent, setRent] = useState('');
 const saveRent = () => {

@@ -38,7 +38,8 @@ const Modalexpense = ({ show, onClose }) => {
       const { data } = await addExpense({
         variables: { ...expenseFormState },
       });
-      AuthService.loggedIn(data);
+      console.log(JSON.stringify(data)); 
+      AuthService.loggedIn(JSON.stringify(data.addTransaction._id));
     } catch (e) {
       console.error(e);
     }
