@@ -42,6 +42,15 @@ When the user selects the link, a modal will appear. If the user selects signup,
 If the user has already signed up, but would like to sign in, they can select singin, and will reciece the form to login. 
 ![Alt text](./images/oink-login.png)
 
+Once the user has either signed in or signed up, they will see the dashboard. 
+![Alt text](./images/oink-dash.png)
+The dashboard includes a summary of each section as well as the option to input your monthly income. 
+
+The navigation bar to acces the other sections is located at the bottom of the webpage. When the user selects the report section, they will access their monthly budget report. Here, the user can set their budget for the month and see how their actual spending compares to their budget. A user can access their total income and total expenses for one day by selecting that day on the calendar at the top of the page and viewing the modal. 
+![Alt text](./images/oink-report-top.png)
+![Alt text](./images/oink-report-bottom.png)
+![Alt text](./images/oink-report-cal-modal.png)
+
 
 ## Support 
 
