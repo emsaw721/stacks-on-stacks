@@ -4,17 +4,15 @@ import { useMutation } from "@apollo/client";
 import { ADD_INCOME } from "../utils/mutations";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { format } from 'date-fns'
 
-
-function Income(show) {
-
-    const [startDate, setStartDate] = useState(new Date());
+const Modalincome = ({ show, onClose }) => {
 
     const [incomeFormState, setIncomeState] = useState({
         firstcategory: 'Income',
         amount: '',
         note: '',
-        date: startDate
+        yearmonth: new Date(),
     });
 
     const [addIncome] = useMutation(ADD_INCOME);
@@ -24,17 +22,19 @@ function Income(show) {
         setIncomeState({ ...incomeFormState, [name]: value });
     };
 
-    const handleDateSelect = (event) => {
-        setIncomeState({ ...startDate, date: event.value });
+    const handleDateSelect = (date) => {
+        setIncomeState({ ...incomeFormState, yearmonth: date });
     };
 
     const handleFormSubmit = async (event) => {
-        console.log(incomeFormState)
         event.preventDefault();
 
         try {
             const { data } = await addIncome({
-                variables: { ...incomeFormState },
+                variables: {
+                    ...incomeFormState,
+                    yearmonth: format(incomeFormState.yearmonth, 'yyyyMM')
+                },
             });
             console.log(data);
         } catch (e) {
@@ -42,11 +42,11 @@ function Income(show) {
         }
     };
 
-
     return (
         <section>
             <Modal
-                show={show}>
+                show={show}
+                onHide={() => onClose(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Income</Modal.Title>
                 </Modal.Header>
@@ -66,22 +66,21 @@ function Income(show) {
                             placeholder="Notes"
                             name="note"
                             type="text"
-                            id="incomeNote"
+                            id="incomenote"
                             value={incomeFormState.note}
                             onChange={handleInputChange}
                         />
                         <DatePicker
-                            selected={startDate}
-                            onChange={(date) => setStartDate(date)}
-                            onSelect={handleDateSelect}
-                            value={incomeFormState.date}                            
-                        />                        
+                            selected={incomeFormState.yearmonth}
+                            onChange={(date) => handleDateSelect(date)}
+                            value={incomeFormState.yearmonth}
+                        />
                         <Button
                             disabled={!(incomeFormState.firstcategory)}
                             type='submit' variant='success' className='subbtn'>
                             Add
                         </Button>
-                        <Button
+                        {/* <Button
                             disabled={!(incomeFormState.firstcategory)}
                             type='submit' variant='success' className='subbtn'>
                             Edit
@@ -90,7 +89,7 @@ function Income(show) {
                             disabled={!(incomeFormState.firstcategory)}
                             type='submit' variant='success' className='subbtn'>
                             Delete
-                        </Button>
+                        </Button> */}
                     </Form>
                 </Modal.Body>
             </Modal>
@@ -98,4 +97,4 @@ function Income(show) {
     )
 }
 
-export default Income
+export default Modalincome;

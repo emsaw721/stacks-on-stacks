@@ -61,15 +61,15 @@ export const REMOVE_TRANSACTION = gql`
             _id
         }
     }
-`; 
+`;
 
 export const ADD_INCOME = gql`
-mutation addIncome($username: String!, $amount: String!, $firstcategory: String! $note: String ) {
-    addTransaction(username: $username, amount: $amount, firstcategory: $firstcategory, note: $note){
+mutation addIncome($username: String!, $amount: String!, $firstcategory: String!, $yearmonth: String!, $note: String ) {
+    addTransaction(username: $username, amount: $amount, firstcategory: $firstcategory, yearmonth: $yearmonth, note: $note){
       _id
       username
       amount
-      date      
+      yearmonth      
       firstcategory 
       note
     }
