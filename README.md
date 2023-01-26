@@ -30,7 +30,10 @@ Oink! is a personal finance tracking application. Here, a user can record and se
 
 ## Installation 
 
+In order to enjoy this application, the user simply needs to select the following link: https://guarded-gorge-65763.herokuapp.com/ .
+
 ## Usage 
+
 The user can access the application website here : https://guarded-gorge-65763.herokuapp.com/ .
 
 When the user opens the application, they will see the homepage where they can sign-in or sign-up by selecting the signin/signup link at the bottom of the page. 
@@ -54,10 +57,13 @@ The navigation bar to acces the other sections is located at the bottom of the w
 ![Alt text](./images/oink-report-bottom.png)
 ![Alt text](./images/oink-report-cal-modal.png)
 
+On the expenses page, the user can see a list of their input expenses as well as an option to add another expense. 
 
 ## Support 
 
 ## Roadmap
+
+Future iterations of this project will include a feature to connect to the user's bank account, a feature to connect to a payment application (e.g. PayPal, Venmo), and a way for their expenses as well as their income to automatically populate in their respective sections. 
 
 ## Acknowledgements 
 
