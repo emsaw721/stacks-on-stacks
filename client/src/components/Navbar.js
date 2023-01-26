@@ -21,9 +21,9 @@ const Navbar = () => {
                     <nav className='navbar' >
                         <ul className='nav-list'>
                             <li className='dash-icon'>
-                                <Link to= '/dash' className='nav-link'>
-                        <img src={Navpig} alt="pig" />
-                         </Link>
+                                <Link to='/dash' className='nav-link'>
+                                <img src={Navpig} alt="pig" />
+                                </Link>
                             </li>
                             <li className='navigation-item'>
                                 <Link to='/income' className='nav-link'>
