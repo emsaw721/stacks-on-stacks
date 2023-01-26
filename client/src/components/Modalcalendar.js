@@ -1,5 +1,6 @@
 import React from 'react'
 import { format } from 'date-fns'
+import {Button} from 'react-bootstrap'
 
 
 
@@ -21,7 +22,7 @@ const Modalcalendar = ({ onClose, calDate }) => {
                     <div> Total Income
                     </div>
                 </div>
-                <button type="button" onClick={onClose}>Close</button>
+                <Button type="button" onClick={onClose}>Close</Button>
             </div>
         </div>
     )
