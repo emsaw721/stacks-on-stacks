@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Form, Button, Modal } from 'react-bootstrap'
 import { useMutation } from "@apollo/client";
-import { ADD_TRANSACTION } from "../utils/mutations";
+import { ADD_TRANSACTION} from "../utils/mutations";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from 'date-fns'
 
+
 const Modalincome = ({ show, onClose }) => {
 
+    // Logic to add income
     const [incomeFormState, setIncomeState] = useState({
         firstcategory: 'Income',
         amount: '',
@@ -40,7 +42,7 @@ const Modalincome = ({ show, onClose }) => {
         } catch (e) {
             console.error(e);
         }
-    };
+    };    
 
     return (
         <section>
@@ -80,19 +82,9 @@ const Modalincome = ({ show, onClose }) => {
                             type='submit' variant='success' className='subbtn'>
                             Add
                         </Button>
-                        {/* <Button
-                            disabled={!(incomeFormState.firstcategory)}
-                            type='submit' variant='success' className='subbtn'>
-                            Edit
-                        </Button>
-                        <Button
-                            disabled={!(incomeFormState.firstcategory)}
-                            type='submit' variant='success' className='subbtn'>
-                            Delete
-                        </Button> */}
                     </Form>
                 </Modal.Body>
-            </Modal>
+            </Modal> 
         </section>
     )
 }
