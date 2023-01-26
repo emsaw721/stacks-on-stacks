@@ -60,8 +60,9 @@ const Income = () => {
             <Table>
                 <thead>
                     <tr>
-                        <th>Transaction date</th>
-                        <th>Transaction amount</th>
+                        <th>Income date</th>
+                        <th>Income source</th>
+                        <th>Income amount</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
@@ -71,6 +72,7 @@ const Income = () => {
                             return (
                                 <tr key={t._id}>
                                     <td>{t.date}</td>
+                                    <td>{t.note}</td>
                                     <td>{t.amount}</td>
                                     <td>
                                         <Button onClick={() => { deleteIncome(t._id) }}>Delete</Button>

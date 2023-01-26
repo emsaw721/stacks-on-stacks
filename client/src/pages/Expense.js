@@ -58,6 +58,7 @@ const Expense = () => {
                     <thead>
                         <tr>
                             <th>Transaction date</th>
+                            <th>Expense</th>
                             <th>Transaction amount</th>
                             <th>Delete</th>
                         </tr>
@@ -68,6 +69,7 @@ const Expense = () => {
                             return (
                                 <tr key={t._id}>
                                     <td>{t.date}</td>
+                                    <td>{t.secondcategory}</td>
                                     <td>{t.amount}</td>
                                     <td>
                                         <Button onClick={() => { deleteExpense(t._id) }}>Delete</Button>
