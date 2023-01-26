@@ -7,6 +7,21 @@ import './pages.css';
 
 const Planner = () => {
 
+    const {data} = useQuery(QUERY_TRANSACTIONS);
+    console.log(data); 
+    console.log(JSON.stringify(data)); 
+
+    // const [tRent, setTRent ] = useState(''); 
+    //     tRent = data.secondcategory.housing; 
+    //     console.log(tRent); 
+    //     setTRent(tRent); 
+
+    // const [tUtil, setTUtil] = useState(''); 
+    //     tUtil = data.secondcategory.utility;
+    //     console.log(tUtil);
+    //     setTUtil(tUtil); 
+
+
 const [rent, setRent] = useState('');
 const saveRent = () => {
     localStorage.setItem('rent', rent); 
@@ -107,8 +122,8 @@ let sum = arr.reduce(function(prev, current) {
                     <div className='reality'>
                         <h2>Actual</h2>
                         <div className='actual'>
-                        <div className='rentact'>{savedRent}</div>
-                        <div className='utilact'>{savedUtility}</div>
+                        <div className='rentact'></div>
+                        <div className='utilact'></div>
                         <div className='grocact'>{savedGrocery}</div>
                         <div className='othact'>{savedOther - 450}</div>
                         <div className='totact'>{sum - 450}</div>

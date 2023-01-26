@@ -22,6 +22,7 @@ const Modalexpense = ({ show, onClose }) => {
   const [addExpense] = useMutation(ADD_TRANSACTION);
 
   const handleDropdownChange = (event) => {
+    console.log('second category selected'); 
     setExpenseState({ ...expenseFormState, secondcategory: event.value });
   };
 
