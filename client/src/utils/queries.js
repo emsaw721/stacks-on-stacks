@@ -48,7 +48,7 @@ query transaction($id: ID!) {
     transaction(_id: $id) {
         _id
         amount
-        date
+        yearmonth
         firstcategory
         secondcategory
         categoryNote

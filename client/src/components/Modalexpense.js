@@ -12,11 +12,11 @@ const Modalexpense = ({ show, onClose }) => {
 
   const [expenseFormState, setExpenseState] = useState({
     username: '',
+    amount: '',
+    yearmonth: '',
     firstcategory: 'Expense',
     secondcategory: '',
-    amount: '',
-    categoryNote: '',
-    yearmonth: ''
+    categoryNote: ''
   });
 
 
@@ -35,7 +35,7 @@ function addDate() {
 
   const dateArr = [yearStamp, monthStamp]; 
 
-  const yearMonthStamp = dateArr.join('-0'); 
+  const yearMonthStamp = dateArr.join("-0"); 
   console.log(yearMonthStamp); 
 
   setExpenseState({ ...expenseFormState, yearmonth: yearMonthStamp, username: decoded.data.username })
@@ -48,34 +48,23 @@ function addDate() {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setExpenseState({ ...expenseFormState, [name]: value });
-
+    setExpenseState({ ...expenseFormState, [name]: value }); 
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     addDate(); 
-    // check if form has everything (as per react-bootstrap docs)
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
 
-    try {
       const { data } = await addExpense({
         variables: { ...expenseFormState },
       });
 
-      console.log(data)
-
-    } catch (e) {
-      console.error(e);
-    }
+      console.log(`This is the data: ${JSON.stringify(data)}`);
+    localStorage.setItem('transaction', JSON.stringify(data)); 
   };
-  
-  console.log(expenseFormState); 
 
+  // console.log(`This is the expense form input ${JSON.stringify(expenseFormState)}`); 
+  
   const secondCategoryDropdown = ['Housing', 'Utility', 'Food', 'Transportation', 'Insurance', 'Education', 'Healthcare', 'Savings & Investiment', 'Personal spending', 'Others'];
 
   return (
@@ -86,7 +75,7 @@ function addDate() {
         <Modal.Title>Add Your Expenses</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form onSubmit={handleFormSubmit} noValidate validated={validated}>
+        <Form noValidate validated={validated}>
           <Dropdown options={secondCategoryDropdown} onChange={handleDropdownChange} value={expenseFormState.secondcategory} placeholder="Select an option" className='form-input'></Dropdown>
           <Form.Control
             className="form-input"
@@ -108,7 +97,7 @@ function addDate() {
           />
           <Button
             disabled={!(expenseFormState.firstcategory && expenseFormState.secondcategory)}
-            type='submit' variant='success' className='subbtn'>
+            type='submit' variant='success' className='subbtn' onClick={handleFormSubmit}>
             Submit
           </Button>
         </Form>
