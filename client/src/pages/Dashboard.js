@@ -5,8 +5,7 @@ import Modalincome from "../components/Modalincome";
 
 function MainDashboard() {
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [isModalOpen, setIsModalOpen] = useState(false);  
 
   return (
     <section>
@@ -19,7 +18,7 @@ function MainDashboard() {
           {/* <span className="input-text">$</span> */}
           {/* <input type="text"  className="input" placeholder="Income balance"/> */}
 
-          <Button type="button" onClick={() => setIsModalOpen(true)}>Add Income</Button>
+          <Button type="button" onClick={() => setIsModalOpen(true)}>Add Income</Button>          
         </div>
         <div className="topics">
           <h2>Expense</h2>
@@ -33,7 +32,7 @@ function MainDashboard() {
           <p> this is where you will categorize your monthly income. </p>
         </div>
       </div>
-      <Modalincome show={isModalOpen} onClose={setIsModalOpen}></Modalincome>
+      <Modalincome show={isModalOpen} onClose={setIsModalOpen}></Modalincome>      
     </section>
   );
 }
