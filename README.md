@@ -1,5 +1,6 @@
 # stacks-on-stacks
 
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/emsaw721/stacks-on-stacks/develop?style=for-the-badge)
 ## Description 
 Oink! is a personal finance tracking application. Here, a user can record and see their total monthly income and expenses as well as create a budget goal for the month. The user also has the benefit of seeing their past income, expenses, and projected budget activity.
 
