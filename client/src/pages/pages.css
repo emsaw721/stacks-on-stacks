@@ -242,7 +242,9 @@ div {
     .table{
         color: var(--quaternary-color); 
         display: flex;
-        justify-content: space-bewteen;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .table h2 {
