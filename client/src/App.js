@@ -16,6 +16,7 @@ import Navbar from './components/Navbar';
 import Expense from './pages/Expense';
 import Planner from './pages/Planner';
 import Dashboard from './pages/Dashboard';
+import Income from './pages/Income';
 
 
 
@@ -50,7 +51,8 @@ function App() {
                     <Routes>
                         <Route path='/dash' element={<Dashboard />} />
                         <Route path='/expense' element={<Expense />} />
-                        <Route path='/planner' element={<Planner />} />                        
+                        <Route path='/planner' element={<Planner />} />
+                        <Route path='/income' element={<Income />} />
                     </Routes>
                 </div>
                 <Navbar />
