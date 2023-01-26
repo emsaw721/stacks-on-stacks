@@ -45,6 +45,7 @@ const Modalexpense = ({ show, onClose }) => {
       const { data } = await addExpense({
         variables: {
           ...expenseFormState,
+          date: expenseFormState.yearmonth.toJSON(),
           yearmonth: format(expenseFormState.yearmonth, 'yyyyMM')
         },
       });

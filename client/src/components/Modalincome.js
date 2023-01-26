@@ -38,6 +38,7 @@ const Modalincome = ({ show, onClose }) => {
             const { data } = await addTransaction({
                 variables: {
                     ...incomeFormState,
+                    date: incomeFormState.yearmonth.toJSON(),
                     yearmonth: format(incomeFormState.yearmonth, 'yyyyMM')
                 },
             });
