@@ -6,6 +6,8 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import DatePicker from "react-datepicker";
 import {format} from "date-fns";
+import DatePicker from "react-datepicker";
+import {format} from "date-fns";
 
 const Modalexpense = ({ show, onClose }) => {
 
@@ -15,6 +17,8 @@ const Modalexpense = ({ show, onClose }) => {
     firstcategory: 'Expense',
     secondcategory: '',
     amount: '',
+    categoryNote: '',
+    yearmonth: new Date()
     categoryNote: '',
     yearmonth: new Date()
   });
@@ -32,7 +36,7 @@ const Modalexpense = ({ show, onClose }) => {
   };
 
   const handleDateSelect = (date) => {
-    setExpenseState({ ...expenseFormState, yearmonth: date });
+    setExpenseState({ ...setExpenseState, yearmonth: date });
   }
 
   const handleFormSubmit = async (event) => {

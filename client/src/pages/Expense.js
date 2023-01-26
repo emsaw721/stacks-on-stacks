@@ -4,24 +4,17 @@ import {Button, Table} from 'react-bootstrap'
 import Modalexpense from '../components/Modalexpense';
 import {useMutation, useQuery} from "@apollo/client";
 import {QUERY_TRANSACTIONS} from "../utils/queries";
-import { REMOVE_TRANSACTION } from "../utils/mutations";
-import { format } from "date-fns"
+import {REMOVE_TRANSACTION} from "../utils/mutations";
 
 const Expense = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const { data } = useQuery(QUERY_TRANSACTIONS);
-    const [expenseList, setExpenseList] = useState([])
+    const {data} = useQuery(QUERY_TRANSACTIONS);
     const [removeTransaction] = useMutation(REMOVE_TRANSACTION);
 
     useEffect(() => {
         if (!data) return;
         console.log(data);
-        const yearMonth = format(new Date(), "yyyyMM");
-        let e = data.transactions
-        .filter(t => t.firstcategory === 'Expense' && t.yearmonth === yearMonth)        
-    setExpenseList(e)
-    console.log(e)
     }, [data])
 
     const openLink = () => {        
@@ -36,7 +29,17 @@ const Expense = () => {
         });
     }
 
+
+    const deleteExpense = async (expenseId) => {
+        await removeTransaction({
+            variables: {
+                id: expenseId
+            }
+        });
+    }
+
     return (
+        <>
         <>
         <section className="flex-row justify-center mb-4">
             <div className="col-12 col-md-6">
@@ -62,13 +65,13 @@ const Expense = () => {
                     </thead>
                     <tbody>
                     {
-                        expenseList.map(t => {
+                        data?.transactions.map(t => {
                             return (
-                                <tr key={t._id}>
+                                <tr>
                                     <td>{t.date}</td>
                                     <td>{t.amount}</td>
                                     <td>
-                                        <Button onClick={() => { deleteExpense(t._id); window.location.reload(false) }}>Delete</Button>
+                                        <Button onClick={() => deleteExpense(t._id)}>Delete</Button>
                                     </td>
                                 </tr>
                             )
