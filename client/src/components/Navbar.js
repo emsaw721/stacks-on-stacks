@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Modal, Tab, Nav } from 'react-bootstrap';
 import './components.css';
-import Navpig from './welcomeoink.png';
+import Navpig from './oinknav.png';
 import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm'
 import Auth from '../utils/auth';
@@ -20,10 +20,15 @@ const Navbar = () => {
                 {Auth.loggedIn() ? (
                     <nav className='navbar' >
                         <ul className='nav-list'>
-                            <li className='navigation-item dash-icon'>
-                                <Link to= '/dash' className='nav-link'>
-                        <img src={Navpig} alt="pig" />
-                         </Link>
+                            <li className='dash-icon'>
+                                <Link to='/dash' className='nav-link'>
+                                <img src={Navpig} alt="pig" />
+                                </Link>
+                            </li>
+                            <li className='navigation-item'>
+                                <Link to='/income' className='nav-link'>
+                                    <span className='link-text'>Income</span>
+                                </Link>
                             </li>
                             <li className='navigation-item'>
                                 <Link to='/expense' className='nav-link'>
