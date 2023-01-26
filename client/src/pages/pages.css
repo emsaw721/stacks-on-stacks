@@ -10,6 +10,7 @@
 
 
 /* ------ desktop/laptop formatting -------- */ 
+
 /* dashboard section */
 .categories {
     display: flex;
@@ -17,6 +18,7 @@
     justify-content: space-evenly;
     width: 100%;
     height: auto;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
   }
   
   .topics {
@@ -28,12 +30,14 @@
     background: linear-gradient( #9FCC2E, #858585);
     align-items: center;
     text-align: center;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
   }
   
   .topics p {
     padding: 10px;
     text-align: center;
     align-items: center;
+    font-family: 'IBM Plex Sans', sans-serif;
   }
   .categories .topics {
     box-shadow: 0px 10px 20px 0px rgb(32, 32, 32);
@@ -47,6 +51,16 @@
   }
 
 
+/* ----- Expense --------- */
+
+.expense {
+    display: flex; 
+    align-items: center;
+}
+.expense h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
 /* ------- Planner ---------- */ 
 
 div {
@@ -54,7 +68,7 @@ div {
 }
 .report h1{
     font-size: 3em; 
-    color: var(--quaternary-color);
+    color: var(--quinary-color);
     font-family: 'IBM Plex Sans Condensed', sans-serif;
 }
 
@@ -111,7 +125,7 @@ div {
     width: 100px; 
     height: 40px; 
     margin-bottom: 5px; 
-    margin-top: 15px; 
+    margin-top: 30px; 
     border: 1px solid var(--primary-color); 
 }
 
@@ -126,9 +140,10 @@ div {
 }
 
 .expectedtot {
-    margin-top: 30%; 
-    margin-left: 20%;
+    margin-top: 10%; 
+    margin-left: 10%;
     color: var(--quaternary-color); 
+    font-size: 1.5em; 
 }
 
 .reality h2 {
@@ -157,12 +172,20 @@ div {
 
 }
 
+.subbtn {
+    background-color: var(--quinary-color);
+    border: 1px solid var(--quinary-color); 
+    font-family: 'IBM Plex San Condensed', sans-serif;
+    color: var(--quaternary-color); 
+}
+
 @media screen and (max-width: 768px) {
 
     .report h1{
         font-size: 2em; 
-        color: var(--quaternary-color);
+        color: var(--quinary-color);
         font-family: 'IBM Plex Sans Condensed', sans-serif;
+        text-align: center;
     }
     
     .table{
