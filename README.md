@@ -1,5 +1,6 @@
 # stacks-on-stacks
 
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/emsaw721/stacks-on-stacks/develop?style=for-the-badge)
 ## Description 
 Oink! is a personal finance tracking application. Here, a user can record and see their total monthly income and expenses as well as create a budget goal for the month. The user also has the benefit of seeing their past income, expenses, and projected budget activity.
 
@@ -30,11 +31,42 @@ Oink! is a personal finance tracking application. Here, a user can record and se
 
 ## Installation 
 
+In order to enjoy this application, the user simply needs to select the following link: https://guarded-gorge-65763.herokuapp.com/ .
+
 ## Usage 
+
+The user can access the application website here : https://guarded-gorge-65763.herokuapp.com/ .
+
+This application is formatted for desktop computers, laptop computers, and mobile phones. 
+
+When the user opens the application, they will see the homepage where they can sign-in or sign-up by selecting the signin/signup link at the bottom of the page. 
+![Alt text](./images/oink-homesceen.png)
+
+When the user selects the link, a modal will appear. If the user selects signup, then they will recieve the form to signup. 
+![Alt text](./images/oink-signup.png)
+
+If the user has already signed up, but would like to sign in, they can select singin, and will reciece the form to login. 
+![Alt text](./images/oink-login.png)
+
+Once the user has either signed in or signed up, they will see the dashboard. 
+![Alt text](./images/oink-dash.png)
+The dashboard includes a summary of each section as well as the option to input your monthly income. 
+
+The user will also see a progress bar just underneath the header, this display how the user's overall spending compares to their income. This feature, like the header, footer, and navigation bar will persist on the screen as the user switches between sections. 
+![Alt text](./images/oink-balance-hero.png)
+
+The navigation bar to acces the other sections is located at the bottom of the webpage. When the user selects the report section, they will access their monthly budget report. Here, the user can set their budget for the month and see how their actual spending compares to their budget. A user can access their total income and total expenses for one day by selecting that day on the calendar at the top of the page and viewing the modal. 
+![Alt text](./images/oink-report-top.png)
+![Alt text](./images/oink-report-bottom.png)
+![Alt text](./images/oink-report-cal-modal.png)
+
+On the expenses page, the user can see a list of their input expenses as well as an option to add another expense. 
 
 ## Support 
 
 ## Roadmap
+
+Future iterations of this project will include a feature to connect to the user's bank account, a feature to connect to a payment application (e.g. PayPal, Venmo), and a way for their expenses as well as their income to automatically populate in their respective sections. 
 
 ## Acknowledgements 
 

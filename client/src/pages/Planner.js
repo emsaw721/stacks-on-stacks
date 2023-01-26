@@ -1,18 +1,13 @@
 import React, { useState, useEffect} from 'react';
-import decode from 'jwt-decode';
 import Cal from '../components/Calendar'
 import './pages.css';
-import { useQuery } from '@apollo/client';
-import { QUERY_BUDGET } from '../utils/queries';
 
 
 const Planner = () => {
 
-    const {data} = useQuery(QUERY_BUDGET);
-    console.log(data); 
-
 const [rent, setRent] = useState('');
 const saveRent = () => {
+    localStorage.setItem('rent', rent); 
     alert(rent)
 }
 const changeRent = (event) => {
@@ -20,6 +15,7 @@ const changeRent = (event) => {
 }
 const [util, setUtil] = useState('');
 const saveUtil = () => {
+    localStorage.setItem('util', util)
     alert(util)
 }
 const changeUtil = (event) => {
@@ -28,6 +24,7 @@ const changeUtil = (event) => {
 
 const [grocery, setGrocery] = useState('');
 const saveGrocery = () => {
+    localStorage.setItem('grocery', grocery); 
     alert(grocery)
 }
 const changeGrocery = (event) => {
@@ -36,11 +33,27 @@ const changeGrocery = (event) => {
 
 const [other, setOther] = useState('');
 const saveOther = () => {
+    localStorage.setItem('other', other)
     alert(other)
 }
 const changeOther = (event) => {
     setOther(event.target.value); 
 }
+
+const savedRent = localStorage.getItem('rent');
+const savedUtility = localStorage.getItem('util'); 
+const savedGrocery = localStorage.getItem('grocery');
+const savedOther = localStorage.getItem('other'); 
+
+let arr = [savedRent, savedUtility, savedGrocery, savedOther]; 
+console.log(arr); 
+
+let sum = arr.reduce(function(prev, current) {
+    return prev + +current
+  }, 0);
+  console.log(sum) 
+
+
     return (
         <section className='report'>
             <style>
@@ -72,31 +85,31 @@ const changeOther = (event) => {
                     <div className='projection'>
                         <h2>Expected</h2>
                         <div className='expected'>
-                            <input onChange={changeRent} value={rent} />
+                            <input onChange={changeRent} value={rent} placeholder={savedRent} />
                             <button onClick={saveRent}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeUtil} value={util} />
+                            <input onChange={changeUtil} value={util} placeholder={savedUtility} />
                             <button onClick={saveUtil}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeGrocery} value={grocery} />
+                            <input onChange={changeGrocery} value={grocery} placeholder={savedGrocery} />
                             <button onClick={saveGrocery}>Save</button>
                         </div>
                         <div className='expected'>
-                            <input onChange={changeOther} value={other} />
+                            <input onChange={changeOther} value={other} placeholder={savedOther} />
                             <button onClick={saveOther}>Save</button>
                         </div>
-                        <div className='expectedtot'>####</div>
+                        <div className='expectedtot'>{sum}</div>
                     </div>
                     <div className='reality'>
                         <h2>Actual</h2>
                         <div className='actual'>
-                        <div className='rentact'>#</div>
-                        <div className='utilact'>#</div>
-                        <div className='grocact'>#</div>
-                        <div className='othact'>#</div>
-                        <div className='totact'>####</div>
+                        <div className='rentact'>{savedRent}</div>
+                        <div className='utilact'>{savedUtility}</div>
+                        <div className='grocact'>{savedGrocery}</div>
+                        <div className='othact'>{savedOther - 450}</div>
+                        <div className='totact'>{sum - 450}</div>
                         </div>
                     </div>
                 </div>  

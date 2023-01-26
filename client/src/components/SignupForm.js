@@ -12,7 +12,6 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
-  let errorMessage = 'Something went wrong with your signup!'
 
   const [createUser] = useMutation(ADD_USER)
 
@@ -40,21 +39,9 @@ const SignupForm = () => {
 
       AuthService.login(data.addUser.token);
     } catch (error) {
-      if (error.message.includes("duplicated")) {
-        errorMessage = "Username or email already exists!"
-      } else {
-        errorMessage = 'Something went wrong with your signup!'
-      }
       console.error(error);
       setShowAlert(true);
     };
-
-    setUserFormData({
-      username: '',
-      email: '',
-      password: '',
-    });
-
   };
 
   return (
@@ -66,7 +53,7 @@ const SignupForm = () => {
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-          {errorMessage}
+          Something went wrong with your login!
         </Alert>
         <Form.Group>
           <Form.Label className='formlabel' htmlFor='username'>Username</Form.Label>
@@ -120,77 +107,3 @@ const SignupForm = () => {
 
 export default SignupForm;
 
-
-// const SignupForm = () => {
-//   const [formState, setFormState] = useState({
-//     username: '',
-//     email: '',
-//     password: '',
-//   });
-//   const [addUser, { error }] = useMutation(ADD_USER);
-
-//   // update state based on form input changes
-//   const handleChange = (event) => {
-//     const { name, value } = event.target;
-
-//     setFormState({
-//       ...formState,
-//       [name]: value,
-//     });
-//   };
-
-//   // submit form
-//   const handleFormSubmit = async (event) => {
-//     event.preventDefault();
-
-//     try {
-//       const { data } = await addUser({
-//         variables: { ...formState },
-//       });
-
-//       Auth.login(JSON.stringify(data.addUser));
-//     } catch (e) {
-//       console.error(e);
-//     }
-//   };
-
-//   return (
-//             <form className='signupform' onSubmit={handleFormSubmit}>
-//               <h3 className='formlabel'>Username</h3>
-//               <input
-//                 className="form-input"
-//                 placeholder="Your username"
-//                 name="username"
-//                 type="username"
-//                 id="username"
-//                 value={formState.username}
-//                 onChange={handleChange}
-//               />
-//               <h3>Email</h3>
-//               <input
-//                 className="form-input"
-//                 placeholder="Your email"
-//                 name="email"
-//                 type="email"
-//                 id="email"
-//                 value={formState.email}
-//                 onChange={handleChange}
-//               />
-//               <h3>Password</h3>
-//               <input
-//                 className="form-input"
-//                 placeholder="******"
-//                 name="password"
-//                 type="password"
-//                 id="password"
-//                 value={formState.password}
-//                 onChange={handleChange}
-//               />
-//               <button className="btn d-block w-100" type="submit">
-//           Submit
-//               </button>
-//             </form>
-//   );
-// };
-
-// export default SignupForm;

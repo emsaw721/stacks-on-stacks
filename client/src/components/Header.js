@@ -8,11 +8,9 @@ import decode from 'jwt-decode';
 const Header = () => {
 const loggedIn = Auth.loggedIn();
  if(loggedIn) {
-    const idtoken = localStorage.getItem('id_token');
-    console.log(idtoken); 
+    const idtoken = localStorage.getItem('id_token');    
 
-    const decoded = decode(idtoken);
-    console.log(decoded); 
+    const decoded = decode(idtoken);    
 
     const username = decoded.data.username;
     return (
