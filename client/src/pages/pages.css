@@ -108,7 +108,6 @@ div {
 }
 
 .reportcontainer {
-    border-bottom: 2px dashed var(--secondary-color);
     margin-top: 10%; 
 }
 
@@ -121,6 +120,7 @@ div {
 .planner-table h2 {
     color: var(--quaternary-color);
     font-family: 'IBM Plex Sans Condensed', sans-serif;
+    padding-left: 5%; 
 }
 
 .cats .projection .reality {
@@ -133,6 +133,7 @@ div {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.5em;
     padding-top: 5%; 
+    padding-left: 5%; 
 }
 
 .utilhead {
@@ -148,7 +149,7 @@ div {
 }
 
 .tothead {
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 .projection .expected {
@@ -187,6 +188,8 @@ div {
 
 .actual {
     margin-left: 40px; 
+    padding-top: 70px; 
+    font-size: 1.5em; 
     color: var(--sextary-color); 
 }
 
@@ -195,15 +198,16 @@ div {
 }
 
 .grocact {
-    margin-top: 55px; 
+    margin-top: 65px; 
 }
 
 .othact {
-    margin-top: 55px; 
+    margin-top: 65px; 
 }
 
 .totact {
-    margin-top: 55px; 
+    margin-top: 90px; 
+    padding-top: 20px; 
 }
 
 .subbtn {
