@@ -19,33 +19,17 @@ const Navbar = () => {
             <>
                 {Auth.loggedIn() ? (
                     <nav className='navbar' >
-                        <ul className='nav-list'>
-                            <li className='dash-icon'>
+                         
+                        <div className='dash-icon'>
                                 <Link to='/dash' className='nav-link'>
                                 <img src={Navpig} alt="pig" />
                                 </Link>
-                            </li>
-                            <li className='navigation-item'>
-                                <Link to='/income' className='nav-link'>
-                                    <span className='link-text'>Income</span>
-                                </Link>
-                            </li>
-                            <li className='navigation-item'>
-                                <Link to='/expense' className='nav-link'>
-                                    <span className='link-text'>Expense</span>
-                                </Link>
-                            </li>
-                            <li className='navigation-item'>
-                                <Link to='/planner' className='nav-link'>
-                                    <span className='link-text'>Report</span>
-                                </Link>
-                            </li>
-                            <li className='navigation-item'>
+                            </div>
+                            <div className='navigation-item'>
                                 <Link className='nav-link' onClick={Auth.logout}>
                                     <span className='link-text'>Logout</span>
                                 </Link>
-                            </li>
-                        </ul>
+                            </div>   
                     </nav>
                 ) : (
                     <nav className='navbar' >
