@@ -20,6 +20,7 @@
 
 .navbar {
     background-color: var(--quaternary-color);
+    padding: 0; 
 }
 
 .nav-list {
@@ -27,6 +28,7 @@
     list-style: none;
     text-decoration: none; 
     justify-content: space-evenly;
+    padding-left: 5%; 
 }
 
 .navigation-item {
@@ -34,10 +36,14 @@
     font-size: 2em;
     text-decoration: none;
     margin-left: 5%;
-    margin-right: 5%; 
+    padding-top: 5px; 
     color: var(--tertiary-color); 
 }
 
+
+.navigation-item img {
+    padding-top: 0; 
+}
 
 .nav-link {
     text-decoration: none; 
@@ -51,10 +57,6 @@
 .link-text {
     color: var(--tertiary-color);
     text-decoration: none; 
-}
-
-.dash-icon {
-    margin: 10%; 
 }
 
 .loggedoutlink {
@@ -229,28 +231,40 @@
 
 @media screen and (max-width: 768px) {
 
+    html {
+        width: 100%; 
+    }
+
     /* -------- Navbar Styling ---------- */
     .navcontainer {
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+        display: flex; 
+        background-color: var(--quinary-color);
+        width: 100%; 
     }
     
     .navbar {
         background-color: var(--quinary-color);
         margin: 0; 
         padding: 0; 
-        display: flex; 
     }
     
     .nav-list {
         list-style: none;
         text-decoration: none; 
         justify-content: space-evenly;
+        padding-left: 10%; 
     }
     
     .navigation-item {
         list-style: none;
-        font-size: 1.5em;
+        font-size: 1.1em;
         text-decoration: none;
+    }
+
+    .navigation-item img {
+        padding: 0; 
+        margin: 0;  
     }
     
     .nav-link {
@@ -265,11 +279,11 @@
     .link-text {
         color: var(--tertiary-color);
         text-decoration: none; 
+        padding-top: 10px; 
     }
 
-    .dash-icon {
-        width: 2%; 
-        height: auto; 
+    .loggedoutlink {
+        color: var(--tertiary-color); 
     }
 
     /* ------- signup form --------- */ 
@@ -315,8 +329,9 @@
     }
 
     .header .loggedout {
-        flex-direction: column;
-        flex-wrap: wrap; 
+        justify-content: center;
+        text-align: center;
+        margin: 0; 
     }
 
     .header .loggedout h1 {
@@ -324,11 +339,6 @@
         font-family: 'IBM Plex Sans Condensed', sans-serif;
     }
 
-    .header .loggedout img {
-        width: 50%;
-        height: auto;
-        margin-left: 30%;
-    }
 
     .header .loggedin img {
         display: none;
