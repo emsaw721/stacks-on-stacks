@@ -87,3 +87,5 @@ The badges for this README were acquired <a href="https://dev.to/envoy_/150-badg
 ## Project Status 
 <img src="https://img.shields.io/badge/Status-In%20Progress-orange" />
 
+I am having problems getting the actual data displayed on the  Progress Report page. We have our transaction imported as a group of objects, in an array, in an object, and react doesn't like arr.filter(); 
+

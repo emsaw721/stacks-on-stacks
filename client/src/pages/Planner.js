@@ -43,19 +43,6 @@ const Planner = () => {
 //  let grocAmount = ''
 //  let othAmount = ''
 
-const [expenseList, setExpenseList] = useState([])
-const { data } = useQuery(QUERY_TRANSACTIONS);
-useEffect(() => {
-    if (!data) return;
-    console.log(data);
-    let t = data.transactions
-    .filter(t => t.firstcategory === 'Expense')        
-setExpenseList(t)
-console.log(t)
-}, [data])
-
-
-
 const [rent, setRent] = useState('');
 const saveRent = () => {
     localStorage.setItem('rent', rent); 
@@ -159,19 +146,9 @@ let sum = arr.reduce(function(prev, current) {
                         <div className='rentact'>{savedRent}</div>
                         <div className='utilact'>{savedUtility}</div>
                         <div className='grocact'>{savedGrocery}</div>
-                        <div className='othact'>{savedOther - 450}</div>
-                        <div className='totact'>{sum - 450}</div>
+                        <div className='othact'>{savedOther}</div>
+                        <div className='totact'>{sum}</div>
                     </div>
-              
-                    {/* expenseList.map((e) => {
-     
-            <div key={e._id}>
-            <div>
-        <h3>{e.secondcategory}</h3>
-        <li>{e.amount}</li>
-    </div>         
-            </div>
-    }) */}
                     </div>
                 </div>  
                 </div>
