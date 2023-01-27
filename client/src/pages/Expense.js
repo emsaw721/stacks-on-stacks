@@ -68,7 +68,7 @@ const Expense = () => {
                         expenseList.map(t => {
                             return (
                                 <tr key={t._id}>
-                                    <td>{t.date}</td>
+                                    <td>{format(new Date(t.date), 'yyyy-MM-dd')}</td>
                                     <td>{t.secondcategory}</td>
                                     <td>{t.amount}</td>
                                     <td>

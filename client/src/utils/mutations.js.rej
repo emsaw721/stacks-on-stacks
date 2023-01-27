@@ -1,0 +1,17 @@
+diff a/client/src/utils/mutations.js b/client/src/utils/mutations.js	(rejected hunks)
+@@ -39,13 +39,8 @@ mutation addTransaction( $amount: String!, $firstcategory: String!, $secondcateg
+       amount
+       date
+       yearmonth
+-      firstcategory {
+-        _id
+-        firstCategory        
+-        secondCategory {
+-          secondCategory
+-        }
+-      }
++      firstcategory 
++      secondcategory       
+       categoryNote
+       location
+       note

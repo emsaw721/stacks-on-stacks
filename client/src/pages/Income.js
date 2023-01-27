@@ -71,7 +71,7 @@ const Income = () => {
                         incomeTotal.map(t => {
                             return (
                                 <tr key={t._id}>
-                                    <td>{t.date}</td>
+                                    <td>{format(new Date(t.date), 'yyyy-MM-dd')}</td>
                                     <td>{t.note}</td>
                                     <td>{t.amount}</td>
                                     <td>

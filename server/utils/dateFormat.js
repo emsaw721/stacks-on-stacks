@@ -39,16 +39,17 @@ module.exports = (
   };
 
   const dateObj = new Date(timestamp);
-  const formattedMonth = months[dateObj.getMonth()];
-
-  const dayOfMonth = dateSuffix
-    ? addDateSuffix(dateObj.getDate())
-    : dateObj.getDate();
-
-  const year = dateObj.getFullYear();
-
-
-  const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year}`;
-
-  return formattedTimeStamp;
+  return dateObj.toJSON()
+  // const formattedMonth = months[dateObj.getMonth()];
+  //
+  // const dayOfMonth = dateSuffix
+  //   ? addDateSuffix(dateObj.getDate())
+  //   : dateObj.getDate();
+  //
+  // const year = dateObj.getFullYear();
+  //
+  //
+  // const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year}`;
+  //
+  // return formattedTimeStamp;
 };
