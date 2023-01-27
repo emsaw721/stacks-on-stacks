@@ -7,10 +7,10 @@ import './pages.css';
 
 const Planner = () => {
 
-    const {data} = useQuery(QUERY_TRANSACTIONS); 
-    console.log(data); 
-    const dataArr = data?.transactions; 
-    console.log(dataArr); 
+    // const {data} = useQuery(QUERY_TRANSACTIONS); 
+    // console.log(data); 
+    // const dataArr = data?.transactions; 
+    // console.log(dataArr); 
 
 
 
@@ -42,6 +42,18 @@ const Planner = () => {
 // let utilAmount = ''
 //  let grocAmount = ''
 //  let othAmount = ''
+
+const [expenseList, setExpenseList] = useState([])
+const { data } = useQuery(QUERY_TRANSACTIONS);
+useEffect(() => {
+    if (!data) return;
+    console.log(data);
+    let t = data.transactions
+    .filter(t => t.firstcategory === 'Expense')        
+setExpenseList(t)
+console.log(t)
+}, [data])
+
 
 
 const [rent, setRent] = useState('');
@@ -141,16 +153,26 @@ let sum = arr.reduce(function(prev, current) {
                         </div>
                         <div className='expectedtot'>{sum}</div>
                     </div>
-                    {/* <div className='reality'>
+                    <div className='reality'>
                         <h2>Actual</h2>
                         <div className='actual'>
-                        <div className='rentact'>{rentAmount}</div>
-                        <div className='utilact'>{utilAmount}</div>
-                        <div className='grocact'>{grocAmount}</div>
-                        <div className='othact'>{othAmount}</div>
-                        <div className='totact'>{}</div>
-                        </div>
-                    </div> */}
+                        <div className='rentact'>{savedRent}</div>
+                        <div className='utilact'>{savedUtility}</div>
+                        <div className='grocact'>{savedGrocery}</div>
+                        <div className='othact'>{savedOther - 450}</div>
+                        <div className='totact'>{sum - 450}</div>
+                    </div>
+              
+                    {/* expenseList.map((e) => {
+     
+            <div key={e._id}>
+            <div>
+        <h3>{e.secondcategory}</h3>
+        <li>{e.amount}</li>
+    </div>         
+            </div>
+    }) */}
+                    </div>
                 </div>  
                 </div>
             </div>
