@@ -126,14 +126,13 @@ div {
 .cats .projection .reality {
     flex-direction: column; 
     justify-content: space-evenly;
-    color: var(--quaternary-color); 
-
+    color: var(--quaternary-color);
 }
-
 
 .cats h3 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.5em;
+    padding-top: 5%; 
 }
 
 .utilhead {
@@ -161,7 +160,7 @@ div {
     width: 100px; 
     height: 40px; 
     margin-bottom: 5px; 
-    margin-top: 30px; 
+    margin-top: 60px; 
     border: 1px solid var(--primary-color); 
 }
 
@@ -176,8 +175,8 @@ div {
 }
 
 .expectedtot {
-    margin-top: 10%; 
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-top: 80px; 
     color: var(--quaternary-color); 
     font-size: 1.5em; 
 }
@@ -205,7 +204,6 @@ div {
 
 .totact {
     margin-top: 55px; 
-
 }
 
 .subbtn {
@@ -254,6 +252,7 @@ div {
 
     .cats {
         margin-left: 0; 
+        padding-left: 0; 
     }
     
     .cats h3 {
