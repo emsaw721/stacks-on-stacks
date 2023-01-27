@@ -7,18 +7,23 @@ import './pages.css';
 
 const Planner = () => {
 
-    // const {data} = useQuery(QUERY_TRANSACTIONS); 
-    // console.log(data); 
-    // const dataArr = data?.transactions; 
-    // console.log(dataArr); 
+// let rentAmount = ''
+// let utilAmount = ''
+//  let grocAmount = ''
+//  let othAmount = ''
 
-
+    const {data} = useQuery(QUERY_TRANSACTIONS); 
+    console.log(data); 
+    const dataArr = data?.transactions; 
+    console.log(dataArr); 
 
     // const dataRentObj = dataArr.filter(obj  => obj.secondcategory === 'Housing'); 
     // const rentArr = dataRentObj.map((rents) => {
     //     return rentAmount = rents.amount
     //     console.log(rentAmount); 
     // });
+
+    // console.log(rentArr); 
 
 //     const dataUtilObj = dataArr.filter(obj  => {return obj.secondcategory === 'Utility'}); 
 //     const utilArr = dataUtilObj.map((utils) => {
@@ -36,24 +41,6 @@ const Planner = () => {
 //         console.log(others.amount); 
 //         setOthAmount(others.amount); 
 //     });
-
-
-// let rentAmount = rentArr.rents.amount; 
-// let utilAmount = ''
-//  let grocAmount = ''
-//  let othAmount = ''
-
-const [expenseList, setExpenseList] = useState([])
-const { data } = useQuery(QUERY_TRANSACTIONS);
-useEffect(() => {
-    if (!data) return;
-    console.log(data);
-    let t = data.transactions
-    .filter(t => t.firstcategory === 'Expense')        
-setExpenseList(t)
-console.log(t)
-}, [data])
-
 
 
 const [rent, setRent] = useState('');
@@ -162,16 +149,6 @@ let sum = arr.reduce(function(prev, current) {
                         <div className='othact'>{savedOther - 450}</div>
                         <div className='totact'>{sum - 450}</div>
                     </div>
-              
-                    {/* expenseList.map((e) => {
-     
-            <div key={e._id}>
-            <div>
-        <h3>{e.secondcategory}</h3>
-        <li>{e.amount}</li>
-    </div>         
-            </div>
-    }) */}
                     </div>
                 </div>  
                 </div>
