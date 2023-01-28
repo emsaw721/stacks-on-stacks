@@ -1,0 +1,16 @@
+diff a/client/src/pages/pages.css b/client/src/pages/pages.css	(rejected hunks)
+@@ -7,13 +7,7 @@
+     --sextary-color: #EC4F46;
+     --septary-color: #006edc;
+ }
+-* {
+-  margin: 0;
+-  padding: 0;
+-  box-sizing: border-box;
+-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+-  font-style: italic;
+-}
++
+ /* Dashboard Section */
+ .banner{
+     background-color: var(--quaternary-color);
