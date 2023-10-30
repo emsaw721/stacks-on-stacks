@@ -1,0 +1,332 @@
+:root {
+    --primary-color: #0A0A0A;
+    --secondary-color: #858585;
+    --tertiary-color: #FFFFFF;
+    --quaternary-color: #011936;
+    --quinary-color: #9FCC2E;
+    --sextary-color: #EC4F46;
+    --septary-color: #006edc;
+}
+
+/* Dashboard Section */
+.banner{
+    background-color: var(--quaternary-color);
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    padding: 30px;
+    color: var(--sextary-color);
+    position: relative;
+}
+.banner p{
+    font-size: 14pt;
+}
+
+
+/* ------ desktop/laptop formatting -------- */ 
+
+/* dashboard section */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  }
+  
+  .topics {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background: linear-gradient(#9fcc2e, #858585);
+    align-items: center;
+    text-align: center;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  }
+  
+  .topics p {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  .categories .topics {
+    box-shadow: 0px 10px 20px 0px rgb(32, 32, 32);
+  }
+
+  .stock {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    background-image: url('./stocksbackground.png'); 
+    background-repeat: no-repeat; 
+    align-items: center;
+    text-align: center;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  }
+  
+  .input {
+    align-items: center;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    margin-top: 10px;
+  }
+
+  .dashbtn {
+    background-color: var(--quaternary-color); 
+    border-color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+  }
+
+
+/* ----- Expense --------- */
+
+.expense {
+    display: flex; 
+    align-items: center;
+}
+.expense h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* ------- Planner ---------- */ 
+
+div {
+    width: 100%; 
+}
+.report h1{
+    font-size: 3em; 
+    color: var(--quinary-color);
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.reportcontainer {
+    margin-top: 10%; 
+}
+
+.planner-table{
+    color: var(--quaternary-color); 
+    width: 100%; 
+    display: flex; 
+}
+
+.planner-table h2 {
+    color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    padding-left: 5%; 
+}
+
+.cats .projection .reality {
+    flex-direction: column; 
+    justify-content: space-evenly;
+    color: var(--quaternary-color);
+}
+
+.cats h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5em;
+    padding-top: 5%; 
+    padding-left: 5%; 
+}
+
+.utilhead {
+    margin-top: 45px;
+}
+
+.grochead {
+    margin-top: 45px;
+}
+
+.othhead {
+    margin-top: 45px;
+}
+
+.tothead {
+    margin-top: 60px;
+}
+
+.projection .expected {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.expected input {
+    width: 100px; 
+    height: 40px; 
+    margin-bottom: 5px; 
+    margin-top: 60px; 
+    border: 1px solid var(--primary-color); 
+}
+
+.expected button {
+    background-color: var(--septary-color); 
+    color: var(--tertiary-color);
+    width: 100px; 
+    height: 40px; 
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.expectedtot {
+    margin-left: 5%;
+    margin-top: 80px; 
+    color: var(--quaternary-color); 
+    font-size: 1.5em; 
+}
+
+.reality h2 {
+    margin-left: 40px; 
+}
+
+.actual {
+    margin-left: 40px; 
+    padding-top: 70px; 
+    font-size: 1.5em; 
+    color: var(--sextary-color); 
+}
+
+.utilact {
+    margin-top: 55px; 
+}
+
+.grocact {
+    margin-top: 65px; 
+}
+
+.othact {
+    margin-top: 65px; 
+}
+
+.totact {
+    margin-top: 90px; 
+    padding-top: 20px; 
+}
+
+.subbtn {
+    background-color: var(--quinary-color);
+    border: 1px solid var(--quinary-color); 
+    font-family: 'IBM Plex San Condensed', sans-serif;
+    color: var(--quaternary-color); 
+}
+.table{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.table th{
+    background-color:var(--secondary-color);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .report h1{
+        font-size: 2em; 
+        color: var(--quinary-color);
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+        text-align: center;
+    }
+    
+    .table{
+        color: var(--quaternary-color); 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .table h2 {
+        color: var(--quaternary-color);
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+
+    .cats .projection .reality {
+        flex-direction: column; 
+        justify-content: space-evenly;
+        color: var(--quaternary-color); 
+    }
+
+    .cats {
+        margin-left: 0; 
+        padding-left: 0; 
+    }
+    
+    .cats h3 {
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    .utilhead {
+        margin-top: 45px;
+    }
+
+    .grochead {
+        margin-top: 45px;
+    }
+
+    .othhead {
+        margin-top: 45px;
+    }
+
+    .tothead {
+        margin-top: 70px;
+    }
+
+    .expected input {
+        width: 100px; 
+        height: 20px; 
+        margin-bottom: 5px; 
+        margin-top: 15px; 
+        border: 1px solid var(--primary-color); 
+    }
+
+    .expected button {
+        background-color: var(--septary-color); 
+        color: var(--tertiary-color);
+        width: 100px; 
+        height: 40px; 
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+
+    .expectedtot {
+        margin-top: 30%; 
+        margin-left: 20%;
+        color: var(--quaternary-color); 
+    }
+    
+    .reality h2 {
+        margin-left: 40px; 
+    }
+
+    .actual {
+        margin-left: 40px; 
+        color: var(--sextary-color); 
+        font-size: 1.5em;
+    }
+
+    .utilact {
+        margin-top: 45px; 
+    }
+
+    .grocact {
+        margin-top: 45px; 
+    }
+
+    .othact {
+        margin-top: 45px; 
+    }
+
+    .totact {
+        margin-top: 45px; 
+
+    }
+}

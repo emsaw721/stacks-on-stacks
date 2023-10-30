@@ -1,0 +1,8 @@
+diff a/server/models/index.js b/server/models/index.js	(rejected hunks)
+@@ -2,6 +2,5 @@ const User = require('./User');
+ const Transactions = require('./Transactions');
+ const FirstCategory = require("./FirstCategory");
+ const SecondCategory = require("./SecondCategory")
+-const SecondCategory = require("./SecondCategory")
+ 
+ module.exports = { User, Transactions,FirstCategory, SecondCategory };

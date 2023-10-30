@@ -1,0 +1,418 @@
+:root {
+    --primary-color: #0A0A0A;
+    --secondary-color: #858585;
+    --tertiary-color: #FFFFFF;
+    --quaternary-color: #011936;
+    --quinary-color: #9FCC2E;
+    --sextary-color: #EC4F46;
+    --septary-color: #006edc;
+}
+
+
+/* ---- desktop/ laptop formatting ------- */
+
+
+/* -------- Navbar Styling ---------- */
+.navcontainer {
+    font-family: 'IBM Plex Sans', sans-serif;
+    width: 100%; 
+}
+
+.navbar {
+    background-color: var(--quaternary-color);
+    padding: 0; 
+}
+
+.nav-list {
+    display: flex; 
+    list-style: none;
+    text-decoration: none; 
+    justify-content: space-evenly;
+    padding-left: 5%; 
+}
+
+.navigation-item {
+    list-style: none;
+    font-size: 2em;
+    text-decoration: none;
+    margin-left: 5%;
+    padding-top: 5px; 
+    color: var(--tertiary-color); 
+}
+
+
+.navigation-item img {
+    padding-top: 0; 
+}
+
+.nav-link {
+    text-decoration: none; 
+    color: var(--quaternary-color); 
+}
+
+.nav-link:hover {
+    text-decoration: underline var(--septary-color);
+}
+
+.link-text {
+    color: var(--tertiary-color);
+    text-decoration: none; 
+}
+
+.loggedoutlink {
+    color: var(--tertiary-color); 
+}
+
+
+/* ------- signup form --------- */ 
+
+.formlabel {
+    color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.forminput {
+    width: 100%; 
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400; 
+    border: 1px solid var(--secondary-color); 
+    border-radius: 0.375rem; 
+}
+
+.signupform input {
+    width: 100%; 
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400; 
+    border: 1px solid var(--secondary-color); 
+    border-radius: 0.375rem; 
+}
+
+.formbtn {
+    color: var(--tertiary-color); 
+    background-color: var(--quinary-color);
+} 
+
+.formbtn :hover {
+    border-color: var(--quaternary-color); 
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color); 
+} 
+
+
+.nav-pills .nav-link {
+    color: var(--septary-color); 
+}
+
+.nav-pills .nav-link.active{
+    color: var(--tertiary-color); 
+    background-color: var(--septary-color);
+}
+
+.modal-body button.btn.btn-success {
+    background-color: var(--quinary-color);
+    border-color: var(--quinary-color);
+    margin-top: 10px;
+}
+
+.modal-body .button.btn.btn-success:hover {
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color); 
+    margin-top: 10px; 
+}
+
+/* -------- Header Styling ------- */
+.header {
+    background-color: var(--quaternary-color);
+    color: var(--tertiary-color);
+    display: flex;
+}
+
+.header .loggedin {
+    justify-content: center;
+    text-align: center;
+}
+
+.header .loggedin h1 {
+    margin-top: 10%;
+    margin-bottom: 10%; 
+    font-size: 5em;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.header .loggedout {
+    flex-direction: column;
+    justify-content: center;
+    width: 50%; 
+}
+
+.header .loggedout h1 {
+    margin-left: 50%;
+    margin-top: 10%; 
+    font-size: 5em; 
+    width: 100%; 
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.header .loggedout img {
+    width: 100%;
+    height: auto;
+    margin-left: 50%;
+}
+
+.header .loggedin img {
+    display: none;
+}
+
+/* ---- Hero Styling -------*/ 
+.hero {
+    background-color: var(--tertiary-color);
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 0; 
+    /*make sure to change this for progress bar */
+    text-align: center;
+    padding: 10px; 
+}
+
+.hero h3 {
+    color: var(--quaternary-color); 
+}
+
+/* ----- Calendar Styling -------- */
+
+.calendar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.modalCBackdrop {
+    background: rgba(0, 0, 0, .65);
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.modalCalendar {
+    background-color: white;
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 15px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+
+/* ------- progress bar ------ */
+
+.progressBar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--quinary-color);
+}
+
+/* ------- Footer Styling ------- */
+.footer {
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* ----- mobile formatting ------- */
+
+@media screen and (max-width: 768px) {
+
+    html {
+        width: 100%; 
+    }
+
+    /* -------- Navbar Styling ---------- */
+    .navcontainer {
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+        display: flex; 
+        background-color: var(--quinary-color);
+        width: 100%; 
+    }
+    
+    .navbar {
+        background-color: var(--quinary-color);
+        margin: 0; 
+        padding: 0; 
+    }
+    
+    .nav-list {
+        list-style: none;
+        text-decoration: none; 
+        justify-content: space-evenly;
+        padding-left: 10%; 
+    }
+    
+    .navigation-item {
+        list-style: none;
+        font-size: 1.1em;
+        text-decoration: none;
+    }
+
+    .navigation-item img {
+        padding: 0; 
+        margin: 0;  
+    }
+    
+    .nav-link {
+        text-decoration: none; 
+        color: var(--quaternary-color); 
+    }
+    
+    .nav-link:hover {
+        text-decoration: underline var(--septary-color);
+    }
+    
+    .link-text {
+        color: var(--tertiary-color);
+        text-decoration: none; 
+        padding-top: 10px; 
+    }
+
+    .loggedoutlink {
+        color: var(--tertiary-color); 
+    }
+
+    /* ------- signup form --------- */ 
+
+    .formlabel {
+        color: var(--quaternary-color);
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+
+    .formbtn {
+        color: var(--tertiary-color);
+        background-color: var(--quinary-color);
+     border-color: var(--quinary-color);
+        margin-top: 10px;
+    }
+
+    .formbtn:hover {
+        border-color: var(--quaternary-color); 
+        background-color: var(--tertiary-color);
+        color: var(--quaternary-color); 
+    }
+    
+    
+    /* -------- Header Styling ------- */
+
+    .header {
+        background-color: var(--quinary-color);
+        color: var(--tertiary-color);
+        display: flex;
+        text-align: center; 
+    }
+
+    .header .loggedin {
+        justify-content: center;
+        text-align: center;
+        margin: 0; 
+    }
+
+    .header .loggedin h1 {
+        font-size: 3em; 
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+
+    .header .loggedout {
+        justify-content: center;
+        text-align: center;
+        margin: 0; 
+    }
+
+    .header .loggedout h1 {
+        font-size: 3em; 
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+
+
+    .header .loggedin img {
+        display: none;
+    }
+
+    /* ---- Hero Styling ------ */ 
+
+    .hero {
+        /* background-color: var(--quaternary-color); */
+        position: sticky;
+        position: -webkit-sticky; 
+        top: 0; 
+        /*make sure to change this for progress bar */
+        text-align: center;
+    }
+
+    /* .hero h3 {
+        color: var(--tertiary-color); 
+    } */
+
+    .calendar {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .modalBackdrop {
+        background: rgba(0, 0, 0, .65);
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .modalContainer {
+        background-color: white;
+        border-radius: 5px;
+        margin: 50px auto;
+        padding: 15px;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+    }
+
+    .nav-pills .nav-link {
+        color: var(--septary-color);
+    }
+
+    .nav-pills .nav-link.active {
+        color: var(--tertiary-color);
+        background-color: var(--septary-color);
+    }
+
+    .button.btn.btn-success {
+        background-color: var(--quinary-color);
+        border-color: var(--quinary-color);
+    }
+
+
+    /* ---------- Expense Styling -----------*/
+
+    .subbtn {
+        background-color: var(--quinary-color) !important;
+        border-color: var(--quinary-color);
+        margin-top: 10px;
+    }
+
+
+    /* ------- Footer Styling ------- */
+    .footer {
+        background-color: var(--quinary-color);
+        color: var(--tertiary-color);
+    }
+}

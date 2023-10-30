@@ -1,0 +1,33 @@
+{
+  "name": "stacks-on-stacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "seed": "cd server && npm run seed",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsaw721/stacks-on-stacks.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/emsaw721/stacks-on-stacks/issues"
+  },
+  "homepage": "https://github.com/emsaw721/stacks-on-stacks#readme",
+  "dependencies": {    
+    "jwt-decode": "^3.1.2",
+    "react-bootstrap": "^2.7.0",    
+    "react-router-dom": "^6.7.0"
+  }
+}
